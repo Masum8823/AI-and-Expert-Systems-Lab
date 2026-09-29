@@ -2228,3 +2228,51 @@ petal_length = 0.067797
 অর্থাৎ original measurement-এর scale বদলে গেছে।
 
 ---
+
+# 75. Data Filtering
+
+Filtering মানে dataset থেকে specific condition অনুযায়ী data বের করা।
+
+Example:
+
+```python
+df[df["petal_length"] > 4]
+```
+
+মানে:
+
+> যেসব flower-এর petal length 4-এর বেশি, শুধু সেগুলো দেখাও।
+
+---
+
+# 76. Filtering-এর Logic
+
+ধরো:
+
+```text
+petal_length
+
+1.4
+1.5
+4.7
+4.5
+4.9
+```
+
+Condition:
+
+```python
+petal_length > 4
+```
+
+তাহলে:
+
+```text
+4.7
+4.5
+4.9
+```
+
+থাকবে।
+
+---
