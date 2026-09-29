@@ -572,3 +572,106 @@ Female
 Source-এ One-Hot Encoding এবং Label Encoding দুটো method-ই উল্লেখ করা হয়েছে।
 
 ---
+
+# 17. Feature কী?
+
+Dataset-এর প্রতিটি useful input column-কে সহজভাবে feature বলা যায়।
+
+Example:
+
+| Study Hours | Attendance | Previous Marks | Result |
+| ----------: | ---------: | -------------: | ------ |
+|           5 |         80 |             70 | Pass   |
+
+এখানে:
+
+```text
+Study Hours
+Attendance
+Previous Marks
+```
+
+হলো input features।
+
+আর:
+
+```text
+Result
+```
+
+হতে পারে target/output।
+
+---
+
+# 18. Feature Selection
+
+Dataset-এ অনেক column থাকতে পারে।
+
+কিন্তু সব column model-এর জন্য দরকারি নাও হতে পারে।
+
+তাই useful feature select করা হয়।
+
+এটাই:
+
+# Feature Selection
+
+Example:
+
+```text
+Name
+Age
+Study Hours
+Attendance
+Previous Marks
+Random ID
+```
+
+Prediction-এর জন্য হয়তো:
+
+```text
+Study Hours
+Attendance
+Previous Marks
+```
+
+যথেষ্ট।
+
+তখন প্রয়োজনীয় features select করা হবে।
+
+---
+
+# 19. Feature Scaling
+
+ধরো আমাদের dataset:
+
+```text
+Age = 20
+Salary = 50000
+```
+
+দুটোর scale অনেক different।
+
+একটি:
+
+```text
+20
+```
+
+আরেকটি:
+
+```text
+50000
+```
+
+কিছু ML algorithm-এর জন্য এই difference সমস্যা তৈরি করতে পারে।
+
+তাই numerical values-কে comparable scale-এ আনা হয়।
+
+এটাকে বলে:
+
+# Feature Scaling
+
+Source-এ বলা হয়েছে scaling বড় value-এর domination কমাতে এবং model performance/convergence improve করতে সাহায্য করতে পারে।
+
+---
+
