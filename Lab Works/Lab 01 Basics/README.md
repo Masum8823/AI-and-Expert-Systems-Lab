@@ -758,3 +758,21 @@ std = 1
 দুটো এক জিনিস নয়।
 
 ---
+
+# 22. এখন আসি Python Libraries-এ
+
+এই Lab-এর সবচেয়ে important তিনটি library:
+
+```text
+NumPy
+Pandas
+Matplotlib
+```
+
+এছাড়া preprocessing-এর জন্য:
+
+```text
+Scikit-learn
+```
+
+---
