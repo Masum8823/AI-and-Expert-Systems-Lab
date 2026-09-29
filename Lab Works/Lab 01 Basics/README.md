@@ -776,3 +776,402 @@ Scikit-learn
 ```
 
 ---
+
+# 23. NumPy কী?
+
+NumPy = Numerical Python
+
+এটি mainly numerical calculation এবং array/matrix নিয়ে কাজ করার জন্য ব্যবহার করা হয়।
+
+Import:
+
+```python
+import numpy as np
+```
+
+এখানে:
+
+```text
+numpy
+```
+
+library-এর নাম।
+
+আর:
+
+```text
+np
+```
+
+হলো তার short name।
+
+তাই:
+
+```python
+np.array()
+```
+
+মানে NumPy-এর array function ব্যবহার করা।
+
+---
+
+# 24. NumPy Array কী?
+
+সাধারণ Python list:
+
+```python
+numbers = [1, 2, 3, 4, 5]
+```
+
+NumPy:
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+```
+
+Array numerical operation-এর জন্য খুব useful।
+
+---
+
+# 25. `np.arange()`
+
+Source code:
+
+```python
+arr = np.arange(1, 13)
+```
+
+এটা তৈরি করবে:
+
+```text
+1 2 3 4 5 6 7 8 9 10 11 12
+```
+
+মনে রাখবে:
+
+```python
+np.arange(start, stop)
+```
+
+এখানে `stop` সাধারণত include হয় না।
+
+তাই:
+
+```python
+np.arange(1, 13)
+```
+
+মানে:
+
+```text
+1 থেকে 12
+```
+
+---
+
+# 26. `reshape()`
+
+ধরো array:
+
+```text
+1 2 3 4 5 6 7 8 9 10 11 12
+```
+
+এতে মোট:
+
+```text
+12 elements
+```
+
+এখন:
+
+```python
+arr.reshape(3, 4)
+```
+
+করলে:
+
+```text
+1  2  3  4
+5  6  7  8
+9 10 11 12
+```
+
+হবে।
+
+অর্থাৎ:
+
+```text
+3 rows
+4 columns
+```
+
+কারণ:
+
+```text
+3 × 4 = 12
+```
+
+### Important
+
+Reshape করার সময় total elements একই থাকতে হবে।
+
+যেমন 12 elements-কে:
+
+```text
+3 × 4
+2 × 6
+4 × 3
+```
+
+করা যাবে।
+
+কিন্তু:
+
+```text
+5 × 3
+```
+
+করা যাবে না।
+
+কারণ:
+
+```text
+5 × 3 = 15
+```
+
+---
+
+# 27. NumPy Matrix
+
+Source:
+
+```python
+A = np.array([[1, 2],
+              [3, 4]])
+
+B = np.array([[5, 6],
+              [7, 8]])
+```
+
+এগুলো 2×2 matrix।
+
+A:
+
+```text
+1 2
+3 4
+```
+
+B:
+
+```text
+5 6
+7 8
+```
+
+---
+
+# 28. Element-wise Multiplication
+
+Code:
+
+```python
+A * B
+```
+
+এখানে একই position-এর value multiply হয়।
+
+```text
+1×5 = 5
+2×6 = 12
+3×7 = 21
+4×8 = 32
+```
+
+Result:
+
+```text
+5   12
+21  32
+```
+
+অর্থাৎ:
+
+```text
+A * B
+```
+
+মানে এখানে element-by-element multiplication।
+
+---
+
+# 29. Matrix Multiplication
+
+Code:
+
+```python
+np.dot(A, B)
+```
+
+এটা সাধারণ element-wise multiplication না।
+
+Matrix multiplication rule অনুযায়ী calculation হয়।
+
+Result:
+
+```text
+19  22
+43  50
+```
+
+যেমন first value:
+
+```text
+(1×5) + (2×7)
+
+= 5 + 14
+
+= 19
+```
+
+---
+
+# 30. Transpose
+
+Code:
+
+```python
+np.transpose(A)
+```
+
+অথবা:
+
+```python
+A.T
+```
+
+Transpose করলে:
+
+Rows ↔ Columns
+
+Original:
+
+```text
+1 2
+3 4
+```
+
+Transpose:
+
+```text
+1 3
+2 4
+```
+
+অর্থাৎ:
+
+```text
+Row → Column
+Column → Row
+```
+
+---
+
+# 31. Mean
+
+Mean মানে সাধারণ average।
+
+Data:
+
+```text
+10, 20, 30, 40, 50
+```
+
+Mean:
+
+```text
+(10+20+30+40+50) / 5
+
+= 150 / 5
+
+= 30
+```
+
+Python:
+
+```python
+np.mean(data)
+```
+
+---
+
+# 32. Median
+
+Median হলো sorted data-এর middle value।
+
+Example:
+
+```text
+10, 20, 30, 40, 50
+```
+
+Middle:
+
+```text
+30
+```
+
+তাই:
+
+```python
+np.median(data)
+```
+
+দিলে:
+
+```text
+30
+```
+
+---
+
+# 33. Standard Deviation
+
+Standard deviation বলে data values average-এর আশেপাশে কতটা spread করেছে।
+
+সহজভাবে:
+
+```text
+Low Standard Deviation
+→ values কাছাকাছি
+
+High Standard Deviation
+→ values বেশি ছড়ানো
+```
+
+Python:
+
+```python
+np.std(data)
+```
+
+---
+
+# 34. Variance
+
+Variance-ও data কতটা spread করেছে তা measure করে।
+
+Python:
+
+```python
+np.var(data)
+```
+
+Relationship:
+
+```text
+Variance = Standard Deviation²
+```
+
+---
