@@ -1820,3 +1820,121 @@ Median।
 
 ---
 
+
+# 58. Missing Value Check
+
+Code:
+
+```python
+df.isnull().sum()
+```
+
+এটা খুব important।
+
+প্রতিটি column-এ কয়টি missing value আছে সেটা দেখায়।
+
+Example:
+
+```text
+Age       0
+Salary    1
+Name      0
+```
+
+মানে:
+
+```text
+Age → missing নেই
+Salary → 1টি missing
+Name → missing নেই
+```
+
+---
+
+# 59. Missing Value তৈরি করে Practice
+
+Source-এ intentionally missing value তৈরি করা হয়েছে:
+
+```python
+df.loc[np.random.choice(df.index, 5), "sepal_width"] = np.nan
+```
+
+এখানে:
+
+```text
+sepal_width
+```
+
+column-এর randomly 5টি row-তে:
+
+```text
+NaN
+```
+
+বসানো হচ্ছে।
+
+তারপর:
+
+```python
+df.isnull().sum()
+```
+
+দিলে:
+
+```text
+sepal_width    5
+```
+
+দেখাবে।
+
+Source-এর exercise-এ ঠিক এইভাবে 5টি missing value simulate করা হয়েছে।
+
+---
+
+# 60. Missing Value Fill করা
+
+Source:
+
+```python
+df["sepal_width"].fillna(
+    df["sepal_width"].mean(),
+    inplace=True
+)
+```
+
+এর concept:
+
+```text
+যেখানে NaN আছে
+        ↓
+sepal_width-এর mean বের করো
+        ↓
+NaN-এর জায়গায় mean বসাও
+```
+
+তারপর:
+
+```python
+df.isnull().sum()
+```
+
+দিলে missing value আর থাকবে না।
+
+---
+
+# 61. `np.random.choice()`
+
+এটা random selection-এর জন্য।
+
+```python
+np.random.choice(df.index, 5)
+```
+
+মানে:
+
+> DataFrame-এর index থেকে random 5টি select করো।
+
+তাই প্রতিবার run করলে কোন 5টি row select হবে সেটা আলাদা হতে পারে।
+
+---
+
