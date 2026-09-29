@@ -2276,3 +2276,132 @@ petal_length > 4
 থাকবে।
 
 ---
+
+# 77. পুরো Lab-এর Master Flow
+
+এখন পুরো বিষয়টাকে একসাথে দেখো:
+
+```text
+                 AI / ML
+                    │
+                    ▼
+                 Dataset
+                    │
+                    ▼
+              Load Dataset
+                    │
+                    ▼
+             Explore Dataset
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+   Missing Values          Duplicates
+          │                   │
+          ▼                   ▼
+       Handle               Remove
+          │                   │
+          └─────────┬─────────┘
+                    ▼
+            Categorical Data
+                    │
+                    ▼
+                 Encoding
+                    │
+                    ▼
+             Feature Selection
+                    │
+                    ▼
+              Feature Scaling
+                    │
+                    ▼
+               Filtering
+                    │
+                    ▼
+            Ready for ML Model
+```
+
+---
+
+# 78. সবচেয়ে Important Python Functions
+
+এই Lab-এর জন্য প্রথমে এগুলো মনে রাখলেই অনেকটা কাজ হবে:
+
+```python
+np.array()
+np.arange()
+reshape()
+np.dot()
+np.transpose()
+np.mean()
+np.median()
+np.std()
+np.var()
+```
+
+Pandas:
+
+```python
+pd.DataFrame()
+pd.read_csv()
+df.head()
+df.shape
+df.info()
+df.describe()
+df.isnull()
+df.isnull().sum()
+df.dropna()
+df.fillna()
+df.duplicated()
+df.drop_duplicates()
+df.copy()
+```
+
+Visualization:
+
+```python
+plt.bar()
+plt.plot()
+plt.scatter()
+plt.xlabel()
+plt.ylabel()
+plt.title()
+plt.show()
+```
+
+Encoding:
+
+```python
+LabelEncoder()
+fit_transform()
+```
+
+Scaling:
+
+```python
+MinMaxScaler()
+fit_transform()
+```
+
+---
+
+# 79. কোন Library কী কাজ করে?
+
+এটা খুব ভালোভাবে মনে রাখো:
+
+| Library      | Main কাজ                                    |
+| ------------ | ------------------------------------------- |
+| NumPy        | Numerical calculation, Array, Matrix        |
+| Pandas       | Dataset/Table handling                      |
+| Matplotlib   | Graph/Visualization                         |
+| Scikit-learn | ML preprocessing এবং Machine Learning tools |
+
+এক লাইনে:
+
+```text
+NumPy    → Number
+Pandas   → Data/Table
+Matplotlib → Graph
+Sklearn  → ML tools
+```
+
+---
