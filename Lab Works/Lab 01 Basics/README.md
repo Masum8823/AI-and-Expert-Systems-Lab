@@ -675,3 +675,86 @@ Source-এ বলা হয়েছে scaling বড় value-এর domination ক�
 
 ---
 
+# 20. Normalization
+
+Normalization-এর একটি common method হলো:
+
+# Min-Max Scaling
+
+এতে value সাধারণত:
+
+```text
+0 থেকে 1
+```
+
+এর মধ্যে নিয়ে আসা হয়।
+
+Formula:
+
+```text
+X' = (X - Min) / (Max - Min)
+```
+
+ধরো:
+
+```text
+Min = 10
+Max = 100
+X = 55
+```
+
+তাহলে:
+
+```text
+(55 - 10) / (100 - 10)
+
+= 45 / 90
+
+= 0.5
+```
+
+অর্থাৎ:
+
+```text
+55 → 0.5
+```
+
+Source-এ Min-Max Scaling-এর এই formula দেওয়া আছে।
+
+---
+
+# 21. Standardization
+
+আরেকটি scaling method হলো:
+
+# Standardization / Z-score Scaling
+
+Formula:
+
+```text
+Z = (X - Mean) / Standard Deviation
+```
+
+এখানে data এমনভাবে transform হয় যাতে:
+
+```text
+Mean ≈ 0
+Standard Deviation ≈ 1
+```
+
+Normalization:
+
+```text
+0 → 1 range
+```
+
+Standardization:
+
+```text
+mean = 0
+std = 1
+```
+
+দুটো এক জিনিস নয়।
+
+---
