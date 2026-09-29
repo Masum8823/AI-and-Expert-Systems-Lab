@@ -222,3 +222,106 @@ AI/ML Model-এর জন্য প্রস্তুত
 # Data Preprocessing
 
 ---
+# 7. Data কী?
+
+Data মানে হলো information।
+
+Example:
+
+```text
+Name = Alice
+Age = 25
+Salary = 50000
+```
+
+আর অনেকগুলো data একসাথে থাকলে আমরা dataset পাই।
+
+Example:
+
+| Name    | Age | Salary |
+| ------- | --: | -----: |
+| Alice   |  25 |  50000 |
+| Bob     |  30 |  60000 |
+| Charlie |  35 |  70000 |
+
+---
+
+# 8. Dataset কী?
+
+অনেকগুলো related data একসাথে থাকলে তাকে dataset বলা হয়।
+
+যেমন student dataset:
+
+| Name | Age | Marks | Result |
+| ---- | --: | ----: | ------ |
+| A    |  20 |    80 | Pass   |
+| B    |  21 |    45 | Pass   |
+| C    |  20 |    30 | Fail   |
+
+এখানে:
+
+* প্রতিটি **row** = একটি student's record
+* প্রতিটি **column** = একটি feature/information
+
+---
+
+# 9. Data Preprocessing কী?
+
+Raw data সরাসরি AI model-এ দেওয়া সবসময় ভালো হয় না।
+
+কারণ data-এর মধ্যে থাকতে পারে:
+
+* Missing value
+* Duplicate data
+* Wrong data
+* Text/category
+* Different numerical scales
+
+তাই model-এর আগে data clean এবং prepare করতে হয়।
+
+এই কাজকে বলা হয়:
+
+# Data Preprocessing
+
+সহজ flow:
+
+```text
+Raw Data
+   ↓
+Data Cleaning
+   ↓
+Data Transformation
+   ↓
+Feature Selection
+   ↓
+Feature Scaling
+   ↓
+Ready for ML
+```
+
+Source অনুযায়ী preprocessing হলো raw data-কে clean এবং structured format-এ transform করার process।
+
+---
+
+# 10. Data Cleaning
+
+Data Cleaning মানে data-এর সমস্যা ঠিক করা।
+
+যেমন:
+
+```text
+Age = 20
+Age = 21
+Age = NULL
+Age = 22
+Age = 20
+```
+
+এখানে:
+
+* NULL → Missing value
+* একই row একাধিকবার থাকলে → Duplicate
+
+এগুলো handle করতে হবে।
+
+---
