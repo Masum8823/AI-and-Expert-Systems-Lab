@@ -436,3 +436,44 @@ Mean:
 ধরা যেতে পারে।
 
 ---
+
+# 13. Categorical Data vs Numerical Data
+
+এটা খুব important।
+
+## Numerical Data
+
+যে data number দিয়ে প্রকাশ করা যায়।
+
+Example:
+
+```text
+Age = 25
+Salary = 50000
+Height = 5.8
+Marks = 85
+```
+
+এগুলো numerical।
+
+---
+
+## Categorical Data
+
+যে data category বা group বোঝায়।
+
+Example:
+
+```text
+Gender = Male
+City = Dhaka
+Color = Red
+Species = Setosa
+```
+
+এগুলো categorical।
+
+Source-এ categorical data-কে categories বোঝানো non-numeric data এবং numerical data-কে measurable numbers হিসেবে আলাদা করা হয়েছে।
+
+---
+
