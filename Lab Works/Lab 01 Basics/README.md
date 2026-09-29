@@ -2405,3 +2405,448 @@ Sklearn  → ML tools
 ```
 
 ---
+
+# 80. AI Lab-এ Dataset নিয়ে কাজ করার সাধারণ Pattern
+
+যেকোনো dataset পেলে প্রথমে এই pattern follow করতে পারো:
+
+```python
+import pandas as pd
+
+# 1. Load dataset
+df = pd.read_csv("dataset.csv")
+
+# 2. See first rows
+print(df.head())
+
+# 3. Check shape
+print(df.shape)
+
+# 4. Check information
+print(df.info())
+
+# 5. Check statistics
+print(df.describe())
+
+# 6. Check missing values
+print(df.isnull().sum())
+
+# 7. Check duplicates
+print(df.duplicated().sum())
+```
+
+এরপর প্রয়োজন অনুযায়ী:
+
+```text
+Missing Value Handle
+        ↓
+Duplicate Remove
+        ↓
+Categorical Encoding
+        ↓
+Feature Scaling
+        ↓
+Filtering / Feature Selection
+```
+
+---
+
+# 81. Exam-এর জন্য Short Definitions
+
+## AI
+
+**AI is the field of creating machines that can perform tasks requiring human intelligence.**
+
+সহজে:
+
+> Machine-কে intelligent কাজ করানোর technology/field হলো AI।
+
+---
+
+## Machine Learning
+
+> AI-এর একটি subset যেখানে computer data থেকে pattern শিখে prediction বা decision নেয়।
+
+---
+
+## Deep Learning
+
+> Multiple hidden layers-যুক্ত neural network-based learning method হলো Deep Learning।
+
+---
+
+## Data Preprocessing
+
+> AI/ML model-এর আগে raw data-কে clean, transform এবং prepare করার process হলো data preprocessing।
+
+---
+
+## Data Cleaning
+
+> Missing, duplicate এবং incorrect data handle করার process হলো data cleaning।
+
+---
+
+## Encoding
+
+> Categorical data-কে numerical form-এ convert করার process হলো encoding।
+
+---
+
+## Feature Scaling
+
+> Numerical features-কে comparable scale-এ আনার process হলো feature scaling।
+
+---
+
+## Normalization
+
+> Data-কে সাধারণত 0 থেকে 1 range-এ convert করার scaling technique হলো normalization।
+
+---
+
+## Standardization
+
+> Data-কে mean 0 এবং standard deviation 1-এর কাছাকাছি scale করার technique হলো standardization।
+
+---
+
+## DataFrame
+
+> Pandas-এর table-like data structure হলো DataFrame।
+
+---
+
+# 82. সবচেয়ে Important Differences
+
+## AI vs ML
+
+```text
+AI = বড় field
+ML = AI-এর subset
+```
+
+---
+
+## ML vs DL
+
+```text
+ML = বিভিন্ন learning algorithm-এর broad field
+
+DL = Multiple-layer Neural Network based learning
+```
+
+---
+
+## Numerical vs Categorical
+
+```text
+Numerical = Number
+
+Categorical = Category
+```
+
+Example:
+
+```text
+Age = 20          → Numerical
+
+Gender = Male     → Categorical
+```
+
+---
+
+## Normalization vs Standardization
+
+```text
+Normalization
+→ সাধারণত 0 থেকে 1
+
+Standardization
+→ Mean = 0
+→ Std = 1
+```
+
+---
+
+## Element-wise vs Matrix Multiplication
+
+```text
+A * B
+→ Same position-এর values multiply
+
+np.dot(A, B)
+→ Matrix multiplication
+```
+
+---
+
+# 83. এই পুরো Lab-টা একটা Real-Life Example দিয়ে বুঝি
+
+ধরো তুমি এমন একটা AI বানাবে:
+
+> **Student Pass/Fail Prediction**
+
+তোমার dataset:
+
+| Study Hours | Attendance | Previous Marks | Result |
+| ----------: | ---------: | -------------: | ------ |
+|           2 |         50 |             30 | Fail   |
+|           4 |         70 |             50 | Pass   |
+|           6 |         80 |             65 | Pass   |
+|           8 |         90 |             80 | Pass   |
+
+এখন কী করবে?
+
+### Step 1 — Dataset Load
+
+```text
+CSV → Pandas
+```
+
+### Step 2 — Dataset Understand
+
+```text
+head()
+shape
+info()
+describe()
+```
+
+### Step 3 — Missing Value Check
+
+```text
+isnull().sum()
+```
+
+### Step 4 — Duplicate Check
+
+```text
+duplicated()
+```
+
+### Step 5 — Categorical Data
+
+যদি:
+
+```text
+Gender = Male/Female
+```
+
+থাকে:
+
+```text
+Encoding
+```
+
+করব।
+
+### Step 6 — Scaling
+
+যদি কোনো feature-এর value অনেক বড় হয়:
+
+```text
+Feature Scaling
+```
+
+করতে পারি।
+
+### Step 7 — Features এবং Target
+
+```text
+Study Hours
+Attendance
+Previous Marks
+```
+
+হবে input features।
+
+```text
+Result
+```
+
+হবে target।
+
+### Step 8 — এরপর
+
+এই prepared data Machine Learning model-এ দেওয়া যাবে।
+
+---
+
+# 84. Beginner হিসেবে এখন কী কী মুখস্থ করবে?
+
+সব formula মুখস্থ করার আগে **concept বুঝবে**।
+
+এই order-এ শিখবে:
+
+```text
+1. Python Basic
+      ↓
+2. NumPy
+      ↓
+3. Pandas
+      ↓
+4. Matplotlib
+      ↓
+5. Dataset
+      ↓
+6. Data Preprocessing
+      ↓
+7. Encoding
+      ↓
+8. Scaling
+      ↓
+9. Machine Learning
+```
+
+---
+
+# 85. একদম Short Memory Map
+
+শেষ মুহূর্তে revision করার সময় শুধু এটা দেখলেও পুরো topic মনে পড়বে:
+
+```text
+AI
+│
+├── ML
+│   └── Neural Network
+│       └── Deep Learning
+│
+└── Data
+    │
+    ├── Load
+    │
+    ├── Explore
+    │   ├── head()
+    │   ├── shape
+    │   ├── info()
+    │   └── describe()
+    │
+    ├── Clean
+    │   ├── Missing Values
+    │   └── Duplicates
+    │
+    ├── Transform
+    │   └── Encoding
+    │
+    ├── Scale
+    │   ├── Normalization
+    │   └── Standardization
+    │
+    ├── Filter
+    │
+    └── ML Model
+```
+
+---
+
+# 86. One-Line Cheat Sheet
+
+```text
+AI
+→ Machine-কে intelligent কাজ করানো।
+
+ML
+→ Data থেকে machine-এর pattern শেখা।
+
+DL
+→ Multiple-layer neural network based learning।
+
+Dataset
+→ অনেকগুলো related data-এর collection।
+
+Data Preprocessing
+→ Model-এর আগে data clean ও prepare করা।
+
+NumPy
+→ Numerical/Array/Matrix কাজ।
+
+Pandas
+→ Dataset/Table কাজ।
+
+Matplotlib
+→ Graph/Chart তৈরি।
+
+DataFrame
+→ Pandas-এর table।
+
+head()
+→ প্রথম কয়েকটি row।
+
+shape
+→ rows এবং columns।
+
+info()
+→ Dataset-এর structure/info।
+
+describe()
+→ Numerical statistics।
+
+isnull().sum()
+→ Missing value count।
+
+dropna()
+→ Missing row/values remove।
+
+fillna()
+→ Missing value fill।
+
+duplicated()
+→ Duplicate check।
+
+drop_duplicates()
+→ Duplicate remove।
+
+LabelEncoder
+→ Category → Number।
+
+MinMaxScaler
+→ Values → 0 থেকে 1 range।
+
+Filtering
+→ Condition অনুযায়ী data select।
+```
+
+---
+
+# 87. Final Understanding
+
+এই Lab-এর সবচেয়ে বড় concept হলো:
+
+> **AI model বানানোর আগে data-কে বুঝতে এবং ঠিকভাবে prepare করতে হয়।**
+
+তাই পুরো Lab-কে শুধু এই sentence দিয়ে মনে রাখতে পারো:
+
+```text
+DATA
+ ↓
+LOAD
+ ↓
+UNDERSTAND
+ ↓
+CLEAN
+ ↓
+TRANSFORM
+ ↓
+SCALE
+ ↓
+FILTER
+ ↓
+READY FOR MACHINE LEARNING
+```
+
+আর Python-এর দিক থেকে:
+
+```text
+NumPy
+→ Calculation
+
+Pandas
+→ Data
+
+Matplotlib
+→ Visualization
+
+Scikit-learn
+→ Preprocessing / ML
+```
