@@ -1938,3 +1938,92 @@ np.random.choice(df.index, 5)
 
 ---
 
+# 62. Duplicate কী?
+
+একই row একাধিকবার থাকলে duplicate।
+
+Example:
+
+```text
+Name    Age
+Alice   20
+Bob     21
+Alice   20
+```
+
+এখানে:
+
+```text
+Alice 20
+```
+
+দুইবার আছে।
+
+তাই একটি duplicate।
+
+---
+
+# 63. Duplicate Check
+
+Code:
+
+```python
+df.duplicated().sum()
+```
+
+এটা মোট কয়টি duplicate row আছে সেটা বলে।
+
+যদি output:
+
+```text
+1
+```
+
+হয়, তাহলে 1টি duplicate আছে।
+
+---
+
+# 64. Duplicate Rows দেখা
+
+```python
+df[df.duplicated()]
+```
+
+এটি duplicate row দেখায়।
+
+এখানে প্রথম occurrence সাধারণত বাদ পড়ে এবং পরের duplicate row দেখানো হয়।
+
+---
+
+# 65. সব Duplicate দেখা
+
+```python
+df[df.duplicated(keep=False)]
+```
+
+এতে duplicate group-এর প্রথম row-সহ সব duplicate rows দেখা যায়।
+
+Example:
+
+```text
+101 → same data
+142 → same data
+```
+
+দুটোই দেখাবে।
+
+Source-এর example-এ 1 duplicate pair পাওয়া গিয়েছিল এবং duplicate remove করার পর shape `(149, 5)` হয়েছিল।
+
+---
+
+# 66. Duplicate Remove
+
+Code:
+
+```python
+df = df.drop_duplicates()
+```
+
+এতে duplicate rows remove হয়ে যাবে।
+
+---
