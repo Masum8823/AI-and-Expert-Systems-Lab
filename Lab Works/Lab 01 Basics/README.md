@@ -1371,3 +1371,138 @@ Bob       60000     6000
 হবে।
 
 ---
+
+# 41. Matplotlib কী?
+
+Matplotlib হলো Python-এর একটি visualization library।
+
+সহজভাবে:
+
+> Data-কে graph/chart আকারে দেখানোর জন্য Matplotlib ব্যবহার করা হয়।
+
+Import:
+
+```python
+import matplotlib.pyplot as plt
+```
+
+এখানে:
+
+```text
+plt
+```
+
+হলো `matplotlib.pyplot`-এর short name।
+
+---
+
+# 42. Bar Chart
+
+Bar chart দিয়ে category অনুযায়ী value compare করা যায়।
+
+Source:
+
+```python
+names = ['Alice', 'Bob', 'Charlie', 'David']
+scores = [85, 90, 95, 88]
+```
+
+মানে:
+
+```text
+Alice   → 85
+Bob     → 90
+Charlie → 95
+David   → 88
+```
+
+তারপর:
+
+```python
+plt.bar(names, scores)
+```
+
+দিলে bar chart তৈরি হবে।
+
+---
+
+# 43. Graph-এর Labels
+
+```python
+plt.xlabel("Students")
+```
+
+X-axis-এর নাম।
+
+```python
+plt.ylabel("Scores")
+```
+
+Y-axis-এর নাম।
+
+```python
+plt.title("Student Scores Bar Chart")
+```
+
+Graph-এর title।
+
+শেষে:
+
+```python
+plt.show()
+```
+
+graph দেখায়।
+
+---
+
+# 44. Line Plot
+
+Line plot-এ points line দিয়ে connect করা হয়।
+
+Example:
+
+```python
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 4, 6, 8, 10])
+```
+
+তারপর:
+
+```python
+plt.plot(x, y)
+```
+
+এতে:
+
+```text
+1 → 2
+2 → 4
+3 → 6
+4 → 8
+5 → 10
+```
+
+এর relationship graph-এ দেখা যাবে।
+
+---
+
+# 45. Scatter Plot
+
+Scatter plot-এ individual points হিসেবে data দেখানো হয়।
+
+```python
+plt.scatter(x, y)
+```
+
+এটি useful যখন আমরা দুইটি variable-এর relationship দেখতে চাই।
+
+যেমন:
+
+```text
+Study Hours vs Marks
+```
+
+প্রতিটি student একটি point হতে পারে।
+
+---
