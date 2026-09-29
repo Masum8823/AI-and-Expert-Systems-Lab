@@ -1175,3 +1175,199 @@ Variance = Standard Deviation²
 ```
 
 ---
+
+# 35. Pandas কী?
+
+Pandas হলো Python-এর একটি library যা mainly:
+
+* Dataset load
+* Table/data handling
+* Filtering
+* Cleaning
+* Analysis
+
+এর জন্য ব্যবহার হয়।
+
+Import:
+
+```python
+import pandas as pd
+```
+
+এখানে:
+
+```text
+pd
+```
+
+হলো Pandas-এর short name।
+
+---
+
+# 36. DataFrame কী?
+
+Pandas-এর সবচেয়ে important concept:
+
+# DataFrame
+
+সহজভাবে:
+
+> DataFrame = Python-এর ভিতরে Excel table-এর মতো structure।
+
+Example:
+
+```text
+Name     Age     Salary
+Alice    25      50000
+Bob      30      60000
+Charlie  35      70000
+```
+
+এটাই DataFrame-এর মতো।
+
+---
+
+# 37. DataFrame তৈরি করা
+
+Source:
+
+```python
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Emma'],
+    'Age': [25, 30, 35, 40, 45],
+    'Salary': [50000, 60000, 70000, 80000, None]
+}
+
+df = pd.DataFrame(data)
+```
+
+এখানে:
+
+```text
+data
+```
+
+একটি Python dictionary।
+
+তারপর:
+
+```python
+pd.DataFrame(data)
+```
+
+dictionary-কে table/DataFrame বানাচ্ছে।
+
+---
+
+# 38. `df` কী?
+
+এখানে:
+
+```python
+df = pd.DataFrame(data)
+```
+
+আমরা DataFrame-টাকে:
+
+```text
+df
+```
+
+নামে রেখেছি।
+
+`df` কোনো special keyword না।
+
+আমরা চাইলে:
+
+```python
+table = pd.DataFrame(data)
+```
+
+ও লিখতে পারতাম।
+
+কিন্তু সাধারণভাবে:
+
+```text
+df = DataFrame
+```
+
+হিসেবে সবাই ব্যবহার করে।
+
+---
+
+# 39. Data Filtering
+
+Source:
+
+```python
+filtered_df = df[df['Age'] > 30]
+```
+
+এটার মানে:
+
+> যাদের Age 30-এর বেশি, শুধু তাদের rows রাখো।
+
+যেমন:
+
+```text
+Alice    25
+Bob      30
+Charlie  35
+David    40
+Emma     45
+```
+
+Filter:
+
+```text
+Age > 30
+```
+
+তাহলে:
+
+```text
+Charlie
+David
+Emma
+```
+
+থাকবে।
+
+---
+
+# 40. New Column তৈরি করা
+
+Source:
+
+```python
+df['Bonus'] = df['Salary'] * 0.1
+```
+
+এখানে:
+
+```text
+Salary × 10%
+```
+
+হিসেবে Bonus তৈরি হচ্ছে।
+
+যেমন:
+
+```text
+Salary = 50000
+
+Bonus = 50000 × 0.1
+      = 5000
+```
+
+তাই table:
+
+```text
+Name      Salary    Bonus
+Alice     50000     5000
+Bob       60000     6000
+```
+
+হবে।
+
+---
