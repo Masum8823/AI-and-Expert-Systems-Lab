@@ -325,3 +325,114 @@ Age = 20
 এগুলো handle করতে হবে।
 
 ---
+
+# 11. Missing Value কী?
+
+যখন কোনো data পাওয়া যায় না তখন সেটি missing value।
+
+Example:
+
+| Name  | Age | Salary |
+| ----- | --: | -----: |
+| Alice |  25 |  50000 |
+| Bob   |  30 |  60000 |
+| Emma  |  45 |    NaN |
+
+এখানে Emma-এর salary নেই।
+
+Pandas সাধারণত এটাকে:
+
+```text
+NaN
+```
+
+দিয়ে দেখায়।
+
+NaN-এর অর্থ এখানে value পাওয়া যাচ্ছে না।
+
+---
+
+# 12. Missing Value কীভাবে handle করব?
+
+মূলত তিনভাবে করা যায়।
+
+## Method 1 — Remove
+
+যে row-তে missing value আছে সেটি delete করে দেওয়া।
+
+```python
+df.dropna()
+```
+
+Example:
+
+```text
+Alice   25   50000
+Bob     30   60000
+Emma    45   NaN
+```
+
+`dropna()` করলে Emma-এর row বাদ যেতে পারে।
+
+---
+
+## Method 2 — Fill
+
+Missing জায়গায় একটি suitable value বসানো।
+
+যেমন mean:
+
+```python
+df.fillna(df.mean())
+```
+
+ধরো:
+
+```text
+Salary:
+50000
+60000
+NaN
+80000
+```
+
+Mean:
+
+```text
+(50000 + 60000 + 80000) / 3
+= 63333.33
+```
+
+তাহলে NaN-এর জায়গায় প্রায়:
+
+```text
+63333.33
+```
+
+বসানো যায়।
+
+---
+
+## Method 3 — Interpolation
+
+আগের এবং পরের value দেখে missing value estimate করা।
+
+সহজভাবে:
+
+```text
+10
+20
+?
+40
+50
+```
+
+এখানে মাঝের value অনুমান করে:
+
+```text
+30
+```
+
+ধরা যেতে পারে।
+
+---
