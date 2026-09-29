@@ -477,3 +477,98 @@ Source-এ categorical data-কে categories বোঝানো non-numeric dat
 
 ---
 
+# 14. Encoding কী?
+
+Machine Learning model সাধারণত numerical data নিয়ে কাজ করতে বেশি স্বাচ্ছন্দ্যবোধ করে।
+
+কিন্তু dataset-এ যদি থাকে:
+
+```text
+Male
+Female
+```
+
+তাহলে এগুলোকে number-এ convert করতে হতে পারে।
+
+এই conversion হলো:
+
+# Encoding
+
+---
+
+# 15. Label Encoding
+
+প্রতিটি category-কে একটি number দেওয়া হয়।
+
+Example:
+
+```text
+Male   → 0
+Female → 1
+```
+
+আর species:
+
+```text
+setosa     → 0
+versicolor → 1
+virginica  → 2
+```
+
+Python:
+
+```python
+from sklearn.preprocessing import LabelEncoder
+
+encoder = LabelEncoder()
+
+df["species"] = encoder.fit_transform(df["species"])
+```
+
+এখানে:
+
+### `LabelEncoder()`
+
+একটি encoder তৈরি করছে।
+
+### `fit_transform()`
+
+দুইটি কাজ একসাথে করছে:
+
+```text
+fit
++
+transform
+```
+
+অর্থাৎ category চিনছে এবং তারপর number-এ convert করছে।
+
+Source-এর Iris example-এ `species` column-কে LabelEncoder দিয়ে numeric label-এ convert করা হয়েছে।
+
+---
+
+# 16. One-Hot Encoding
+
+আরেকটি encoding method হলো One-Hot Encoding।
+
+ধরো:
+
+```text
+Gender
+------
+Male
+Female
+```
+
+এটা এমন হতে পারে:
+
+| Male | Female |
+| ---: | -----: |
+|    1 |      0 |
+|    0 |      1 |
+
+অর্থাৎ প্রতিটি category-এর জন্য আলাদা binary column তৈরি হয়।
+
+Source-এ One-Hot Encoding এবং Label Encoding দুটো method-ই উল্লেখ করা হয়েছে।
+
+---
