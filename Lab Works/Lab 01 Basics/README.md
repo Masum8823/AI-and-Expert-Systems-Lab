@@ -188,3 +188,37 @@ Deep Learning complex কাজের ক্ষেত্রে খুব useful,
 Source-এও DL-কে multiple hidden layers-যুক্ত neural network হিসেবে ব্যাখ্যা করা হয়েছে।
 
 ---
+
+# 6. এই Lab-এ আসলে কী শিখব?
+
+এই lab-এর মূল focus এখনো বড় কোনো AI model বানানো না।
+
+বরং AI-এর আগে যে সবচেয়ে important কাজ করতে হয়:
+
+> **Data নিয়ে কাজ করা।**
+
+Lab-এ মূলত আমরা শিখব:
+
+```text
+Dataset
+   ↓
+Load
+   ↓
+Understand
+   ↓
+Clean
+   ↓
+Transform
+   ↓
+Scale
+   ↓
+Filter
+   ↓
+AI/ML Model-এর জন্য প্রস্তুত
+```
+
+এই process-এর সবচেয়ে গুরুত্বপূর্ণ অংশ হলো:
+
+# Data Preprocessing
+
+---
