@@ -2027,3 +2027,58 @@ df = df.drop_duplicates()
 এতে duplicate rows remove হয়ে যাবে।
 
 ---
+
+# 67. Encoding করার আগে একটা গুরুত্বপূর্ণ বিষয়
+
+ধরো:
+
+```text
+species
+
+setosa
+versicolor
+virginica
+```
+
+Machine-এর জন্য এগুলোকে numerical representation দিতে পারি:
+
+```text
+setosa     → 0
+versicolor → 1
+virginica  → 2
+```
+
+তারপর model numerical data নিয়ে কাজ করতে পারে।
+
+---
+
+# 68. LabelEncoder পুরো flow
+
+```python
+from sklearn.preprocessing import LabelEncoder
+
+encoder = LabelEncoder()
+
+df["species"] = encoder.fit_transform(df["species"])
+```
+
+এখানে step:
+
+```text
+species
+   ↓
+LabelEncoder
+   ↓
+numeric values
+```
+
+Example:
+
+```text
+setosa     → 0
+versicolor → 1
+virginica  → 2
+```
+
+---
+
