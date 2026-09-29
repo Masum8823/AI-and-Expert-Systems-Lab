@@ -1638,3 +1638,185 @@ Iris:
 ```
 
 ---
+# 51. সব rows দেখানো
+
+Pandas বড় dataset হলে সব rows automatically দেখায় না।
+
+সব rows দেখাতে:
+
+```python
+pd.set_option('display.max_rows', None)
+```
+
+তারপর:
+
+```python
+print(df)
+```
+
+শেষে চাইলে setting reset করা যায়:
+
+```python
+pd.reset_option('display.max_rows')
+```
+
+---
+
+# 52. সব columns দেখানো
+
+```python
+pd.set_option('display.max_columns', None)
+```
+
+এতে সব columns display করা যাবে।
+
+Reset:
+
+```python
+pd.reset_option('display.max_columns')
+```
+
+---
+
+# 53. Data Exploration
+
+Dataset পাওয়ার পর সরাসরি model বানানো উচিত না।
+
+প্রথমে dataset বুঝতে হবে।
+
+এটাকে বলা যায়:
+
+# Data Exploration
+
+আমরা জানতে চাই:
+
+```text
+কত rows?
+কত columns?
+কোন data type?
+Missing value আছে?
+Statistics কেমন?
+```
+
+---
+
+# 54. `df.info()`
+
+Code:
+
+```python
+df.info()
+```
+
+এতে dataset সম্পর্কে basic information পাওয়া যায়।
+
+যেমন:
+
+```text
+Number of rows
+Column names
+Non-null count
+Data type
+Memory usage
+```
+
+Iris dataset-এ source output অনুযায়ী 5টি column ছিল, যার 4টি `float64` এবং `species` ছিল `object`।
+
+---
+
+# 55. Data Type
+
+Example:
+
+```text
+float64
+object
+```
+
+### `float64`
+
+Decimal number।
+
+Example:
+
+```text
+5.1
+3.5
+1.4
+```
+
+### `object`
+
+সাধারণত text/string type-এর data।
+
+যেমন:
+
+```text
+setosa
+versicolor
+virginica
+```
+
+---
+
+# 56. `df.describe()`
+
+Code:
+
+```python
+df.describe()
+```
+
+এটি numerical columns-এর statistical summary দেয়।
+
+যেমন:
+
+```text
+count
+mean
+std
+min
+25%
+50%
+75%
+max
+```
+
+---
+
+# 57. এগুলোর অর্থ কী?
+
+## count
+
+কতগুলো valid numerical value আছে।
+
+## mean
+
+Average।
+
+## std
+
+Standard deviation।
+
+## min
+
+সবচেয়ে ছোট value।
+
+## 25%
+
+25th percentile।
+
+## 50%
+
+Median।
+
+## 75%
+
+75th percentile।
+
+## max
+
+সবচেয়ে বড় value।
+
+---
+
