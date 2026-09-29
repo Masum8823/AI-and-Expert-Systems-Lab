@@ -1506,3 +1506,135 @@ Study Hours vs Marks
 প্রতিটি student একটি point হতে পারে।
 
 ---
+# 46. Dataset Import করা
+
+AI/ML-এর জন্য আমাদের real dataset দরকার।
+
+Dataset আসতে পারে:
+
+```text
+CSV file
+URL
+Database
+Excel
+```
+
+Pandas দিয়ে CSV read করা যায়:
+
+```python
+pd.read_csv()
+```
+
+---
+
+# 47. URL থেকে Dataset Load
+
+Source-এর Iris dataset:
+
+```python
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
+
+df = pd.read_csv(url)
+```
+
+এখানে:
+
+```text
+url
+```
+
+এর মধ্যে dataset-এর address রাখা হয়েছে।
+
+তারপর:
+
+```python
+pd.read_csv(url)
+```
+
+dataset পড়ছে।
+
+---
+
+# 48. Iris Dataset কী?
+
+Iris একটি flower dataset।
+
+এতে সাধারণত flower-এর measurements এবং species থাকে।
+
+Columns:
+
+```text
+sepal_length
+sepal_width
+petal_length
+petal_width
+species
+```
+
+Source example-এ dataset-এর shape:
+
+```text
+150 rows
+5 columns
+```
+
+ছিল।
+
+---
+
+# 49. `head()` কী?
+
+Code:
+
+```python
+df.head()
+```
+
+Dataset-এর প্রথম 5 rows দেখায়।
+
+যদি:
+
+```python
+df.head(10)
+```
+
+দিই, তাহলে প্রথম 10 rows দেখতে পারব।
+
+Default:
+
+```text
+5 rows
+```
+
+---
+
+# 50. `shape` কী?
+
+Code:
+
+```python
+df.shape
+```
+
+dataset-এর:
+
+```text
+(rows, columns)
+```
+
+দেয়।
+
+Iris:
+
+```text
+(150, 5)
+```
+
+মানে:
+
+```text
+150 rows
+5 columns
+```
+
+---
