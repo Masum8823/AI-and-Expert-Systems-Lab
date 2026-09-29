@@ -2082,3 +2082,149 @@ virginica  → 2
 
 ---
 
+# 69. Scaling-এর Practical Code
+
+Source:
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+
+columns_to_scale = [
+    "sepal_length",
+    "petal_length"
+]
+
+df_scaled = df.copy()
+
+df_scaled[columns_to_scale] = scaler.fit_transform(
+    df[columns_to_scale]
+)
+```
+
+এখন line-by-line দেখি।
+
+---
+
+# 70. `MinMaxScaler()`
+
+```python
+scaler = MinMaxScaler()
+```
+
+একটি Min-Max scaler তৈরি করা হলো।
+
+এর কাজ:
+
+```text
+Old values
+    ↓
+0 থেকে 1 range
+```
+
+এ convert করা।
+
+---
+
+# 71. কোন columns scale করব?
+
+```python
+columns_to_scale = [
+    "sepal_length",
+    "petal_length"
+]
+```
+
+এখানে আমরা বলছি:
+
+> শুধু এই দুইটি column scale করব।
+
+---
+
+# 72. `df.copy()`
+
+```python
+df_scaled = df.copy()
+```
+
+এখানে original `df` সরাসরি পরিবর্তন না করে একটি copy তৈরি করা হয়েছে।
+
+অর্থাৎ:
+
+```text
+Original:
+df
+
+Copy:
+df_scaled
+```
+
+তাই experiment করতে সুবিধা হয়।
+
+---
+
+# 73. `fit_transform()`
+
+```python
+scaler.fit_transform(df[columns_to_scale])
+```
+
+এখানে দুইটি কাজ হচ্ছে।
+
+### fit
+
+Data দেখে:
+
+```text
+minimum
+maximum
+```
+
+শিখে নেয়।
+
+### transform
+
+সেই information ব্যবহার করে values scale করে।
+
+অর্থাৎ:
+
+```text
+fit
+↓
+Data-এর min/max বুঝে
+
+transform
+↓
+values 0-1 range-এ convert
+```
+
+দুটো একসাথে:
+
+```text
+fit_transform()
+```
+
+---
+
+# 74. Scaling-এর Output
+
+আগে:
+
+```text
+sepal_length = 5.1
+petal_length = 1.4
+```
+
+Scaling-এর পরে source-এর output-এ এগুলো:
+
+```text
+sepal_length = 0.222222
+petal_length = 0.067797
+```
+
+এর মতো value হয়েছে।
+
+অর্থাৎ original measurement-এর scale বদলে গেছে।
+
+---
