@@ -1272,3 +1272,84 @@ print(X_test.shape)
 এগুলো দিয়ে training এবং testing data-তে কত rows/columns আছে সেটা দেখা যায়।
 
 ---
+# 57. Feature Scaling / Standardization
+
+Lab-এ:
+
+```python
+scaler = StandardScaler()
+```
+
+ব্যবহার করা হয়েছে।
+
+তারপর:
+
+```python
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+```
+
+---
+
+# 58. StandardScaler কী করে?
+
+StandardScaler numerical features-কে standardize করে।
+
+Concept:
+
+```text
+Mean ≈ 0
+Standard Deviation ≈ 1
+```
+
+এর মতো scale-এ নিয়ে আসে।
+
+---
+
+# 59. কেন Training Data-তে `fit_transform()`?
+
+```python
+X_train = scaler.fit_transform(X_train)
+```
+
+এখানে:
+
+```text
+fit
+↓
+Training data-এর mean/std শেখে
+
+transform
+↓
+Training data scale করে
+```
+
+---
+
+# 60. কেন Test Data-তে শুধু `transform()`?
+
+```python
+X_test = scaler.transform(X_test)
+```
+
+খুব important:
+
+Test data-এর statistics দিয়ে নতুন করে scaler fit করা হয় না।
+
+Training data থেকে শেখা scaling parameters ব্যবহার করেই test data transform করা হয়।
+
+সহজভাবে:
+
+```text
+X_train
+ ↓
+fit
+ ↓
+transform
+
+X_test
+ ↓
+শুধু transform
+```
+
+---
