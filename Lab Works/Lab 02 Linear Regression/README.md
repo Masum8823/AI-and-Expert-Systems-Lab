@@ -1353,3 +1353,68 @@ X_test
 ```
 
 ---
+# 61. Simple Linear Regression
+
+এখন আমরা শুধু একটি feature ব্যবহার করব:
+
+```text
+MedInc
+```
+
+অর্থাৎ:
+
+```text
+Median Income → House Price
+```
+
+এটাই:
+
+# Simple Linear Regression
+
+---
+
+# 62. Simple Regression-এর Code
+
+```python
+X_simple = df[["MedInc"]]
+Y_simple = df["Price"]
+```
+
+এখানে:
+
+```text
+X_simple → MedInc
+Y_simple → Price
+```
+
+---
+
+# 63. কেন `df[["MedInc"]]`?
+
+এখানে দুইটি square bracket:
+
+```python
+df[["MedInc"]]
+```
+
+ব্যবহার করা হয়েছে।
+
+কারণ আমরা DataFrame format-এ একটি column নিতে চাই।
+
+এটি:
+
+```python
+df["MedInc"]
+```
+
+থেকে কিছুটা আলাদা।
+
+Lab code-এ model input হিসেবে DataFrame shape ধরে রাখার জন্য:
+
+```python
+df[["MedInc"]]
+```
+
+ব্যবহার করা হয়েছে।
+
+---
