@@ -2504,3 +2504,98 @@ Predicted
 ```
 
 ---
+# 106. Quick Revision Table
+
+| Term                | সহজ অর্থ                            |
+| ------------------- | ----------------------------------- |
+| Linear Regression   | Continuous value predict করার model |
+| Regression          | Number predict করা                  |
+| Simple Regression   | 1 feature                           |
+| Multiple Regression | Multiple features                   |
+| X                   | Input features                      |
+| Y                   | Target                              |
+| m                   | Slope                               |
+| c                   | Intercept                           |
+| β                   | Coefficients                        |
+| Training            | Model শেখানো                        |
+| Testing             | Model পরীক্ষা                       |
+| Prediction          | Model-এর estimated output           |
+| MAE                 | Average absolute error              |
+| MSE                 | Average squared error               |
+| R²                  | Model কতটা variation explain করছে   |
+| Correlation         | দুই variable-এর relationship        |
+| Scaling             | Feature-এর scale adjust করা         |
+| StandardScaler      | Standardization করা                 |
+| Coefficient         | Feature-এর learned coefficient      |
+
+---
+
+# 107. One-Minute Memory Map
+
+শেষ মুহূর্তে revision করার সময়:
+
+```text
+LINEAR REGRESSION
+        ↓
+Continuous Value Prediction
+        ↓
+     ┌──┴──┐
+     ↓     ↓
+ Simple  Multiple
+   ↓        ↓
+1 Feature  Many Features
+   ↓        ↓
+Y=mX+c    Y=β₀+β₁X₁+...
+        ↓
+      Dataset
+        ↓
+       EDA
+        ↓
+     X / Y Split
+        ↓
+   Train / Test
+        ↓
+      Scaling
+        ↓
+     Training
+        ↓
+    Prediction
+        ↓
+   MAE / MSE / R²
+        ↓
+   Coefficients
+        ↓
+ Feature Analysis
+```
+
+---
+
+# 108. সবচেয়ে Important কথা
+
+এই Lab-কে এক লাইনে মনে রাখো:
+
+> **Linear Regression হলো এমন একটি supervised learning method যা input feature(s) এবং continuous target-এর মধ্যে linear relationship শিখে target predict করে।**
+
+আর পুরো practical process:
+
+```text
+Dataset
+ ↓
+Understand Data
+ ↓
+EDA
+ ↓
+Separate X and Y
+ ↓
+Train/Test Split
+ ↓
+Scale Features
+ ↓
+Train Linear Regression
+ ↓
+Predict
+ ↓
+Evaluate
+ ↓
+Analyze Coefficients
+```
