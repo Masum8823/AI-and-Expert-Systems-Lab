@@ -609,3 +609,116 @@ Better Model
 `LinearRegression()` ব্যবহার করছি।
 
 ---
+# 23. এখন Python Part
+
+এই Lab-এ প্রধান libraries:
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+এছাড়াও Scikit-learn থেকে:
+
+```python
+train_test_split
+LinearRegression
+metrics
+StandardScaler
+fetch_california_housing
+```
+
+ব্যবহার করা হয়েছে।
+
+---
+
+# 24. NumPy
+
+```python
+import numpy as np
+```
+
+NumPy numerical calculation এবং arrays-এর জন্য ব্যবহার হয়।
+
+এই Lab-এ খুব বেশি NumPy operation নেই, কিন্তু Python-এর data science ecosystem-এর গুরুত্বপূর্ণ library।
+
+---
+
+# 25. Pandas
+
+```python
+import pandas as pd
+```
+
+Pandas dataset/table নিয়ে কাজ করার জন্য ব্যবহার করা হয়।
+
+যেমন:
+
+```python
+df = pd.DataFrame(...)
+```
+
+এখানে:
+
+```text
+df = DataFrame
+```
+
+---
+
+# 26. Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+```
+
+Graph তৈরি করার জন্য ব্যবহার হয়।
+
+যেমন:
+
+```python
+plt.scatter()
+plt.plot()
+plt.show()
+```
+
+---
+
+# 27. Seaborn
+
+```python
+import seaborn as sns
+```
+
+Seaborn মূলত সুন্দর এবং সহজ statistical visualization তৈরির জন্য ব্যবহৃত হয়।
+
+এই Lab-এ:
+
+```python
+sns.heatmap()
+sns.barplot()
+```
+
+ব্যবহার করা হয়েছে।
+
+---
+
+# 28. Scikit-learn
+
+Scikit-learn হলো Python-এর জনপ্রিয় Machine Learning library।
+
+এই Lab-এ এটি ব্যবহার হয়েছে:
+
+```text
+Train/Test Split
+Linear Regression
+Evaluation Metrics
+Feature Scaling
+Dataset Loading
+```
+
+এর জন্য।
+
+---
