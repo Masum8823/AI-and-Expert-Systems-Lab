@@ -1158,3 +1158,117 @@ Y → Output/Target
 ```
 
 ---
+# 50. Train এবং Test Data
+
+Machine Learning-এ পুরো dataset দিয়ে model train করে একই data দিয়ে পরীক্ষা করা ভালো practice নয়।
+
+তাই dataset ভাগ করা হয়:
+
+```text
+Training Data
+Testing Data
+```
+
+---
+
+# 51. Training Data কী?
+
+Training data দিয়ে:
+
+> Model relationship শেখে।
+
+Example:
+
+```text
+Training Data
+     ↓
+Model learns
+     ↓
+Pattern
+```
+
+---
+
+# 52. Testing Data কী?
+
+Testing data model training-এর সময় ব্যবহার না করে পরে model-এর performance পরীক্ষা করার জন্য রাখা হয়।
+
+```text
+Training
+   ↓
+Learn
+
+Testing
+   ↓
+Evaluate
+```
+
+---
+
+# 53. 80/20 Split
+
+Lab-এ:
+
+```text
+80% → Training
+20% → Testing
+```
+
+ব্যবহার করা হয়েছে।
+
+Code:
+
+```python
+X_train, X_test, Y_train, Y_test = train_test_split(
+    X,
+    Y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+---
+
+# 54. `test_size=0.2`
+
+```python
+test_size=0.2
+```
+
+মানে:
+
+```text
+20% → Test
+80% → Train
+```
+
+---
+
+# 55. `random_state=42`
+
+Dataset split করার সময় random selection হয়।
+
+```python
+random_state=42
+```
+
+দিলে একই code আবার run করলে একই ধরনের split পাওয়া যায়।
+
+এটাকে reproducibility-এর জন্য ব্যবহার করা হয়।
+
+`42` নিজে কোনো magic mathematical value না।
+
+অন্য fixed integer-ও দেওয়া যায়।
+
+---
+
+# 56. Training এবং Testing Shape
+
+```python
+print(X_train.shape)
+print(X_test.shape)
+```
+
+এগুলো দিয়ে training এবং testing data-তে কত rows/columns আছে সেটা দেখা যায়।
+
+---
