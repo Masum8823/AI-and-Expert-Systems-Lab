@@ -1791,3 +1791,100 @@ Lower → Better
 তবে metric-এর scale আলাদা হওয়ায় raw MAE আর MSE-এর number সরাসরি compare করা উচিত নয়।
 
 ---
+
+# 81. R² Score
+
+R² =
+
+# R-squared
+
+এটা বলে model target-এর variation কতটা explain করতে পারছে।
+
+সহজভাবে:
+
+> Model data-এর relationship কতটা ভালোভাবে capture করছে তার একটি measure।
+
+---
+
+# 82. R²-এর Basic Idea
+
+সাধারণভাবে:
+
+```text
+R² closer to 1
+→ better fit
+
+R² around 0
+→ model খুব কম explanatory power দেখাচ্ছে
+
+R² negative
+→ কিছু পরিস্থিতিতে খুব poor fit হতে পারে
+```
+
+Lab material-এ মূলত বলা হয়েছে:
+
+> R² value 1-এর কাছাকাছি হলে fit ভালো।
+
+---
+
+# 83. R² Example
+
+ধরো:
+
+```text
+R² = 0.90
+```
+
+Conceptually model target-এর variation-এর বড় অংশ explain করছে।
+
+আর:
+
+```text
+R² = 0.30
+```
+
+হলে model তুলনামূলকভাবে কম variation explain করছে।
+
+---
+
+# 84. Metrics-এর Code
+
+Simple regression:
+
+```python
+mean_absolute_error(
+    Y_test_simple,
+    Y_pred_simple
+)
+
+mean_squared_error(
+    Y_test_simple,
+    Y_pred_simple
+)
+
+r2_score(
+    Y_test_simple,
+    Y_pred_simple
+)
+```
+
+Multiple regression:
+
+```python
+mean_absolute_error(
+    Y_test,
+    Y_pred_multi
+)
+
+mean_squared_error(
+    Y_test,
+    Y_pred_multi
+)
+
+r2_score(
+    Y_test,
+    Y_pred_multi
+)
+```
+
+---
