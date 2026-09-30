@@ -906,3 +906,255 @@ pd.reset_option('display.max_columns')
 দিয়ে Pandas-এর display settings আগের অবস্থায় ফেরত নেওয়া যায়।
 
 ---
+
+# 37. EDA কী?
+
+EDA =
+
+# Exploratory Data Analysis
+
+সহজভাবে:
+
+> Dataset-এর ভিতরে কী আছে সেটা explore এবং understand করার process।
+
+Model train করার আগে আমরা জানতে চাই:
+
+```text
+Data কেমন?
+Missing value আছে?
+Values-এর distribution কেমন?
+Features-এর relationship কেমন?
+```
+
+---
+
+# 38. `df.describe()`
+
+```python
+print(df.describe())
+```
+
+এটি numerical columns-এর statistical summary দেয়।
+
+যেমন:
+
+```text
+count
+mean
+std
+min
+25%
+50%
+75%
+max
+```
+
+এসব আমরা আগের Lab-এও দেখেছি।
+
+---
+
+# 39. Missing Value Check
+
+```python
+df.isnull().sum()
+```
+
+প্রতিটি column-এ কতটি missing value আছে সেটা দেখায়।
+
+যদি:
+
+```text
+MedInc     0
+HouseAge   0
+...
+```
+
+হয়, তাহলে ওই columns-এ missing value নেই।
+
+---
+
+# 40. Correlation কী?
+
+এটা Lab 2-এর খুব important concept।
+
+Correlation হলো দুইটি variable-এর মধ্যে relationship-এর strength এবং direction বোঝার একটি statistical measure।
+
+সহজভাবে:
+
+```text
+X বাড়লে Y-ও বাড়ে?
+X বাড়লে Y কমে?
+নাকি তেমন relationship নেই?
+```
+
+---
+
+# 41. Positive Correlation
+
+যদি:
+
+```text
+X ↑
+Y ↑
+```
+
+তাহলে positive correlation থাকতে পারে।
+
+Example:
+
+```text
+Income ↑
+House Price ↑
+```
+
+---
+
+# 42. Negative Correlation
+
+যদি:
+
+```text
+X ↑
+Y ↓
+```
+
+তাহলে negative correlation হতে পারে।
+
+Example:
+
+```text
+একটি variable বাড়লে অন্যটি কমছে।
+```
+
+---
+
+# 43. Correlation Heatmap
+
+Code:
+
+```python
+plt.figure(figsize=(10, 6))
+
+sns.heatmap(
+    df.corr(),
+    annot=True,
+    cmap="coolwarm",
+    linewidths=0.5
+)
+
+plt.title("Feature Correlation Heatmap")
+plt.show()
+```
+
+এখানে সবচেয়ে important:
+
+```python
+df.corr()
+```
+
+এটি columns-এর correlation calculate করে।
+
+---
+
+# 44. `annot=True`
+
+```python
+annot=True
+```
+
+দিলে heatmap-এর প্রতিটি cell-এর ভিতরে correlation value দেখা যায়।
+
+Example:
+
+```text
+0.85
+-0.60
+0.12
+```
+
+---
+
+# 45. Correlation Value বোঝা
+
+Correlation সাধারণত:
+
+```text
+-1 থেকে +1
+```
+
+এর মধ্যে থাকে।
+
+সহজভাবে:
+
+```text
++1 → Strong Positive
+ 0 → Little/No Linear Relationship
+-1 → Strong Negative
+```
+
+---
+
+# 46. Lab-এর Important Insight
+
+Provided lab material অনুযায়ী:
+
+> **MedInc (Median Income) এবং Price-এর মধ্যে high correlation দেখা যায়।**
+
+অর্থাৎ Median Income এবং house price-এর মধ্যে strong positive relationship লক্ষ্য করা হয়েছে।
+
+---
+
+# 47. Feature এবং Target আলাদা করা
+
+Code:
+
+```python
+X = df.drop(columns=["Price"])
+Y = df["Price"]
+```
+
+এখানে:
+
+```text
+X = Features
+Y = Target
+```
+
+---
+
+# 48. X কেন Price ছাড়া?
+
+আমরা Price predict করতে চাই।
+
+তাই Price নিজে input হতে পারে না।
+
+তাই:
+
+```python
+X = df.drop(columns=["Price"])
+```
+
+মানে:
+
+> Price column বাদ দিয়ে বাকি columns X হিসেবে নাও।
+
+---
+
+# 49. Y কী?
+
+```python
+Y = df["Price"]
+```
+
+মানে:
+
+> Price column-কে target হিসেবে Y-তে রাখো।
+
+তাই:
+
+```text
+X → Input Features
+Y → Output/Target
+```
+
+---
