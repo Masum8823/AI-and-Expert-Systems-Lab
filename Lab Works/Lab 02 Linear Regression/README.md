@@ -2214,3 +2214,153 @@ Predicted Price
 compare করে model-এর performance বের করা হয়।
 
 ---
+# 97. Lab-এর Important Python Pattern
+
+Dataset load:
+
+```python
+data = fetch_california_housing()
+
+df = pd.DataFrame(
+    data.data,
+    columns=data.feature_names
+)
+
+df["Price"] = data.target
+```
+
+---
+
+# 98. EDA Pattern
+
+```python
+print(df.head())
+
+print(df.describe())
+
+print(df.isnull().sum())
+
+print(df.corr())
+```
+
+Visualization:
+
+```python
+sns.heatmap(df.corr(), annot=True)
+plt.show()
+```
+
+---
+
+# 99. Train/Test Pattern
+
+```python
+X = df.drop(columns=["Price"])
+Y = df["Price"]
+
+X_train, X_test, Y_train, Y_test = train_test_split(
+    X,
+    Y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+মনে রাখো:
+
+```text
+X → Input
+Y → Output
+
+Train → Learn
+Test → Evaluate
+```
+
+---
+
+# 100. Scaling Pattern
+
+```python
+scaler = StandardScaler()
+
+X_train = scaler.fit_transform(X_train)
+
+X_test = scaler.transform(X_test)
+```
+
+মনে রাখবে:
+
+```text
+Train → fit_transform()
+
+Test → transform()
+```
+
+---
+
+# 101. Model Training Pattern
+
+Simple:
+
+```python
+model = LinearRegression()
+
+model.fit(X_train, Y_train)
+```
+
+Prediction:
+
+```python
+prediction = model.predict(X_test)
+```
+
+---
+
+# 102. Evaluation Pattern
+
+```python
+MAE = mean_absolute_error(
+    Y_test,
+    prediction
+)
+
+MSE = mean_squared_error(
+    Y_test,
+    prediction
+)
+
+R2 = r2_score(
+    Y_test,
+    prediction
+)
+```
+
+Concept:
+
+```text
+MAE → Average absolute error
+MSE → Average squared error
+R²  → Model fit/explanatory power
+```
+
+---
+
+# 103. Coefficient Pattern
+
+```python
+coefficients = pd.DataFrame({
+    "Feature": X.columns,
+    "Coefficient": model.coef_
+})
+```
+
+তারপর:
+
+```python
+coefficients.sort_values(
+    by="Coefficient",
+    ascending=False
+)
+```
+
+---
