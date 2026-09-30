@@ -1646,3 +1646,148 @@ R²
 ```
 
 ---
+# 75. MAE
+
+MAE =
+
+# Mean Absolute Error
+
+সহজভাবে:
+
+> Actual এবং predicted value-এর difference-এর absolute average।
+
+Concept:
+
+```text
+Error = Actual - Predicted
+
+Absolute Error = |Actual - Predicted|
+
+MAE = সব Absolute Error-এর Average
+```
+
+---
+
+# 76. MAE Example
+
+ধরো:
+
+```text
+Actual      Predicted
+
+100         90
+200         220
+300         280
+```
+
+Errors:
+
+```text
+100 - 90  = 10
+200 - 220 = -20
+300 - 280 = 20
+```
+
+Absolute errors:
+
+```text
+10
+20
+20
+```
+
+MAE:
+
+```text
+(10 + 20 + 20) / 3
+
+= 16.67
+```
+
+---
+
+# 77. MAE কীভাবে বুঝব?
+
+MAE যত কম:
+
+```text
+Prediction Error
+      ↓
+   কম
+```
+
+তত prediction সাধারণত actual values-এর কাছাকাছি।
+
+---
+
+# 78. MSE
+
+MSE =
+
+# Mean Squared Error
+
+এখানে error square করা হয়।
+
+```text
+MSE = Average[(Actual - Predicted)²]
+```
+
+MAE-এর মতোই error measure করে, কিন্তু বড় errors-কে বেশি গুরুত্ব দেয় কারণ error square করা হয়।
+
+---
+
+# 79. MSE Example
+
+Errors:
+
+```text
+10
+-20
+20
+```
+
+Square:
+
+```text
+100
+400
+400
+```
+
+Average:
+
+```text
+(100 + 400 + 400) / 3
+
+= 300
+```
+
+তাই:
+
+```text
+MSE = 300
+```
+
+---
+
+# 80. MAE vs MSE
+
+```text
+MAE
+→ Absolute Error
+→ সহজে interpret করা যায়
+
+MSE
+→ Squared Error
+→ বড় error-কে বেশি penalize করে
+```
+
+দুটোর ক্ষেত্রেই সাধারণভাবে:
+
+```text
+Lower → Better
+```
+
+তবে metric-এর scale আলাদা হওয়ায় raw MAE আর MSE-এর number সরাসরি compare করা উচিত নয়।
+
+---
