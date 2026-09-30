@@ -1572,3 +1572,77 @@ c
 learn করে।
 
 ---
+
+# 71. Multiple Linear Regression
+
+এবার আমরা শুধু MedInc নয়, **সব available features** ব্যবহার করব।
+
+```text
+Feature 1
+Feature 2
+Feature 3
+...
+Feature n
+     ↓
+Linear Regression
+     ↓
+Price
+```
+
+এটাই Multiple Linear Regression।
+
+---
+
+# 72. Multiple Model Train
+
+Code:
+
+```python
+multi_model = LinearRegression()
+
+multi_model.fit(
+    X_train,
+    Y_train
+)
+```
+
+এখানে:
+
+```text
+X_train → সব features
+Y_train → Price
+```
+
+দিয়ে model train হচ্ছে।
+
+---
+
+# 73. Multiple Regression Prediction
+
+```python
+Y_pred_multi = multi_model.predict(X_test)
+```
+
+এখানে test-এর সব features ব্যবহার করে Price predict করা হচ্ছে।
+
+---
+
+# 74. Model Evaluation কেন দরকার?
+
+শুধু prediction করলেই হবে না।
+
+আমাদের জানতে হবে:
+
+> Model কতটা ভালো prediction করছে?
+
+তাই evaluation metrics ব্যবহার করি।
+
+Lab-এ তিনটি metric:
+
+```text
+MAE
+MSE
+R²
+```
+
+---
