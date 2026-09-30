@@ -722,3 +722,187 @@ Dataset Loading
 এর জন্য।
 
 ---
+
+# 29. Dataset Load করা
+
+Lab-এ:
+
+```python
+from sklearn.datasets import fetch_california_housing
+```
+
+ব্যবহার করা হয়েছে।
+
+তারপর:
+
+```python
+data = fetch_california_housing()
+```
+
+দিয়ে dataset load করা হয়েছে।
+
+---
+
+# 30. Important Note: Dataset-এর নাম
+
+Lab instruction-এ dataset-টিকে:
+
+```text
+Boston Housing Prices Dataset
+```
+
+বলা হয়েছে।
+
+কিন্তু provided code বাস্তবে:
+
+```python
+fetch_california_housing()
+```
+
+ব্যবহার করছে।
+
+অর্থাৎ code অনুযায়ী dataset হলো:
+
+# California Housing Dataset
+
+README-তে code বুঝতে গেলে **`fetch_california_housing()`-কেই follow করবে**।
+
+---
+
+# 31. Dataset DataFrame-এ নেওয়া
+
+Code:
+
+```python
+df = pd.DataFrame(
+    data.data,
+    columns=data.feature_names
+)
+```
+
+এখানে dataset-এর feature data দিয়ে Pandas DataFrame তৈরি করা হয়েছে।
+
+সহজভাবে:
+
+```text
+Raw Dataset
+     ↓
+Pandas DataFrame
+     ↓
+df
+```
+
+---
+
+# 32. Target Column তৈরি করা
+
+Code:
+
+```python
+df["Price"] = data.target
+```
+
+এখানে dataset-এর target values:
+
+```text
+data.target
+```
+
+কে DataFrame-এর নতুন column:
+
+```text
+Price
+```
+
+হিসেবে রাখা হয়েছে।
+
+অর্থাৎ:
+
+```text
+Features → df-এর অন্যান্য columns
+
+Target → Price
+```
+
+---
+
+# 33. Dataset-এর Concept
+
+এই dataset-এ বিভিন্ন housing-related features আছে।
+
+যেমন source code-এর:
+
+```text
+MedInc
+```
+
+Median Income বোঝায়।
+
+এবং:
+
+```text
+Price
+```
+
+হলো target।
+
+আমরা বিভিন্ন features ব্যবহার করে:
+
+```text
+House Price
+```
+
+predict করতে চাই।
+
+---
+
+# 34. `df.head()`
+
+```python
+print(df.head())
+```
+
+প্রথম 5টি row দেখাবে।
+
+Dataset load হয়েছে কিনা দ্রুত check করার জন্য এটি useful।
+
+---
+
+# 35. পুরো Dataset Print
+
+```python
+print(df)
+```
+
+দিলে DataFrame-এর content print হবে।
+
+তারপর:
+
+```python
+pd.set_option('display.max_rows', None)
+```
+
+দিলে Pandas সব rows display করার চেষ্টা করবে।
+
+এবং:
+
+```python
+pd.set_option('display.max_columns', None)
+```
+
+দিলে সব columns display করা যাবে।
+
+---
+
+# 36. Settings Reset
+
+শেষে:
+
+```python
+pd.reset_option('display.max_rows')
+pd.reset_option('display.max_columns')
+```
+
+দিয়ে Pandas-এর display settings আগের অবস্থায় ফেরত নেওয়া যায়।
+
+---
