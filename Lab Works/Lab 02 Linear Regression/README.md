@@ -1888,3 +1888,183 @@ r2_score(
 ```
 
 ---
+# 85. খুব Important: Provided Code-এর একটি Label Issue
+
+Source code-এ Simple Linear Regression-এর prediction-এর পর print করা হয়েছে:
+
+```python
+print("\nMultiple Linear Regression Performance:")
+```
+
+কিন্তু ওই অংশটি আসলে:
+
+```text
+Simple Linear Regression
+```
+
+এর performance।
+
+অর্থাৎ print text-টা conceptually mismatch করেছে।
+
+**Code-এর মূল calculation বোঝার সময় heading-এর চেয়ে কোন variables ব্যবহার হচ্ছে সেটা follow করবে।**
+
+---
+
+# 86. Feature Importance
+
+Multiple Linear Regression-এ প্রতিটি feature-এর একটি coefficient থাকে।
+
+Code:
+
+```python
+coefficients = pd.DataFrame({
+    "Feature": X.columns,
+    "Coefficient": multi_model.coef_
+})
+```
+
+এখানে একটি নতুন DataFrame তৈরি হচ্ছে।
+
+দুটি column:
+
+```text
+Feature
+Coefficient
+```
+
+---
+
+# 87. `multi_model.coef_`
+
+এই অংশ:
+
+```python
+multi_model.coef_
+```
+
+model শেখা coefficients দেয়।
+
+যেমন hypothetical:
+
+```text
+Feature       Coefficient
+
+MedInc        0.85
+HouseAge      0.10
+AveRooms      0.30
+Population   -0.20
+```
+
+---
+
+# 88. Coefficient কী বোঝায়?
+
+Coefficient-এর:
+
+```text
+Sign → Direction
+Magnitude → Relationship-এর strength-এর indication
+```
+
+যেমন:
+
+```text
++0.8
+```
+
+positive relationship।
+
+```text
+-0.5
+```
+
+negative relationship।
+
+কিন্তু coefficient-এর magnitude compare করার সময় feature scaling এবং feature units-এর বিষয় মাথায় রাখতে হয়।
+
+---
+
+# 89. Coefficients Sort করা
+
+Code:
+
+```python
+coefficients = coefficients.sort_values(
+    by="Coefficient",
+    ascending=False
+)
+```
+
+মানে coefficient বড় থেকে ছোট সাজানো হচ্ছে।
+
+```text
+Largest
+ ↓
+...
+ ↓
+Smallest
+```
+
+---
+
+# 90. Feature Importance Barplot
+
+Code:
+
+```python
+sns.barplot(
+    x="Coefficient",
+    y="Feature",
+    data=coefficients
+)
+```
+
+এতে প্রতিটি feature-এর coefficient bar আকারে দেখা যায়।
+
+তারপর:
+
+```python
+plt.title(
+    "Feature Importance in Linear Regression"
+)
+```
+
+graph-এর title।
+
+---
+
+# 91. Feature Selection কী?
+
+Feature Selection মানে:
+
+> Prediction-এর জন্য relevant features নির্বাচন করা।
+
+ধরো dataset-এ 10টি feature আছে:
+
+```text
+X1
+X2
+X3
+...
+X10
+```
+
+সবগুলো ব্যবহার করার বদলে analysis করে হয়তো কিছু feature বাদ দেওয়া যায়।
+
+---
+
+# 92. Feature Importance এবং Feature Selection এক জিনিস নয়
+
+এটা মনে রাখা ভালো।
+
+```text
+Feature Importance
+→ কোন feature model-এ কতটা contribution/relationship দেখাচ্ছে তা examine করা।
+
+Feature Selection
+→ কোন features model-এর জন্য রাখব/বাদ দেব সেই decision process।
+```
+
+এই Lab-এ coefficients ব্যবহার করে feature impact examine করা হচ্ছে।
+
+---
