@@ -1418,3 +1418,157 @@ df[["MedInc"]]
 ব্যবহার করা হয়েছে।
 
 ---
+
+# 64. Simple Model তৈরি
+
+```python
+simple_model = LinearRegression()
+```
+
+এখানে Scikit-learn-এর Linear Regression model তৈরি হলো।
+
+---
+
+# 65. Model Train করা
+
+```python
+simple_model.fit(
+    X_train_simple,
+    Y_train_simple
+)
+```
+
+`fit()` মানে:
+
+> Training data ব্যবহার করে model-এর parameters শেখানো।
+
+অর্থাৎ:
+
+```text
+Training Data
+      ↓
+fit()
+      ↓
+Learn relationship
+```
+
+---
+
+# 66. Prediction
+
+Training-এর পরে:
+
+```python
+Y_pred_simple = simple_model.predict(X_test_simple)
+```
+
+এখানে model test features দেখে predicted house prices তৈরি করছে।
+
+```text
+X_test
+  ↓
+Trained Model
+  ↓
+Y_pred
+```
+
+---
+
+# 67. Actual বনাম Predicted
+
+ধরো:
+
+```text
+Actual Price     Predicted Price
+
+2.5              2.3
+3.0              3.1
+1.8              1.9
+```
+
+এখানে:
+
+```text
+Actual = সত্যিকারের value
+
+Predicted = Model-এর অনুমান
+```
+
+দুটোর difference-ই model error-এর অংশ।
+
+---
+
+# 68. Regression Line
+
+Simple Linear Regression-এর সবচেয়ে সুন্দর visual হলো regression line।
+
+Code:
+
+```python
+plt.scatter(
+    X_test_simple,
+    Y_test_simple,
+    label="Actual Prices"
+)
+
+plt.plot(
+    X_test_simple,
+    Y_pred_simple,
+    label="Regression Line"
+)
+```
+
+এখানে:
+
+```text
+Dots/Points → Actual Prices
+
+Line → Model's predicted relationship
+```
+
+---
+
+# 69. Graph কীভাবে বুঝবে?
+
+Graph-এ:
+
+```text
+Price
+  |
+  |       •
+  |     •
+  |   •
+  |  /──────── Regression Line
+  | /
+  |________________ Income
+```
+
+Regression line actual points-এর overall trend represent করার চেষ্টা করে।
+
+---
+
+# 70. Simple Regression-এর Mathematical Connection
+
+এখানে:
+
+```text
+X = MedInc
+Y = Price
+```
+
+তাই model-এর equation conceptually:
+
+```text
+Price = m(MedInc) + c
+```
+
+Model নিজে:
+
+```text
+m
+c
+```
+
+learn করে।
+
+---
