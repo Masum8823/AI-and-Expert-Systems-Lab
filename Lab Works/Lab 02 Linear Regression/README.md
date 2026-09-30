@@ -349,3 +349,128 @@ Y = c
 অর্থাৎ X zero হলে model-এর predicted Y হলো intercept।
 
 ---
+
+# 13. Multiple Linear Regression
+
+যখন একটির বেশি feature ব্যবহার করা হয় তখন:
+
+# Multiple Linear Regression
+
+Formula:
+
+```text
+Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+```
+
+এখানে:
+
+```text
+Y  = Predicted Target
+β₀ = Intercept
+β₁ = X₁-এর coefficient
+β₂ = X₂-এর coefficient
+...
+βₙ = Xₙ-এর coefficient
+```
+
+---
+
+# 14. Multiple Regression বাস্তব Example
+
+ধরো House Price predict করতে আমাদের:
+
+```text
+X₁ = Income
+X₂ = House Age
+X₃ = Number of Rooms
+X₄ = Population
+```
+
+আছে।
+
+তাহলে equation হতে পারে:
+
+```text
+Price = β₀
+      + β₁(Income)
+      + β₂(House Age)
+      + β₃(Rooms)
+      + β₄(Population)
+```
+
+অর্থাৎ model একসাথে অনেক feature ব্যবহার করে price predict করবে।
+
+---
+
+# 15. Simple বনাম Multiple Linear Regression
+
+| বিষয়    | Simple         | Multiple                     |
+| ------- | -------------- | ---------------------------- |
+| Feature | 1টি            | একাধিক                       |
+| Formula | Y = mX + c     | Y = β₀ + β₁X₁ + ...          |
+| Example | Income → Price | Income + Rooms + Age → Price |
+
+মনে রাখবে:
+
+```text
+1 Feature  → Simple Linear Regression
+
+Many Features → Multiple Linear Regression
+```
+
+---
+
+# 16. Coefficient কী?
+
+Multiple Regression-এ প্রতিটি feature-এর সাথে একটি coefficient থাকে।
+
+Example:
+
+```text
+Price = 1 + 2(Income) + 0.5(Rooms)
+```
+
+এখানে:
+
+```text
+Income coefficient = 2
+Rooms coefficient  = 0.5
+```
+
+Coefficient বলে feature-এর সাথে target-এর relationship-এর direction এবং magnitude সম্পর্কে।
+
+---
+
+# 17. Positive এবং Negative Coefficient
+
+যদি coefficient positive হয়:
+
+```text
+Coefficient > 0
+```
+
+তাহলে feature বাড়ার সাথে target বাড়ার relationship থাকতে পারে।
+
+যদি coefficient negative হয়:
+
+```text
+Coefficient < 0
+```
+
+তাহলে feature বাড়ার সাথে target কমার relationship থাকতে পারে।
+
+Example:
+
+```text
+Coefficient = +2
+```
+
+→ positive relationship
+
+```text
+Coefficient = -1.5
+```
+
+→ negative relationship
+
+---
