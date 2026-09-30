@@ -2068,3 +2068,149 @@ Feature Selection
 এই Lab-এ coefficients ব্যবহার করে feature impact examine করা হচ্ছে।
 
 ---
+# 93. পুরো Lab-এর Complete Flow
+
+এখন পুরো Lab-টা একসাথে:
+
+```text
+                Dataset
+                   ↓
+             Load Dataset
+                   ↓
+              DataFrame
+                   ↓
+                  EDA
+                   ↓
+        ┌──────────┴──────────┐
+        ↓                     ↓
+ Summary Statistics      Correlation
+        ↓                     ↓
+ Missing Check          Heatmap
+        └──────────┬──────────┘
+                   ↓
+            X and Y Split
+                   ↓
+          Train/Test Split
+                   ↓
+          Feature Scaling
+                   ↓
+       ┌───────────┴───────────┐
+       ↓                       ↓
+Simple Regression      Multiple Regression
+       ↓                       ↓
+Prediction              Prediction
+       ↓                       ↓
+       └───────────┬───────────┘
+                   ↓
+              Evaluation
+                   ↓
+             MAE / MSE / R²
+                   ↓
+          Coefficient Analysis
+                   ↓
+           Feature Selection
+```
+
+---
+
+# 94. Simple Linear Regression-এর Full Concept
+
+```text
+One Feature
+    ↓
+MedInc
+    ↓
+LinearRegression()
+    ↓
+Train
+    ↓
+Predict Price
+    ↓
+Regression Line
+    ↓
+Evaluate
+```
+
+Mathematics:
+
+```text
+Price = m × MedInc + c
+```
+
+---
+
+# 95. Multiple Linear Regression-এর Full Concept
+
+```text
+Many Features
+      ↓
+X1, X2, X3, ... Xn
+      ↓
+LinearRegression()
+      ↓
+Train
+      ↓
+Predict Price
+      ↓
+Evaluate
+```
+
+Mathematics:
+
+```text
+Price = β₀
+      + β₁X₁
+      + β₂X₂
+      + ...
+      + βₙXₙ
+```
+
+---
+
+# 96. একটি Real-Life Example
+
+ধরো তুমি একটি house-এর price predict করতে চাও।
+
+Information:
+
+```text
+Median Income
+House Age
+Average Rooms
+Population
+...
+```
+
+এই সব information হলো:
+
+```text
+Features
+```
+
+Actual house price:
+
+```text
+Target
+```
+
+Machine Learning flow:
+
+```text
+Features
+   ↓
+Linear Regression
+   ↓
+Predicted Price
+```
+
+তারপর:
+
+```text
+Actual Price
+     vs
+Predicted Price
+```
+
+compare করে model-এর performance বের করা হয়।
+
+---
