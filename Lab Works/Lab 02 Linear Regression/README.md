@@ -2364,3 +2364,143 @@ coefficients.sort_values(
 ```
 
 ---
+
+# 104. Exam-এর জন্য Important Definitions
+
+## Linear Regression
+
+> Linear Regression is a supervised machine learning algorithm used to predict continuous numerical values by modeling a linear relationship between input features and a target variable.
+
+---
+
+## Simple Linear Regression
+
+> Simple Linear Regression uses one input feature to predict a continuous target variable.
+
+Formula:
+
+```text
+Y = mX + c
+```
+
+---
+
+## Multiple Linear Regression
+
+> Multiple Linear Regression uses two or more input features to predict a continuous target variable.
+
+Formula:
+
+```text
+Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+```
+
+---
+
+## Regression
+
+> Regression is a supervised learning task used to predict continuous numerical values.
+
+---
+
+## MAE
+
+> MAE is the average absolute difference between actual and predicted values.
+
+---
+
+## MSE
+
+> MSE is the average of squared differences between actual and predicted values.
+
+---
+
+## R²
+
+> R² measures how well the regression model explains the variation in the target variable.
+
+---
+
+## Correlation
+
+> Correlation measures the strength and direction of the relationship between two variables.
+
+---
+
+## Feature Scaling
+
+> Feature scaling transforms numerical features to a common or standardized scale.
+
+---
+
+## Feature Selection
+
+> Feature selection is the process of selecting relevant features for model training.
+
+---
+
+# 105. Most Important Differences
+
+## Simple vs Multiple Regression
+
+```text
+Simple
+→ One feature
+
+Multiple
+→ Multiple features
+```
+
+---
+
+## MAE vs MSE
+
+```text
+MAE
+→ Absolute error
+→ Easy to interpret
+→ Lower generally better
+
+MSE
+→ Squared error
+→ Large errors receive more penalty
+→ Lower generally better
+```
+
+---
+
+## Training vs Testing
+
+```text
+Training
+→ Model learns
+
+Testing
+→ Model is evaluated
+```
+
+---
+
+## X vs Y
+
+```text
+X
+→ Features/Input
+
+Y
+→ Target/Output
+```
+
+---
+
+## Actual vs Predicted
+
+```text
+Actual
+→ Real value from dataset
+
+Predicted
+→ Model-এর estimated value
+```
+
+---
