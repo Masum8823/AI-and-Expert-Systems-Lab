@@ -474,3 +474,138 @@ Coefficient = -1.5
 → negative relationship
 
 ---
+
+# 18. Model কীভাবে Best Line খুঁজে?
+
+এটা Linear Regression-এর important concept।
+
+Model এমন একটি line/equation খুঁজতে চায় যাতে:
+
+```text
+Actual Value
+      ↓
+Predicted Value
+```
+
+এর difference যতটা সম্ভব কম হয়।
+
+এই difference-কে error বলা যায়।
+
+Example:
+
+```text
+Actual Price      = 300000
+Predicted Price   = 280000
+
+Error = 20000
+```
+
+Model এমন parameters খুঁজবে যাতে overall error কম হয়।
+
+---
+
+# 19. Mean Squared Error (MSE)
+
+Linear Regression-এর একটি important objective হলো error কমানো।
+
+MSE:
+
+```text
+MSE = Average of Squared Errors
+```
+
+Conceptually:
+
+```text
+Error = Actual - Predicted
+
+Squared Error = (Actual - Predicted)²
+```
+
+তারপর সব squared error-এর average নেওয়া হয়।
+
+---
+
+# 20. কেন Error Square করা হয়?
+
+ধরো errors:
+
+```text
++10
+-10
+```
+
+যদি সরাসরি average করি:
+
+```text
+(10 + -10) / 2 = 0
+```
+
+দেখে মনে হবে error নেই।
+
+কিন্তু বাস্তবে error আছে।
+
+তাই square করা হয়:
+
+```text
+10²  = 100
+(-10)² = 100
+```
+
+এখন error positive হয়ে যায়।
+
+---
+
+# 21. Least Squares Method
+
+Linear Regression parameters বের করার একটি common method হলো:
+
+# Least Squares
+
+এর basic idea:
+
+> এমন line খুঁজে বের করা যাতে squared errors-এর total যতটা সম্ভব কম হয়।
+
+অর্থাৎ:
+
+```text
+Actual points
+      ↓
+Best fitting line
+      ↓
+Minimum squared error
+```
+
+Source অনুযায়ী Linear Regression-এর coefficients Gradient Descent অথবা Least Squares method দিয়ে learn করা যেতে পারে।
+
+---
+
+# 22. Gradient Descent
+
+আরেকটি method হলো:
+
+# Gradient Descent
+
+এটা সহজভাবে এমন একটি optimization technique যেখানে model-এর parameters ধীরে ধীরে update করা হয় যাতে error কমে।
+
+Concept:
+
+```text
+Start
+  ↓
+Calculate Error
+  ↓
+Update Parameters
+  ↓
+Error কমে?
+  ↓
+Repeat
+  ↓
+Better Model
+```
+
+তবে এই Lab-এর Python code-এ আমরা manually Gradient Descent লিখছি না।
+
+`LinearRegression()` ব্যবহার করছি।
+
+---
