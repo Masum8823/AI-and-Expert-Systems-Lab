@@ -665,3 +665,108 @@ Diabetes
 এই Lab-এর code অনুযায়ী `LabelEncoder` ব্যবহার করা হয়েছে।
 
 ---
+
+# 24. Filtering Data
+
+Filtering মানে নির্দিষ্ট condition অনুযায়ী dataset থেকে কিছু rows বের করা।
+
+Task:
+
+> Outcome = 1 এবং Age > 40
+
+Code:
+
+```python
+selected_patients = diabetes[
+    (diabetes["Outcome"] == 1) &
+    (diabetes["Age"] > 40)
+]
+```
+
+---
+
+# 25. Filtering Condition বুঝি
+
+প্রথম condition:
+
+```python
+diabetes["Outcome"] == 1
+```
+
+মানে:
+
+```text
+Patient diabetic কি না
+```
+
+দ্বিতীয় condition:
+
+```python
+diabetes["Age"] > 40
+```
+
+মানে:
+
+```text
+Patient-এর বয়স 40-এর বেশি কি না
+```
+
+দুই condition-এর মধ্যে:
+
+```python
+&
+```
+
+ব্যবহার করা হয়েছে।
+
+`&` মানে:
+
+```text
+AND
+```
+
+অর্থাৎ দুই condition-ই true হতে হবে।
+
+---
+
+# 26. Outcome Labels for Visualization
+
+Graph-এ `0` এবং `1` দেখানোর পরিবর্তে readable name ব্যবহার করা হয়েছে।
+
+```python
+visual_data = diabetes.copy()
+```
+
+তারপর:
+
+```python
+visual_data["Diabetes_Status"] = visual_data["Outcome"].map({
+    0: "No Diabetes",
+    1: "Diabetes"
+})
+```
+
+এখন:
+
+```text
+0 → No Diabetes
+1 → Diabetes
+```
+
+হিসেবে graph-এ দেখা যাবে।
+
+---
+
+# 27. Data Visualization
+
+Data visualization হলো graph ব্যবহার করে dataset-এর information বোঝানো।
+
+এই Lab-এ ৫ ধরনের visualization করা হয়েছে:
+
+1. Histogram
+2. Box Plot
+3. Correlation Heatmap
+4. KDE Plot
+5. Scatter Plot
+
+---
