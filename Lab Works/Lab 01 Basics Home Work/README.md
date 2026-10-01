@@ -770,3 +770,364 @@ Data visualization হলো graph ব্যবহার করে dataset-এ�
 5. Scatter Plot
 
 ---
+
+# 28. Histogram
+
+### Task
+
+**Histogram of Blood Glucose Levels**
+
+Code:
+
+```python
+plt.figure(figsize=(9, 5))
+
+plt.hist(
+    diabetes["Glucose"],
+    bins=15,
+    edgecolor="black"
+)
+
+plt.title("Blood Glucose Level Distribution")
+plt.xlabel("Glucose Level")
+plt.ylabel("Frequency")
+
+plt.show()
+```
+
+---
+
+# 29. Histogram কী দেখায়?
+
+Histogram কোনো numerical data-এর distribution দেখায়।
+
+এই Lab-এ:
+
+```text
+X-axis → Glucose Level
+Y-axis → Frequency
+```
+
+অর্থাৎ কোন range-এর glucose level কতজন patient-এর আছে তা বোঝা যায়।
+
+### `bins`
+
+```python
+bins=15
+```
+
+Data-কে 15টি interval/group-এ ভাগ করতে সাহায্য করে।
+
+---
+
+# 30. Box Plot
+
+### Task
+
+**Box Plot of BMI by Diabetes Outcome**
+
+Code:
+
+```python
+sns.boxplot(
+    data=visual_data,
+    x="Diabetes_Status",
+    y="BMI"
+)
+```
+
+---
+
+# 31. Box Plot কী দেখায়?
+
+Box plot ব্যবহার করে কোনো numerical data-এর:
+
+* Median
+* Spread
+* Distribution
+* Possible outliers
+
+সম্পর্কে ধারণা পাওয়া যায়।
+
+এই Lab-এ BMI compare করা হয়েছে:
+
+```text
+No Diabetes
+vs
+Diabetes
+```
+
+---
+
+# 32. Correlation
+
+Correlation হলো দুইটি numerical variable-এর মধ্যে relationship-এর strength এবং direction বোঝার একটি measure।
+
+Correlation value সাধারণত:
+
+```text
+-1 থেকে +1
+```
+
+এর মধ্যে থাকে।
+
+### Positive Correlation
+
+```text
++1 এর কাছাকাছি
+```
+
+একটি value বাড়লে অন্যটিও বাড়ার tendency থাকে।
+
+### Negative Correlation
+
+```text
+-1 এর কাছাকাছি
+```
+
+একটি value বাড়লে অন্যটি কমার tendency থাকে।
+
+### Near Zero
+
+```text
+0 এর কাছাকাছি
+```
+
+দুই variable-এর মধ্যে strong linear relationship কম।
+
+---
+
+# 33. Correlation Heatmap
+
+Code:
+
+```python
+corr_matrix = encoded_data.corr()
+```
+
+এটি numerical columns-এর correlation matrix তৈরি করে।
+
+তারপর:
+
+```python
+sns.heatmap(
+    corr_matrix,
+    annot=True,
+    fmt=".2f",
+    cmap="viridis"
+)
+```
+
+দিয়ে heatmap তৈরি করা হয়েছে।
+
+---
+
+# 34. Heatmap-এর `annot=True`
+
+```python
+annot=True
+```
+
+দিলে প্রতিটি cell-এর মধ্যে correlation value দেখা যায়।
+
+Example:
+
+```text
+0.45
+-0.20
+0.78
+```
+
+---
+
+# 35. Heatmap-এর `fmt=".2f"`
+
+```python
+fmt=".2f"
+```
+
+মানে value দুই decimal place পর্যন্ত দেখানো হবে।
+
+Example:
+
+```text
+0.4567
+```
+
+হয়ে যাবে:
+
+```text
+0.46
+```
+
+---
+
+# 36. KDE Plot
+
+### Task
+
+**Age Distribution of Diabetic vs Non-Diabetic Patients**
+
+KDE-এর full form:
+
+> Kernel Density Estimate
+
+KDE plot data-এর distribution-এর smooth curve দেখায়।
+
+Code:
+
+```python
+sns.kdeplot(
+    data=visual_data[visual_data["Outcome"] == 0],
+    x="Age",
+    label="Non-Diabetic",
+    fill=True
+)
+```
+
+এবং diabetic patients-এর জন্য:
+
+```python
+sns.kdeplot(
+    data=visual_data[visual_data["Outcome"] == 1],
+    x="Age",
+    label="Diabetic",
+    fill=True
+)
+```
+
+---
+
+# 37. KDE Plot কেন ব্যবহার করা হয়েছে?
+
+এই graph দিয়ে দেখা যায়:
+
+```text
+Diabetic patients-এর age distribution
+vs
+Non-diabetic patients-এর age distribution
+```
+
+অর্থাৎ দুই group-এর age distribution compare করা যায়।
+
+---
+
+# 38. Scatter Plot
+
+### Task
+
+**Scatter Plot of Glucose vs BMI**
+
+Code:
+
+```python
+sns.scatterplot(
+    data=diabetes,
+    x="Glucose",
+    y="BMI",
+    hue="Outcome"
+)
+```
+
+---
+
+# 39. Scatter Plot কী দেখায়?
+
+Scatter plot দুইটি numerical variable-এর relationship visualize করে।
+
+এই Lab-এ:
+
+```text
+X-axis → Glucose
+Y-axis → BMI
+```
+
+এবং:
+
+```python
+hue="Outcome"
+```
+
+ব্যবহার করে diabetes outcome অনুযায়ী points আলাদা করা হয়েছে।
+
+---
+
+# 40. `hue` কী?
+
+Seaborn-এর:
+
+```python
+hue="Outcome"
+```
+
+এর মাধ্যমে Outcome-এর value অনুযায়ী data points আলাদা করা হয়।
+
+অর্থাৎ:
+
+```text
+Outcome = 0
+Outcome = 1
+```
+
+দুই group আলাদা করে দেখা যায়।
+
+---
+
+# 41. `plt.figure(figsize=...)`
+
+Example:
+
+```python
+plt.figure(figsize=(9, 5))
+```
+
+Graph-এর size নির্ধারণ করতে ব্যবহার করা হয়।
+
+এখানে:
+
+```text
+9 → width
+5 → height
+```
+
+---
+
+# 42. `plt.xlabel()` এবং `plt.ylabel()`
+
+X-axis-এর নাম:
+
+```python
+plt.xlabel("Glucose Level")
+```
+
+Y-axis-এর নাম:
+
+```python
+plt.ylabel("Frequency")
+```
+
+---
+
+# 43. `plt.title()`
+
+Graph-এর title দেওয়ার জন্য:
+
+```python
+plt.title("Blood Glucose Level Distribution")
+```
+
+ব্যবহার করা হয়।
+
+---
+
+# 44. `plt.show()`
+
+Graph display করার জন্য:
+
+```python
+plt.show()
+```
+
+ব্যবহার করা হয়।
+
+---
