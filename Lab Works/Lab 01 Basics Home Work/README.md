@@ -342,3 +342,169 @@ Pregnancies = 0
 তাই `Pregnancies` column-এর `0` পরিবর্তন করা হয়নি।
 
 ---
+
+# 12. Replace Zero Values with Median
+
+যে columns-এ `0` invalid হিসেবে ধরা হয়েছে:
+
+```python
+zero_missing_columns = [
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI"
+]
+```
+
+তারপর প্রতিটি column-এর median বের করে `0` replace করা হয়েছে।
+
+```python
+for col in zero_missing_columns:
+    median = diabetes[col].median()
+    diabetes[col] = diabetes[col].replace(0, median)
+```
+
+### এখানে কী হচ্ছে?
+
+ধরো:
+
+```text
+Glucose:
+100
+120
+0
+140
+```
+
+এখানে `0` invalid হলে:
+
+```text
+median = 120
+```
+
+তাহলে:
+
+```text
+100
+120
+120
+140
+```
+
+হয়ে যাবে।
+
+---
+
+# 13. Median কী?
+
+Median হলো sorted data-এর middle value।
+
+Example:
+
+```text
+10, 20, 30, 40, 50
+```
+
+এখানে median:
+
+```text
+30
+```
+
+আর even number of values হলে মাঝের দুইটির average নেওয়া হয়।
+
+### কেন Median ব্যবহার করা হয়েছে?
+
+এই Lab-এ invalid zero values replace করার জন্য median ব্যবহার করা হয়েছে।
+
+---
+
+# 14. Duplicate Records
+
+Duplicate row মানে একই ধরনের record একাধিকবার থাকা।
+
+Duplicate check:
+
+```python
+duplicate_count = diabetes.duplicated().sum()
+```
+
+এখানে:
+
+```python
+duplicated()
+```
+
+duplicate row identify করে।
+
+আর:
+
+```python
+sum()
+```
+
+duplicate row-এর সংখ্যা count করে।
+
+---
+
+# 15. Display Duplicate Records
+
+Duplicate records দেখতে:
+
+```python
+print(diabetes[diabetes.duplicated()])
+```
+
+এতে duplicate rows display হবে।
+
+---
+
+# 16. Remove Duplicate Records
+
+Duplicate records remove করতে:
+
+```python
+diabetes.drop_duplicates(inplace=True)
+```
+
+### `drop_duplicates()`
+
+Dataset থেকে duplicate rows remove করে।
+
+### `inplace=True`
+
+এর অর্থ হলো original DataFrame-এই পরিবর্তন করা হবে।
+
+---
+
+# 17. Dataset Shape
+
+Duplicate remove করার পর dataset-এর size দেখতে:
+
+```python
+print(diabetes.shape)
+```
+
+`shape` সাধারণত:
+
+```text
+(rows, columns)
+```
+
+format-এ result দেয়।
+
+Example:
+
+```text
+(700, 9)
+```
+
+মানে:
+
+```text
+700 rows
+9 columns
+```
+
+---
