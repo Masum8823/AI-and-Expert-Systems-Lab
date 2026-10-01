@@ -1254,3 +1254,130 @@ Data distribution-এর smooth density curve দেখায়।
 দুইটি numerical variable-এর relationship দেখায়।
 
 ---
+
+# 48. Quick Revision
+
+```text
+Pandas
+→ Data handling
+
+NumPy
+→ Numerical operations
+
+Matplotlib
+→ Visualization
+
+Seaborn
+→ Statistical visualization
+
+read_csv()
+→ Dataset load
+
+head()
+→ First rows
+
+info()
+→ Dataset information
+
+describe()
+→ Statistics
+
+isnull().sum()
+→ Missing values
+
+median()
+→ Median
+
+replace()
+→ Replace values
+
+duplicated()
+→ Find duplicates
+
+drop_duplicates()
+→ Remove duplicates
+
+MinMaxScaler
+→ Normalize data
+
+LabelEncoder
+→ Encode categorical data
+
+&
+→ AND condition
+
+Histogram
+→ Distribution
+
+Box Plot
+→ Median + spread + outliers
+
+Heatmap
+→ Correlation visualization
+
+KDE
+→ Distribution curve
+
+Scatter Plot
+→ Relationship between two variables
+```
+
+---
+
+# 49. One-Minute Memory Map
+
+```text
+                 AI LAB 01
+                     │
+          Diabetes Dataset Analysis
+                     │
+       ┌─────────────┴─────────────┐
+       │                           │
+   Data Cleaning              Visualization
+       │                           │
+       ├─ Missing Values           ├─ Histogram
+       ├─ Zero Values             ├─ Box Plot
+       ├─ Median                  ├─ Heatmap
+       └─ Duplicates              ├─ KDE
+                                  └─ Scatter
+       │
+       ├─ Normalization
+       │      ↓
+       │   MinMaxScaler
+       │
+       ├─ Encoding
+       │      ↓
+       │   LabelEncoder
+       │
+       └─ Filtering
+              ↓
+       Outcome = 1
+       Age > 40
+```
+
+---
+
+# 50. Final Understanding
+
+এই Lab-এর মূল উদ্দেশ্য হলো raw dataset নিয়ে basic **data preprocessing এবং data visualization** শেখা।
+
+আমরা প্রথমে dataset load করেছি এবং dataset-এর structure ও statistics দেখেছি।
+
+তারপর invalid zero values median দিয়ে replace করেছি এবং duplicate records remove করেছি।
+
+এরপর `Glucose`, `BMI` এবং `Age` normalize করেছি এবং `Outcome` encode করেছি।
+
+শেষে বিভিন্ন visualization ব্যবহার করে dataset-এর distribution এবং featureগুলোর relationship দেখেছি।
+
+সবচেয়ে গুরুত্বপূর্ণভাবে মনে রাখবে:
+
+```text
+Load
+→ Inspect
+→ Clean
+→ Normalize
+→ Encode
+→ Filter
+→ Visualize
+→ Analyze
+```
