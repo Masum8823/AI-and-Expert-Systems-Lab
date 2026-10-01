@@ -508,3 +508,160 @@ Example:
 ```
 
 ---
+
+# 18. Normalization
+
+Normalization হলো numerical values-কে একটি নির্দিষ্ট range-এর মধ্যে নিয়ে আসা।
+
+এই Lab-এ:
+
+```text
+Glucose
+BMI
+Age
+```
+
+এই তিনটি feature normalize করা হয়েছে।
+
+Target range:
+
+```text
+0 to 1
+```
+
+---
+
+# 19. কেন Normalization করা হয়?
+
+ধরো:
+
+```text
+Glucose → 50–200
+BMI     → 15–50
+Age     → 20–80
+```
+
+তাহলে featureগুলোর range আলাদা।
+
+Normalization করলে:
+
+```text
+Glucose → 0–1
+BMI     → 0–1
+Age     → 0–1
+```
+
+হয়ে যায়।
+
+এতে numerical features একই scale-এ আসে।
+
+---
+
+# 20. Min-Max Scaler
+
+Normalization-এর জন্য ব্যবহার করা হয়েছে:
+
+```python
+normalizer = MinMaxScaler()
+```
+
+Selected features:
+
+```python
+features = ["Glucose", "BMI", "Age"]
+```
+
+তারপর:
+
+```python
+normalized_data = diabetes.copy()
+```
+
+Original dataset-এর copy তৈরি করা হয়েছে।
+
+তারপর:
+
+```python
+normalized_data[features] = normalizer.fit_transform(
+    diabetes[features]
+)
+```
+
+দিয়ে normalization করা হয়েছে।
+
+---
+
+# 21. `fit_transform()` কী?
+
+```python
+fit_transform()
+```
+
+দুইটি কাজ একসাথে করে:
+
+```text
+fit       → data থেকে প্রয়োজনীয় information শেখে
+transform → সেই information ব্যবহার করে data transform করে
+```
+
+এই Lab-এ:
+
+```python
+normalizer.fit_transform(diabetes[features])
+```
+
+ব্যবহার করা হয়েছে।
+
+---
+
+# 22. Encoding
+
+Encoding হলো categorical data-কে numerical form-এ convert করা।
+
+এই Lab-এ `Outcome` column encode করা হয়েছে।
+
+```python
+encoded_data = diabetes.copy()
+```
+
+তারপর:
+
+```python
+label_encoder = LabelEncoder()
+```
+
+এবং:
+
+```python
+encoded_data["Outcome"] = label_encoder.fit_transform(
+    encoded_data["Outcome"]
+)
+```
+
+---
+
+# 23. LabelEncoder
+
+`LabelEncoder` categorical values-কে numerical values-এ convert করে।
+
+Example:
+
+```text
+No Diabetes
+Diabetes
+```
+
+এর বদলে numerical representation হতে পারে:
+
+```text
+0
+1
+```
+
+এই dataset-এ `Outcome` আগে থেকেই `0` এবং `1`, তাই encoding করার ফলে values একই numerical form-এ থাকে।
+
+### Important
+
+এই Lab-এর code অনুযায়ী `LabelEncoder` ব্যবহার করা হয়েছে।
+
+---
