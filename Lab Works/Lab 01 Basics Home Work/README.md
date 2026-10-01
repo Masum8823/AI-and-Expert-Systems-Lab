@@ -1131,3 +1131,126 @@ plt.show()
 ব্যবহার করা হয়।
 
 ---
+
+# 45. Complete Workflow
+
+এই Lab-এর পুরো workflow:
+
+```text
+Load Dataset
+     ↓
+Check Dataset Information
+     ↓
+Check Statistics
+     ↓
+Check Missing Values
+     ↓
+Replace Invalid Zero Values
+     ↓
+Check Duplicate Records
+     ↓
+Remove Duplicates
+     ↓
+Normalize Selected Features
+     ↓
+Encode Outcome
+     ↓
+Filter Required Patients
+     ↓
+Prepare Data for Visualization
+     ↓
+Create Graphs
+     ↓
+Analyze Dataset
+```
+
+---
+
+# 46. Important Functions Used
+
+| Function            | কাজ                          |
+| ------------------- | ---------------------------- |
+| `pd.read_csv()`     | CSV dataset load করে         |
+| `head()`            | প্রথম কয়েকটি row দেখায়       |
+| `info()`            | Dataset information দেখায়    |
+| `describe()`        | Statistical summary দেখায়    |
+| `isnull()`          | Missing values identify করে  |
+| `sum()`             | Count করে                    |
+| `median()`          | Median বের করে               |
+| `replace()`         | Value replace করে            |
+| `duplicated()`      | Duplicate row identify করে   |
+| `drop_duplicates()` | Duplicate remove করে         |
+| `shape`             | Row ও column সংখ্যা দেখায়    |
+| `copy()`            | DataFrame-এর copy তৈরি করে   |
+| `MinMaxScaler()`    | Data normalize করে           |
+| `fit_transform()`   | Data fit এবং transform করে   |
+| `LabelEncoder()`    | Categorical value encode করে |
+| `map()`             | Value mapping করে            |
+| `plt.hist()`        | Histogram তৈরি করে           |
+| `sns.boxplot()`     | Box plot তৈরি করে            |
+| `sns.heatmap()`     | Heatmap তৈরি করে             |
+| `sns.kdeplot()`     | KDE plot তৈরি করে            |
+| `sns.scatterplot()` | Scatter plot তৈরি করে        |
+| `plt.show()`        | Graph display করে            |
+
+---
+
+# 47. Important Concepts for Exam
+
+### Dataset
+
+Related data-এর collection।
+
+### DataFrame
+
+Rows এবং columns-এর মাধ্যমে data রাখার tabular structure।
+
+### Missing Value
+
+Dataset-এ কোনো value না থাকা।
+
+### Duplicate
+
+একই record একাধিকবার থাকা।
+
+### Median
+
+Sorted data-এর middle value।
+
+### Normalization
+
+Numerical data-কে নির্দিষ্ট range-এর মধ্যে নিয়ে আসা।
+
+### Encoding
+
+Categorical data-কে numerical form-এ convert করা।
+
+### Filtering
+
+Condition ব্যবহার করে নির্দিষ্ট rows বের করা।
+
+### Histogram
+
+Numerical data-এর distribution দেখায়।
+
+### Box Plot
+
+Data-এর median, spread এবং possible outliers দেখায়।
+
+### Correlation
+
+দুইটি variable-এর relationship-এর direction এবং strength বোঝায়।
+
+### Heatmap
+
+Color ব্যবহার করে matrix-এর values visualize করে।
+
+### KDE Plot
+
+Data distribution-এর smooth density curve দেখায়।
+
+### Scatter Plot
+
+দুইটি numerical variable-এর relationship দেখায়।
+
+---
