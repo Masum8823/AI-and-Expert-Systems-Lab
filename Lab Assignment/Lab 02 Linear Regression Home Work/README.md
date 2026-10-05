@@ -525,3 +525,108 @@ Example:
 ```
 
 ---
+# Task 2: Data Preprocessing
+
+Model তৈরি করার আগে dataset prepare করতে হয়।
+
+এই Lab-এ preprocessing-এর প্রধান ধাপ:
+
+```text
+Features এবং Target আলাদা
+        ↓
+Train-Test Split
+        ↓
+Feature Standardization
+```
+
+---
+
+# 29. Features এবং Target আলাদা করা
+
+Code:
+
+```python
+X = diabetes_df.drop(columns=["target"])
+y = diabetes_df["target"]
+```
+
+এখানে:
+
+```text
+X → Features / Input
+y → Target / Output
+```
+
+---
+
+# 30. `X` কী?
+
+```python
+X = diabetes_df.drop(columns=["target"])
+```
+
+এখানে target column বাদ দিয়ে বাকি সব columns নেওয়া হয়েছে।
+
+তাই:
+
+```text
+X = Input Features
+```
+
+---
+
+# 31. `y` কী?
+
+```python
+y = diabetes_df["target"]
+```
+
+এখানে শুধু target column নেওয়া হয়েছে।
+
+তাই:
+
+```text
+y = Target
+```
+
+---
+
+# 32. সহজভাবে X এবং y
+
+```text
+X
+↓
+Input Features
+↓
+Model-কে দেওয়া হবে
+
+y
+↓
+Actual Target
+↓
+Model যেটা predict করবে
+```
+
+---
+
+# 33. Train-Test Split
+
+Dataset-কে দুই ভাগে ভাগ করা হয়েছে:
+
+```text
+80% → Training
+20% → Testing
+```
+
+Code:
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+---
