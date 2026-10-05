@@ -787,3 +787,164 @@ Testing  → transform()
 ```
 
 ---
+# Task 3: Simple Linear Regression
+
+## 43. Simple Linear Regression কী?
+
+Simple Linear Regression-এ মাত্র **একটি input feature** ব্যবহার করা হয়।
+
+সাধারণ equation:
+
+```text
+Y = mX + c
+```
+
+যেখানে:
+
+```text
+Y → Predicted Output
+X → Input Feature
+m → Slope/Coefficient
+c → Intercept
+```
+
+---
+
+# 44. এই Lab-এ Simple Regression
+
+এই Lab-এ:
+
+```text
+Input  → BMI
+Target → Diabetes Progression
+```
+
+অর্থাৎ BMI ব্যবহার করে diabetes progression score predict করা হয়েছে।
+
+---
+
+# 45. BMI Select করা
+
+```python
+bmi_data = diabetes_df[["bmi"]]
+target_data = diabetes_df["target"]
+```
+
+এখানে:
+
+```text
+bmi_data
+→ শুধু BMI feature
+
+target_data
+→ Target value
+```
+
+---
+
+# 46. কেন Double Bracket?
+
+```python
+diabetes_df[["bmi"]]
+```
+
+এখানে double bracket ব্যবহার করার কারণে result DataFrame হিসেবে থাকে।
+
+অন্যদিকে:
+
+```python
+diabetes_df["bmi"]
+```
+
+সাধারণত Series return করে।
+
+Machine Learning-এর জন্য feature input হিসেবে DataFrame format রাখা সুবিধাজনক।
+
+---
+
+# 47. BMI Data Split
+
+BMI এবং target-কে training/testing ভাগে ভাগ করা হয়েছে:
+
+```python
+bmi_train, bmi_test, target_train, target_test = train_test_split(
+    bmi_data,
+    target_data,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+এখানেও:
+
+```text
+80% → Training
+20% → Testing
+```
+
+---
+
+# 48. Simple Regression Model তৈরি
+
+```python
+simple_regression = LinearRegression()
+```
+
+এখানে `LinearRegression()` ব্যবহার করে model তৈরি করা হয়েছে।
+
+---
+
+# 49. Model Training
+
+```python
+simple_regression.fit(
+    bmi_train,
+    target_train
+)
+```
+
+`fit()` model-কে training data দিয়ে relationship শেখায়।
+
+সহজভাবে:
+
+```text
+BMI + Actual Target
+       ↓
+     fit()
+       ↓
+Model learns relationship
+```
+
+---
+
+# 50. Prediction
+
+Training-এর পর test BMI values ব্যবহার করে prediction করা হয়েছে:
+
+```python
+simple_predictions = simple_regression.predict(
+    bmi_test
+)
+```
+
+এখানে:
+
+```text
+bmi_test
+   ↓
+Model
+   ↓
+Predicted Target
+```
+
+---
+
+# 51. `predict()`
+
+```python
+model.predict(data)
+```
+
+নতুন input data-এর জন্য predicted output তৈরি করে।
+
+---
