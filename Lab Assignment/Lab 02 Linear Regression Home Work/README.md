@@ -1616,3 +1616,288 @@ r2 = r2_score(y_test, predictions)
 ```
 
 ---
+# 76. Simple Linear Regression — Quick Revision
+
+```text
+Simple Linear Regression
+        ↓
+Only ONE feature
+        ↓
+This Lab → BMI
+        ↓
+Target → Diabetes Progression
+        ↓
+Train Model
+        ↓
+Predict
+        ↓
+Regression Line
+```
+
+Formula:
+
+```text
+Y = mX + c
+```
+
+---
+
+# 77. Multiple Linear Regression — Quick Revision
+
+```text
+Multiple Linear Regression
+        ↓
+Multiple Features
+        ↓
+This Lab → All available features
+        ↓
+Standardized Features
+        ↓
+Train Model
+        ↓
+Predict Target
+        ↓
+Evaluate
+        ↓
+MAE + MSE + R²
+```
+
+Formula:
+
+```text
+Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+```
+
+---
+
+# 78. Simple vs Multiple — Exam Table
+
+| বিষয়               | Simple Linear Regression | Multiple Linear Regression    |
+| ------------------ | ------------------------ | ----------------------------- |
+| Number of features | 1                        | More than 1                   |
+| Lab feature        | BMI                      | All features                  |
+| Basic formula      | `Y = mX + c`             | `Y = β₀ + β₁X₁ + ... + βₙXₙ`  |
+| Complexity         | Lower                    | Higher                        |
+| Example            | BMI → Target             | All medical features → Target |
+
+---
+
+# 79. Data Preprocessing Flow
+
+```text
+Raw Dataset
+     ↓
+Check Missing Values
+     ↓
+Separate X and y
+     ↓
+Train-Test Split
+     ↓
+Standardize Features
+     ↓
+Model Training
+```
+
+### খুব গুরুত্বপূর্ণ:
+
+Training data:
+
+```python
+fit_transform()
+```
+
+Testing data:
+
+```python
+transform()
+```
+
+---
+
+# 80. Model Evaluation Flow
+
+```text
+Actual Values
+      ↓
+     y_test
+      │
+      │ Compare
+      ↓
+Predicted Values
+      ↑
+model.predict()
+      │
+      ↓
+ ┌────┼────┐
+ ↓    ↓    ↓
+MAE  MSE   R²
+```
+
+---
+
+# 81. One-Minute Revision
+
+```text
+Linear Regression
+→ Numerical value predict করে
+
+Supervised Learning
+→ Input + Target থাকে
+
+X
+→ Features
+
+y
+→ Target
+
+Train
+→ Model শেখে
+
+Test
+→ Model পরীক্ষা করা হয়
+
+80/20
+→ 80% Train + 20% Test
+
+StandardScaler
+→ Feature standardization
+
+Simple Regression
+→ One feature
+
+Multiple Regression
+→ Multiple features
+
+BMI
+→ Simple Regression-এর feature
+
+LinearRegression()
+→ Model তৈরি
+
+fit()
+→ Model train
+
+predict()
+→ Prediction
+
+MAE
+→ Average absolute error
+
+MSE
+→ Average squared error
+
+R²
+→ Explained variation
+
+Coefficient
+→ Feature-এর learned effect/relationship
+
+Heatmap
+→ Correlation visualization
+
+Regplot
+→ Regression line
+
+Bar Plot
+→ Coefficient comparison
+```
+
+---
+
+# 82. Final Concept Map
+
+```text
+                    LINEAR REGRESSION
+                           │
+             ┌─────────────┴─────────────┐
+             ↓                           ↓
+          Simple                     Multiple
+             │                           │
+         One Feature               Many Features
+             │                           │
+            BMI                    All Features
+             │                           │
+             └─────────────┬─────────────┘
+                           ↓
+                       Prediction
+                           │
+                           ↓
+                    Model Evaluation
+                           │
+                    ┌──────┼──────┐
+                    ↓      ↓      ↓
+                   MAE    MSE     R²
+                           │
+                           ↓
+                  Feature Coefficients
+                           │
+                           ↓
+                   Feature Comparison
+```
+
+---
+
+# 83. Final Understanding
+
+এই Lab-এ আমরা Diabetes dataset ব্যবহার করে **Linear Regression-এর complete basic workflow** শিখেছি।
+
+প্রথমে dataset load করে missing values, statistics এবং correlation check করেছি।
+
+তারপর:
+
+```text
+Features → X
+Target → y
+```
+
+আলাদা করেছি এবং dataset-কে:
+
+```text
+80% Training
+20% Testing
+```
+
+ভাগ করেছি।
+
+এরপর `StandardScaler` ব্যবহার করে features standardize করেছি।
+
+Simple Linear Regression-এ শুধুমাত্র:
+
+```text
+BMI
+```
+
+ব্যবহার করে diabetes progression predict করেছি এবং regression line visualize করেছি।
+
+এরপর Multiple Linear Regression-এ সব available features ব্যবহার করেছি।
+
+শেষে model-এর performance:
+
+```text
+MAE
+MSE
+R²
+```
+
+দিয়ে evaluate করেছি।
+
+সবশেষে regression coefficients বের করে features-এর contribution compare করেছি।
+
+---
+
+# 84. Final Memory Line
+
+```text
+Load
+→ Explore
+→ Separate X/y
+→ Split
+→ Standardize
+→ Simple Regression
+→ Multiple Regression
+→ Predict
+→ Evaluate
+→ Analyze Coefficients
+```
+
+এটাই **AI Lab 02 – Linear Regression Using Diabetes Dataset**-এর complete workflow।
