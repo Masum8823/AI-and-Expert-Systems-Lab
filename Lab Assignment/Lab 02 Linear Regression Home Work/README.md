@@ -1064,3 +1064,142 @@ multiple_predictions = multiple_regression.predict(
 এখানে test features ব্যবহার করে target prediction করা হয়েছে।
 
 ---
+
+# 59. Model Evaluation
+
+Prediction করার পর দেখতে হবে model কত ভালো কাজ করেছে।
+
+এই Lab-এ তিনটি metric ব্যবহার করা হয়েছে:
+
+```text
+1. MAE
+2. MSE
+3. R²
+```
+
+---
+
+# 60. MAE — Mean Absolute Error
+
+Full form:
+
+> Mean Absolute Error
+
+Code:
+
+```python
+mae_value = mean_absolute_error(
+    y_test,
+    multiple_predictions
+)
+```
+
+MAE actual value এবং predicted value-এর absolute difference-এর average।
+
+সহজভাবে:
+
+> Model-এর prediction গড়ে actual value থেকে কতটা দূরে আছে তা MAE বোঝায়।
+
+### MAE-এর ক্ষেত্রে
+
+```text
+Lower MAE → Better
+```
+
+সাধারণভাবে error যত কম, model তত ভালো।
+
+---
+
+# 61. MSE — Mean Squared Error
+
+Full form:
+
+> Mean Squared Error
+
+Code:
+
+```python
+mse_value = mean_squared_error(
+    y_test,
+    multiple_predictions
+)
+```
+
+MSE prediction error-এর square-এর average।
+
+সহজভাবে:
+
+> Actual এবং predicted value-এর difference বের করে সেটাকে square করে average করা হয়।
+
+### MSE-এর ক্ষেত্রে
+
+```text
+Lower MSE → Better
+```
+
+---
+
+# 62. R² — R-squared
+
+Full form:
+
+> R-squared
+
+Code:
+
+```python
+r2_value = r2_score(
+    y_test,
+    multiple_predictions
+)
+```
+
+R² model target-এর variation-এর কত অংশ explain করতে পারছে তা বোঝাতে সাহায্য করে।
+
+সহজভাবে:
+
+> Model data-এর pattern কতটা ভালোভাবে explain করতে পারছে তা R² দিয়ে বোঝা যায়।
+
+### সাধারণ ধারণা
+
+```text
+R² বেশি → Better fit
+```
+
+---
+
+# 63. MAE, MSE এবং R² একসাথে
+
+| Metric | কী বোঝায়               | সাধারণভাবে    |
+| ------ | ---------------------- | ------------- |
+| MAE    | Average absolute error | Lower better  |
+| MSE    | Average squared error  | Lower better  |
+| R²     | Explained variation    | Higher better |
+
+---
+
+# 64. Model Evaluation Code
+
+```python
+mae_value = mean_absolute_error(
+    y_test,
+    multiple_predictions
+)
+
+mse_value = mean_squared_error(
+    y_test,
+    multiple_predictions
+)
+
+r2_value = r2_score(
+    y_test,
+    multiple_predictions
+)
+
+print("Multiple Linear Regression Results:")
+print("Mean Absolute Error (MAE):", mae_value)
+print("Mean Squared Error (MSE):", mse_value)
+print("R-squared (R²) Score:", r2_value)
+```
+
+---
