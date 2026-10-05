@@ -1294,3 +1294,52 @@ feature_coefficients = feature_coefficients.sort_values(
 `ascending=False` অর্থ বড় value আগে থাকবে।
 
 ---
+# 70. Feature Importance Bar Chart
+
+Coefficients visualise করতে:
+
+```python
+plt.figure(figsize=(9, 6))
+
+sns.barplot(
+    data=feature_coefficients,
+    x="Coefficient",
+    y="Feature"
+)
+
+plt.title("Feature Importance Based on Regression Coefficients")
+plt.xlabel("Coefficient Value")
+plt.ylabel("Feature")
+
+plt.show()
+```
+
+এই bar chart feature coefficients-এর comparison দেখায়।
+
+---
+
+# 71. Coefficient দিয়ে Feature Comparison
+
+Coefficient-এর sign এবং magnitude দুটোই গুরুত্বপূর্ণ।
+
+### Positive coefficient
+
+```text
+Positive relationship-এর indication
+```
+
+### Negative coefficient
+
+```text
+Negative relationship-এর indication
+```
+
+### Larger absolute coefficient
+
+```text
+Model-এর prediction-এ তুলনামূলকভাবে stronger contribution-এর indication
+```
+
+তবে coefficient-এর magnitude তুলনা করার সময় feature scaling/standardization-এর বিষয়টি গুরুত্বপূর্ণ।
+
+---
