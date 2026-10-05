@@ -452,3 +452,76 @@ Value `-1`-এর দিকে হলে negative relationship strong।
 Value `0`-এর কাছাকাছি হলে strong linear relationship কম।
 
 ---
+# 25. Correlation Heatmap
+
+Correlation calculate:
+
+```python
+corr = diabetes_df.corr()
+```
+
+তারপর heatmap:
+
+```python
+plt.figure(figsize=(10, 7))
+
+sns.heatmap(
+    corr,
+    annot=True,
+    fmt=".2f",
+    cmap="coolwarm"
+)
+
+plt.title("Correlation Heatmap")
+
+plt.show()
+```
+
+---
+
+# 26. Heatmap-এর কাজ
+
+Heatmap ব্যবহার করে একসাথে অনেকগুলো feature-এর correlation দেখা যায়।
+
+এই Lab-এ আমরা দেখতে পারি:
+
+```text
+Feature ↔ Feature
+Feature ↔ Target
+```
+
+এর relationship।
+
+---
+
+# 27. `annot=True`
+
+```python
+annot=True
+```
+
+ব্যবহার করলে heatmap-এর প্রতিটি cell-এর মধ্যে numerical correlation value দেখা যায়।
+
+---
+
+# 28. `fmt=".2f"`
+
+```python
+fmt=".2f"
+```
+
+এর অর্থ value দুই decimal place পর্যন্ত দেখানো হবে।
+
+Example:
+
+```text
+0.4567
+```
+
+হয়ে যাবে:
+
+```text
+0.46
+```
+
+---
