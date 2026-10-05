@@ -220,3 +220,69 @@ from sklearn.datasets import load_diabetes
 Scikit-learn-এর built-in Diabetes dataset load করার জন্য ব্যবহার করা হয়।
 
 ---
+
+# 16. Load Diabetes Dataset
+
+Dataset load করার জন্য:
+
+```python
+diabetes_data = load_diabetes()
+```
+
+এটি scikit-learn-এর built-in Diabetes dataset load করে।
+
+তারপর DataFrame তৈরি করা হয়েছে:
+
+```python
+diabetes_df = pd.DataFrame(
+    diabetes_data.data,
+    columns=diabetes_data.feature_names
+)
+```
+
+এখানে:
+
+```text
+diabetes_data.data
+```
+
+থেকে feature data নেওয়া হয়েছে।
+
+আর:
+
+```text
+diabetes_data.feature_names
+```
+
+থেকে column names নেওয়া হয়েছে।
+
+---
+
+# 17. Target Column Add করা
+
+Dataset-এর target আলাদা করে DataFrame-এ add করা হয়েছে:
+
+```python
+diabetes_df["target"] = diabetes_data.target
+```
+
+এখন DataFrame-এর মধ্যে features এবং target দুটোই আছে।
+
+---
+
+# 18. First Five Rows দেখা
+
+```python
+print(diabetes_df.head())
+```
+
+`head()` dataset-এর প্রথম ৫টি row দেখায়।
+
+### মনে রাখবে
+
+```text
+head()
+→ First 5 rows
+```
+
+---
