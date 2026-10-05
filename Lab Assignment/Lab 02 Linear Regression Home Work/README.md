@@ -630,3 +630,160 @@ X_train, X_test, y_train, y_test = train_test_split(
 ```
 
 ---
+
+# 34. Training Data
+
+Training data model শেখানোর জন্য ব্যবহার করা হয়।
+
+```text
+Training Data
+      ↓
+Model learns relationship
+```
+
+---
+
+# 35. Testing Data
+
+Testing data model training-এর সময় ব্যবহার করা হয় না।
+
+Training শেষে নতুন/unseen data-এর উপর model কত ভালো predict করতে পারে তা test করার জন্য testing data ব্যবহার করা হয়।
+
+```text
+Test Data
+   ↓
+Model Prediction
+   ↓
+Actual Value-এর সাথে Compare
+```
+
+---
+
+# 36. `test_size=0.2`
+
+```python
+test_size=0.2
+```
+
+মানে dataset-এর:
+
+```text
+20% → Test
+80% → Train
+```
+
+---
+
+# 37. `random_state=42`
+
+```python
+random_state=42
+```
+
+Dataset split করার সময় একই random result পাওয়ার জন্য ব্যবহার করা হয়েছে।
+
+সহজভাবে:
+
+> একই code আবার run করলে একইভাবে data split পাওয়ার জন্য `random_state` ব্যবহার করা হয়।
+
+`42` এখানে একটি fixed seed value।
+
+---
+
+# 38. Standardization
+
+Features-এর scale একই নয়।
+
+তাই model training-এর আগে features standardize করা হয়েছে।
+
+এর জন্য:
+
+```python
+standardizer = StandardScaler()
+```
+
+ব্যবহার করা হয়েছে।
+
+---
+
+# 39. StandardScaler কী?
+
+`StandardScaler` feature values-কে standard scale-এ transform করে।
+
+সাধারণভাবে standardization-এর পরে:
+
+```text
+Mean ≈ 0
+Standard Deviation ≈ 1
+```
+
+হয়।
+
+---
+
+# 40. Training Data Standardize
+
+```python
+X_train_scaled = standardizer.fit_transform(X_train)
+```
+
+এখানে `fit_transform()` ব্যবহার করা হয়েছে।
+
+এটি training data থেকে scaling information শেখে এবং তারপর training data transform করে।
+
+---
+
+# 41. Test Data Standardize
+
+```python
+X_test_scaled = standardizer.transform(X_test)
+```
+
+এখানে শুধু:
+
+```text
+transform()
+```
+
+ব্যবহার করা হয়েছে।
+
+কারণ test data-এর জন্য নতুন করে scaler fit করা উচিত নয়।
+
+একই training-based transformation test data-তে apply করা হয়।
+
+---
+
+# 42. `fit_transform()` vs `transform()`
+
+### Training Data
+
+```python
+standardizer.fit_transform(X_train)
+```
+
+মানে:
+
+```text
+Fit + Transform
+```
+
+### Testing Data
+
+```python
+standardizer.transform(X_test)
+```
+
+মানে:
+
+```text
+শুধু Transform
+```
+
+### মনে রাখার সহজ নিয়ম
+
+```text
+Training → fit_transform()
+Testing  → transform()
+```
+
+---
