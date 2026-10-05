@@ -1343,3 +1343,276 @@ Model-এর prediction-এ তুলনামূলকভাবে stronger con
 তবে coefficient-এর magnitude তুলনা করার সময় feature scaling/standardization-এর বিষয়টি গুরুত্বপূর্ণ।
 
 ---
+
+# 72. এই Lab-এর Complete Workflow
+
+পুরো Lab-টা এভাবে মনে রাখতে পারো:
+
+```text
+                 AI LAB 02
+                     │
+            Linear Regression
+                     │
+             Load Diabetes Data
+                     │
+                     ↓
+              Data Exploration
+                     │
+          ┌──────────┼──────────┐
+          ↓          ↓          ↓
+      Missing    Statistics   Correlation
+       Values
+          │
+          ↓
+       Preprocessing
+          │
+      ┌───┴────────────┐
+      ↓                ↓
+  X and y          Train/Test
+  Separate           Split
+      │                │
+      └───────┬────────┘
+              ↓
+       Standardization
+              │
+       ┌──────┴──────┐
+       ↓             ↓
+     Simple        Multiple
+   Regression     Regression
+       │             │
+     BMI only     All Features
+       │             │
+       ↓             ↓
+   Prediction    Prediction
+       │             │
+       └──────┬──────┘
+              ↓
+         Evaluation
+              │
+        ┌─────┼─────┐
+        ↓     ↓     ↓
+       MAE   MSE    R²
+              │
+              ↓
+       Feature Coefficients
+              │
+              ↓
+       Feature Importance
+```
+
+---
+
+# 73. Important Functions
+
+| Function                | কাজ                                        |
+| ----------------------- | ------------------------------------------ |
+| `load_diabetes()`       | Diabetes dataset load করে                  |
+| `pd.DataFrame()`        | DataFrame তৈরি করে                         |
+| `head()`                | প্রথম ৫টি row দেখায়                        |
+| `isnull()`              | Missing values check করে                   |
+| `sum()`                 | Missing values count করে                   |
+| `describe()`            | Statistical summary দেয়                    |
+| `corr()`                | Correlation বের করে                        |
+| `sns.heatmap()`         | Correlation heatmap তৈরি করে               |
+| `drop()`                | Column বাদ দেয়                             |
+| `train_test_split()`    | Train/Test data ভাগ করে                    |
+| `StandardScaler()`      | Features standardize করে                   |
+| `fit_transform()`       | Fit এবং transform করে                      |
+| `transform()`           | Previously fitted transformation apply করে |
+| `LinearRegression()`    | Linear Regression model তৈরি করে           |
+| `fit()`                 | Model train করে                            |
+| `predict()`             | Prediction করে                             |
+| `sns.regplot()`         | Regression line plot করে                   |
+| `mean_absolute_error()` | MAE বের করে                                |
+| `mean_squared_error()`  | MSE বের করে                                |
+| `r2_score()`            | R² বের করে                                 |
+| `sort_values()`         | Data sort করে                              |
+| `sns.barplot()`         | Bar chart তৈরি করে                         |
+
+---
+
+# 74. Important Terms
+
+### Feature
+
+Model-এর input variable।
+
+```text
+X = Features
+```
+
+---
+
+### Target
+
+Model যে output predict করবে।
+
+```text
+y = Target
+```
+
+---
+
+### Training Data
+
+Model শেখানোর জন্য ব্যবহৃত data।
+
+---
+
+### Testing Data
+
+Model-এর performance test করার জন্য ব্যবহৃত unseen data।
+
+---
+
+### Standardization
+
+Features-কে standard scale-এ নিয়ে আসা।
+
+---
+
+### Simple Linear Regression
+
+একটি feature ব্যবহার করে regression করা।
+
+---
+
+### Multiple Linear Regression
+
+একাধিক features ব্যবহার করে regression করা।
+
+---
+
+### Prediction
+
+Model-এর estimated output।
+
+---
+
+### Coefficient
+
+Feature-এর সাথে model-এর learned relationship-এর parameter।
+
+---
+
+### MAE
+
+Average absolute prediction error।
+
+```text
+Lower → Better
+```
+
+---
+
+### MSE
+
+Average squared prediction error।
+
+```text
+Lower → Better
+```
+
+---
+
+### R²
+
+Model target variation কতটা explain করতে পারছে তার measure।
+
+```text
+Higher → Generally Better
+```
+
+---
+
+# 75. Most Important Code Patterns
+
+## Dataset Load
+
+```python
+diabetes_data = load_diabetes()
+```
+
+## DataFrame
+
+```python
+diabetes_df = pd.DataFrame(
+    diabetes_data.data,
+    columns=diabetes_data.feature_names
+)
+
+diabetes_df["target"] = diabetes_data.target
+```
+
+## Missing Values
+
+```python
+diabetes_df.isnull().sum()
+```
+
+## Statistics
+
+```python
+diabetes_df.describe()
+```
+
+## Correlation
+
+```python
+diabetes_df.corr()
+```
+
+## Features and Target
+
+```python
+X = diabetes_df.drop(columns=["target"])
+y = diabetes_df["target"]
+```
+
+## Train-Test Split
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+## Standardization
+
+```python
+scaler = StandardScaler()
+
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+```
+
+## Model
+
+```python
+model = LinearRegression()
+```
+
+## Training
+
+```python
+model.fit(X_train_scaled, y_train)
+```
+
+## Prediction
+
+```python
+predictions = model.predict(X_test_scaled)
+```
+
+## Evaluation
+
+```python
+mae = mean_absolute_error(y_test, predictions)
+mse = mean_squared_error(y_test, predictions)
+r2 = r2_score(y_test, predictions)
+```
+
+---
