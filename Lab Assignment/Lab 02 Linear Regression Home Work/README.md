@@ -286,3 +286,169 @@ head()
 ```
 
 ---
+# 19. Dataset-এর Basic Structure
+
+এই dataset-এ বিভিন্ন medical features আছে এবং একটি target value আছে।
+
+Features model-এর input হিসেবে কাজ করবে।
+
+Target হলো model-এর prediction output।
+
+সহজভাবে:
+
+```text
+Features
+   ↓
+Machine Learning Model
+   ↓
+Target Prediction
+```
+
+---
+
+# Task 1: Data Exploration
+
+Data exploration মানে model বানানোর আগে dataset সম্পর্কে basic information জানা।
+
+এই Lab-এ তিনটি প্রধান exploration করা হয়েছে:
+
+1. Missing Values Check
+2. Statistical Summary
+3. Correlation Heatmap
+
+---
+
+# 20. Missing Values Check
+
+Missing value আছে কি না দেখার জন্য:
+
+```python
+missing_values = diabetes_df.isnull().sum()
+
+print(missing_values)
+```
+
+---
+
+## `isnull()`
+
+```python
+diabetes_df.isnull()
+```
+
+প্রতিটি value missing কি না check করে।
+
+Missing হলে:
+
+```text
+True
+```
+
+না হলে:
+
+```text
+False
+```
+
+---
+
+## `sum()`
+
+```python
+diabetes_df.isnull().sum()
+```
+
+প্রতিটি column-এ কতগুলো missing value আছে তা count করে।
+
+### মনে রাখবে
+
+```text
+isnull()
+→ Missing values identify
+
+sum()
+→ Missing values count
+```
+
+---
+
+# 21. Summary Statistics
+
+Dataset-এর statistical summary দেখতে:
+
+```python
+print(diabetes_df.describe())
+```
+
+`describe()` থেকে numerical data-এর বিভিন্ন statistics পাওয়া যায়।
+
+যেমন:
+
+* Count
+* Mean
+* Standard deviation
+* Minimum
+* 25%
+* 50%
+* 75%
+* Maximum
+
+---
+
+# 22. Mean
+
+Mean হলো average value।
+
+উদাহরণ:
+
+```text
+10, 20, 30
+```
+
+Mean:
+
+```text
+(10 + 20 + 30) / 3 = 20
+```
+
+---
+
+# 23. Standard Deviation
+
+Standard deviation data কতটা spread বা ছড়ানো তা বোঝাতে সাহায্য করে।
+
+সহজভাবে:
+
+> Data values mean-এর আশেপাশে কতটা spread হয়েছে তা বোঝায়।
+
+---
+
+# 24. Correlation
+
+Correlation দুইটি numerical variable-এর মধ্যে relationship বোঝাতে সাহায্য করে।
+
+Correlation সাধারণত:
+
+```text
+-1 থেকে +1
+```
+
+এর মধ্যে থাকে।
+
+### Positive Correlation
+
+Value `+1`-এর দিকে হলে positive relationship strong।
+
+অর্থাৎ একটি variable বাড়লে অন্যটিও বাড়ার tendency থাকতে পারে।
+
+### Negative Correlation
+
+Value `-1`-এর দিকে হলে negative relationship strong।
+
+অর্থাৎ একটি variable বাড়লে অন্যটি কমার tendency থাকতে পারে।
+
+### Near Zero
+
+Value `0`-এর কাছাকাছি হলে strong linear relationship কম।
+
+---
