@@ -1001,3 +1001,66 @@ Estimated Diabetes Progression
 ```
 
 ---
+# Task 4: Multiple Linear Regression
+
+# 55. Multiple Linear Regression কী?
+
+Multiple Linear Regression-এ একাধিক input feature ব্যবহার করা হয়।
+
+Simple Linear Regression:
+
+```text
+Y = mX + c
+```
+
+Multiple Linear Regression:
+
+```text
+Y = β₀ + β₁X₁ + β₂X₂ + β₃X₃ + ... + βₙXₙ
+```
+
+এখানে একাধিক feature model-এর input হিসেবে কাজ করে।
+
+---
+
+# 56. Simple vs Multiple Linear Regression
+
+| Simple Linear Regression | Multiple Linear Regression |
+| ------------------------ | -------------------------- |
+| একটি feature             | একাধিক feature             |
+| BMI ব্যবহার করা হয়েছে    | সব available features      |
+| সহজ model                | তুলনামূলকভাবে complex      |
+| `Y = mX + c`             | `Y = β₀ + β₁X₁ + ...`      |
+
+---
+
+# 57. Multiple Regression Model তৈরি
+
+```python
+multiple_regression = LinearRegression()
+```
+
+তারপর training:
+
+```python
+multiple_regression.fit(
+    X_train_scaled,
+    y_train
+)
+```
+
+এখানে সব standardized features ব্যবহার করা হয়েছে।
+
+---
+
+# 58. Multiple Regression Prediction
+
+```python
+multiple_predictions = multiple_regression.predict(
+    X_test_scaled
+)
+```
+
+এখানে test features ব্যবহার করে target prediction করা হয়েছে।
+
+---
