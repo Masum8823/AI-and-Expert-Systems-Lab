@@ -1203,3 +1203,94 @@ print("R-squared (R²) Score:", r2_value)
 ```
 
 ---
+
+# Task 5: Feature Importance Analysis
+
+# 65. Regression Coefficient কী?
+
+Linear Regression model-এর প্রতিটি feature-এর একটি coefficient থাকে।
+
+এই coefficient feature এবং prediction-এর relationship সম্পর্কে information দেয়।
+
+Multiple Linear Regression-এর equation:
+
+```text
+Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+```
+
+এখানে:
+
+```text
+β₁, β₂, ... βₙ
+```
+
+হলো feature coefficients।
+
+---
+
+# 66. Coefficient Positive হলে
+
+Coefficient positive হলে feature এবং target-এর মধ্যে positive relationship-এর indication থাকতে পারে।
+
+সহজভাবে:
+
+```text
+Feature ↑
+   ↓
+Prediction ↑
+```
+
+এমন relationship model-এ দেখা যেতে পারে।
+
+---
+
+# 67. Coefficient Negative হলে
+
+Coefficient negative হলে negative relationship-এর indication থাকতে পারে।
+
+সহজভাবে:
+
+```text
+Feature ↑
+   ↓
+Prediction ↓
+```
+
+এমন relationship model-এ দেখা যেতে পারে।
+
+---
+
+# 68. Feature Coefficients বের করা
+
+```python
+feature_coefficients = pd.DataFrame({
+    "Feature": X.columns,
+    "Coefficient": multiple_regression.coef_
+})
+```
+
+এখানে একটি DataFrame তৈরি করা হয়েছে যেখানে:
+
+```text
+Feature
+Coefficient
+```
+
+দুটি column আছে।
+
+---
+
+# 69. Coefficients Sort করা
+
+```python
+feature_coefficients = feature_coefficients.sort_values(
+    by="Coefficient",
+    ascending=False
+)
+```
+
+এতে coefficient অনুযায়ী features সাজানো হয়।
+
+`ascending=False` অর্থ বড় value আগে থাকবে।
+
+---
