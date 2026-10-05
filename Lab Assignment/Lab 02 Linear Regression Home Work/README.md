@@ -948,3 +948,56 @@ model.predict(data)
 নতুন input data-এর জন্য predicted output তৈরি করে।
 
 ---
+# 52. Regression Line
+
+Simple Linear Regression-এর relationship graph-এ দেখানো হয়েছে।
+
+```python
+sns.regplot(
+    x=bmi_test["bmi"],
+    y=target_test,
+    scatter_kws={"alpha": 0.7},
+    line_kws={"linewidth": 2}
+)
+```
+
+এখানে:
+
+```text
+X-axis → BMI
+Y-axis → Diabetes Progression
+```
+
+এবং regression line estimated relationship দেখায়।
+
+---
+
+# 53. `regplot()`
+
+Seaborn-এর:
+
+```python
+sns.regplot()
+```
+
+scatter data-এর সাথে একটি regression line দেখাতে পারে।
+
+এই Lab-এ এটি BMI এবং target-এর relationship visualize করতে ব্যবহৃত হয়েছে।
+
+---
+
+# 54. Regression Line কী বোঝায়?
+
+Regression line হলো এমন একটি estimated straight line যা input এবং output-এর relationship represent করে।
+
+সহজভাবে:
+
+```text
+BMI
+ ↓
+Regression Model
+ ↓
+Estimated Diabetes Progression
+```
+
+---
