@@ -421,3 +421,61 @@ Class 1 → 100
 তাহলে dataset imbalanced।
 
 ---
+# 21. Imbalance Ratio
+
+Lab-এ imbalance ratio বের করার জন্য:
+
+```python
+minority_class = df["target"].value_counts().min()
+
+majority_class = df["target"].value_counts().max()
+
+imbalance_ratio = majority_class / minority_class
+
+print(f"Imbalance Ratio: {imbalance_ratio:.2f}")
+```
+
+Formula:
+
+```text
+Imbalance Ratio =
+Majority Class Count
+--------------------
+Minority Class Count
+```
+
+---
+
+# 22. Imbalance Ratio Example
+
+ধরো:
+
+```text
+Majority = 800
+Minority = 200
+```
+
+তাহলে:
+
+```text
+IR = 800 / 200
+   = 4
+```
+
+অর্থাৎ imbalance ratio = 4।
+
+Lab-এর provided guideline অনুযায়ী:
+
+```text
+IR > 2
+→ Dataset imbalanced
+
+IR > 10
+→ Highly imbalanced
+```
+
+### Important
+
+এটি এই Lab-এর guideline হিসেবে মনে রাখবে।
+
+---
