@@ -360,3 +360,39 @@ isnull().sum()
 ```
 
 ---
+
+# 17. Class Distribution
+
+Class distribution দেখতে:
+
+```python
+print(df["target"].value_counts())
+```
+
+এতে প্রতিটি class-এ কতগুলো data আছে তা জানা যায়।
+
+Example:
+
+```text
+0 → কতটি Benign
+1 → কতটি Malignant
+```
+
+---
+
+# 18. Class Distribution কেন গুরুত্বপূর্ণ?
+
+Classification problem-এ প্রতিটি class-এর data কতটা আছে তা জানা গুরুত্বপূর্ণ।
+
+ধরো:
+
+```text
+Benign     → 500
+Malignant  → 50
+```
+
+এখানে দুই class সমান নয়।
+
+এ ধরনের dataset-কে **imbalanced dataset** বলা হয়।
+
+---
