@@ -148,3 +148,83 @@ Model
 ```
 
 ---
+
+# 6. Required Libraries
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    roc_curve,
+    auc
+)
+
+from sklearn.datasets import load_breast_cancer
+```
+
+---
+
+# 7. Pandas
+
+```python
+import pandas as pd
+```
+
+Pandas dataset handling এবং analysis-এর জন্য ব্যবহার করা হয়।
+
+যেমন:
+
+* DataFrame তৈরি করা
+* Dataset দেখা
+* Column select করা
+* Missing values check করা
+* Statistics বের করা
+
+---
+
+# 8. NumPy
+
+```python
+import numpy as np
+```
+
+Numerical operations এবং array-related কাজের জন্য ব্যবহার করা হয়।
+
+---
+
+# 9. Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+```
+
+Graph এবং visualization তৈরি করার জন্য ব্যবহৃত হয়।
+
+---
+
+# 10. Seaborn
+
+```python
+import seaborn as sns
+```
+
+Statistical visualization-এর জন্য ব্যবহার করা হয়।
+
+এই Lab-এ:
+
+* Count plot
+* Heatmap
+* Pie chart
+* Confusion matrix visualization
+
+ইত্যাদিতে Seaborn/Matplotlib ব্যবহার করা হয়েছে।
+
+---
