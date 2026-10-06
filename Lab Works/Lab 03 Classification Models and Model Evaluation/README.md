@@ -314,3 +314,22 @@ EDA-এর মাধ্যমে আমরা জানতে পারি:
 * Dataset balanced নাকি imbalanced?
 
 ---
+
+# 15. Summary Statistics
+
+```python
+print(df.describe())
+```
+
+`describe()` থেকে পাওয়া যায়:
+
+* Count
+* Mean
+* Standard deviation
+* Minimum
+* 25%
+* 50%
+* 75%
+* Maximum
+
+---
