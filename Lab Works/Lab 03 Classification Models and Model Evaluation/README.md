@@ -333,3 +333,30 @@ print(df.describe())
 * Maximum
 
 ---
+# 16. Missing Values
+
+Missing value check:
+
+```python
+print(df.isnull().sum())
+```
+
+### `isnull()`
+
+প্রতিটি value missing কি না check করে।
+
+### `sum()`
+
+প্রতিটি column-এ missing value কতটি আছে তা count করে।
+
+### মনে রাখবে
+
+```text
+isnull()
+→ Missing values check
+
+isnull().sum()
+→ Missing values count
+```
+
+---
