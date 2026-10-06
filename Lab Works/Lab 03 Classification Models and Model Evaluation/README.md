@@ -104,3 +104,47 @@ Regression     → "কত value?"
 ```
 
 ---
+
+# 4. Dataset Used in This Lab
+
+এই Lab-এ **Breast Cancer Dataset** ব্যবহার করা হয়েছে।
+
+Dataset load করা হয়েছে scikit-learn থেকে:
+
+```python
+from sklearn.datasets import load_breast_cancer
+
+cancer = load_breast_cancer()
+```
+
+এই dataset-এ breast cancer সম্পর্কিত বিভিন্ন numerical features এবং একটি target variable আছে।
+
+---
+
+# 5. Target Variable
+
+Code:
+
+```python
+df["target"] = cancer.target
+```
+
+এই Lab-এর target:
+
+```text
+0 → Benign
+1 → Malignant
+```
+
+অর্থাৎ model-এর কাজ হলো:
+
+```text
+Input Features
+      ↓
+Model
+      ↓
+0 = Benign
+1 = Malignant
+```
+
+---
