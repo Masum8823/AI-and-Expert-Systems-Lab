@@ -228,3 +228,71 @@ Statistical visualization-এর জন্য ব্যবহার করা �
 ইত্যাদিতে Seaborn/Matplotlib ব্যবহার করা হয়েছে।
 
 ---
+# 11. Dataset Load করা
+
+```python
+cancer = load_breast_cancer()
+```
+
+এরপর DataFrame:
+
+```python
+df = pd.DataFrame(
+    cancer.data,
+    columns=cancer.feature_names
+)
+```
+
+এবং target:
+
+```python
+df["target"] = cancer.target
+```
+
+---
+
+# 12. `head()`
+
+প্রথম ৫টি row দেখতে:
+
+```python
+print(df.head())
+```
+
+### মনে রাখবে
+
+```text
+head()
+→ First 5 rows
+```
+
+---
+
+# 13. Entire Dataset দেখা
+
+সব row দেখানোর জন্য:
+
+```python
+pd.set_option('display.max_rows', None)
+```
+
+সব column দেখানোর জন্য:
+
+```python
+pd.set_option('display.max_columns', None)
+```
+
+তারপর:
+
+```python
+print(df)
+```
+
+সব data দেখার পর settings reset করা যায়:
+
+```python
+pd.reset_option('display.max_rows')
+pd.reset_option('display.max_columns')
+```
+
+---
