@@ -396,3 +396,28 @@ Malignant  → 50
 এ ধরনের dataset-কে **imbalanced dataset** বলা হয়।
 
 ---
+# 19. Balanced Dataset
+
+যদি classes-এর সংখ্যা মোটামুটি কাছাকাছি হয়:
+
+```text
+Class 0 → 300
+Class 1 → 280
+```
+
+তাহলে dataset relatively balanced।
+
+---
+
+# 20. Imbalanced Dataset
+
+যদি একটি class অন্য class-এর তুলনায় অনেক বেশি হয়:
+
+```text
+Class 0 → 900
+Class 1 → 100
+```
+
+তাহলে dataset imbalanced।
+
+---
