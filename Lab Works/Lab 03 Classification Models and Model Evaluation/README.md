@@ -296,3 +296,21 @@ pd.reset_option('display.max_columns')
 ```
 
 ---
+
+# 14. Exploratory Data Analysis (EDA)
+
+EDA-এর full form:
+
+> Exploratory Data Analysis
+
+EDA হলো model তৈরি করার আগে dataset সম্পর্কে ভালোভাবে বোঝার process।
+
+EDA-এর মাধ্যমে আমরা জানতে পারি:
+
+* Data কেমন?
+* Missing values আছে কি না?
+* Numerical values-এর distribution কেমন?
+* Classes-এর distribution কেমন?
+* Dataset balanced নাকি imbalanced?
+
+---
