@@ -32,3 +32,37 @@
 * বিভিন্ন model-এর performance compare করা
 
 ---
+
+# 2. Classification কী?
+
+Classification হলো এমন একটি **Supervised Machine Learning problem**, যেখানে model কোনো input data-কে নির্দিষ্ট class/category-এর মধ্যে classify করে।
+
+সহজভাবে:
+
+> Classification model input data দেখে সেটি কোন class-এর অন্তর্ভুক্ত তা predict করে।
+
+Example:
+
+```text
+Email → Spam / Not Spam
+
+Patient → Disease / No Disease
+
+Transaction → Fraud / Not Fraud
+
+Tumor → Benign / Malignant
+```
+
+এই Lab-এ:
+
+```text
+Patient/Tumor Data
+       ↓
+Classification Model
+       ↓
+Benign / Malignant
+```
+
+predict করা হয়।
+
+---
