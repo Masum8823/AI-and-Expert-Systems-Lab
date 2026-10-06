@@ -66,3 +66,41 @@ Benign / Malignant
 predict করা হয়।
 
 ---
+
+# 3. Classification vs Regression
+
+এটি খুব গুরুত্বপূর্ণ exam topic।
+
+| Classification                | Regression                  |
+| ----------------------------- | --------------------------- |
+| Class/category predict করে    | Numerical value predict করে |
+| Output discrete               | Output continuous numerical |
+| Example: Disease/No Disease   | Example: House Price        |
+| Logistic Regression, KNN, SVM | Linear Regression           |
+
+### Example
+
+Classification:
+
+```text
+Age = 50, Glucose = 150
+        ↓
+Diabetes
+```
+
+Regression:
+
+```text
+BMI = 30
+   ↓
+Diabetes Progression = 180.5
+```
+
+### সহজে মনে রাখো
+
+```text
+Classification → "কোন class?"
+Regression     → "কত value?"
+```
+
+---
