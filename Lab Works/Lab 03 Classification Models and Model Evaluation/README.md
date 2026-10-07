@@ -519,3 +519,66 @@ Model gives more importance
 > Higher weight values indicate a class is underrepresented.
 
 ---
+
+# 25. TO DO — Dataset Balancing
+
+Lab-এ বলা হয়েছে:
+
+> Learn how to balance dataset if it is imbalanced.
+
+Dataset imbalance handle করার কিছু সাধারণ approach:
+
+* Class weighting
+* Oversampling
+* Undersampling
+* SMOTE
+
+এই Lab-এ এগুলো detailed implementation করা হয়নি; এগুলো **self-study topic** হিসেবে দেওয়া হয়েছে।
+
+---
+
+# 26. Features এবং Target
+
+Machine Learning-এ:
+
+```text
+X → Features
+Y → Target
+```
+
+এই Lab-এ:
+
+```python
+X = df.drop(columns=["target"])
+Y = df["target"]
+```
+
+---
+
+# 27. X কী?
+
+```python
+X = df.drop(columns=["target"])
+```
+
+Target column বাদ দিয়ে বাকি সব columns হলো input features।
+
+```text
+X = Input Features
+```
+
+---
+
+# 28. Y কী?
+
+```python
+Y = df["target"]
+```
+
+Target হলো model-এর output।
+
+```text
+Y = Target
+```
+
+---
