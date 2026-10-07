@@ -781,3 +781,58 @@ rf_model.fit(X_train, Y_train)
 অর্থাৎ original training features ব্যবহার করা হয়েছে।
 
 ---
+
+# Task 1: Logistic Regression
+
+# 40. Logistic Regression কী?
+
+Logistic Regression একটি classification algorithm।
+
+নামতে "Regression" থাকলেও এটি classification problem solve করতে ব্যবহৃত হয়।
+
+এটি সাধারণত class probability estimate করে এবং সেই probability-এর ভিত্তিতে class predict করে।
+
+---
+
+# 41. Logistic Regression Model
+
+```python
+from sklearn.linear_model import LogisticRegression
+
+logistic_model = LogisticRegression()
+```
+
+Training:
+
+```python
+logistic_model.fit(X_train_scaled, Y_train)
+```
+
+Prediction:
+
+```python
+Y_pred_logistic = logistic_model.predict(X_test_scaled)
+```
+
+---
+
+# 42. Logistic Regression-এর কাজ
+
+```text
+Input Features
+      ↓
+Logistic Regression
+      ↓
+Class Prediction
+      ↓
+0 or 1
+```
+
+এই Lab-এ:
+
+```text
+0 → Benign
+1 → Malignant
+```
+
+---
