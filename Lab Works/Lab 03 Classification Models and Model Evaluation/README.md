@@ -582,3 +582,27 @@ Y = Target
 ```
 
 ---
+
+# 29. Train-Test Split
+
+Dataset-কে:
+
+```text
+80% → Training
+20% → Testing
+```
+
+ভাগ করা হয়েছে।
+
+Code:
+
+```python
+X_train, X_test, Y_train, Y_test = train_test_split(
+    X,
+    Y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+---
