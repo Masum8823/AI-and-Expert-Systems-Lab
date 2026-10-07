@@ -479,3 +479,43 @@ IR > 10
 এটি এই Lab-এর guideline হিসেবে মনে রাখবে।
 
 ---
+
+# 23. Class Weight
+
+Class imbalance-এর জন্য class weight বের করা হয়েছে:
+
+```python
+from sklearn.utils.class_weight import compute_class_weight
+
+class_weights = compute_class_weight(
+    class_weight="balanced",
+    classes=np.unique(df["target"]),
+    y=df["target"]
+)
+
+print("Class Weights:", class_weights)
+```
+
+---
+
+# 24. Class Weight কী?
+
+Class weight হলো model-কে different classes-এর প্রতি কতটা গুরুত্ব দিতে হবে তার একটি weight।
+
+যে class dataset-এ কম থাকে, তার weight সাধারণত বেশি হতে পারে।
+
+সহজভাবে:
+
+```text
+Underrepresented Class
+        ↓
+Higher Weight
+        ↓
+Model gives more importance
+```
+
+### Lab-এর note
+
+> Higher weight values indicate a class is underrepresented.
+
+---
