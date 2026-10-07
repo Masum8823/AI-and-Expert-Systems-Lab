@@ -666,3 +666,41 @@ random_state=42
 একই code আবার run করলে একইভাবে split পাওয়ার সম্ভাবনা থাকে।
 
 ---
+# 34. Feature Scaling
+
+এই Lab-এ:
+
+```python
+scaler = StandardScaler()
+```
+
+ব্যবহার করা হয়েছে।
+
+Training data:
+
+```python
+X_train_scaled = scaler.fit_transform(X_train)
+```
+
+Testing data:
+
+```python
+X_test_scaled = scaler.transform(X_test)
+```
+
+---
+
+# 35. StandardScaler কী?
+
+StandardScaler features-কে standard scale-এ নিয়ে আসে।
+
+সাধারণভাবে standardized data-এর:
+
+```text
+Mean ≈ 0
+Standard Deviation ≈ 1
+```
+
+হয়।
+
+---
