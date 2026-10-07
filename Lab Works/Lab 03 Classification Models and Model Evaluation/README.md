@@ -606,3 +606,63 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 ```
 
 ---
+# 30. Training Data
+
+Training data দিয়ে model শেখে।
+
+```text
+Training Features
+        +
+Training Labels
+        ↓
+      Model
+        ↓
+   Learn Pattern
+```
+
+---
+
+# 31. Testing Data
+
+Testing data training-এর পরে model evaluate করার জন্য ব্যবহার করা হয়।
+
+```text
+Test Features
+     ↓
+Model
+     ↓
+Prediction
+     ↓
+Compare with Actual Test Labels
+```
+
+---
+
+# 32. `test_size=0.2`
+
+```python
+test_size=0.2
+```
+
+মানে:
+
+```text
+20% → Testing
+80% → Training
+```
+
+---
+
+# 33. `random_state=42`
+
+Dataset split-এর randomness fixed রাখার জন্য:
+
+```python
+random_state=42
+```
+
+ব্যবহার করা হয়েছে।
+
+একই code আবার run করলে একইভাবে split পাওয়ার সম্ভাবনা থাকে।
+
+---
