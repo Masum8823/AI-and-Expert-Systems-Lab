@@ -704,3 +704,35 @@ Standard Deviation ≈ 1
 হয়।
 
 ---
+# 36. `fit_transform()` vs `transform()`
+
+Training:
+
+```python
+X_train_scaled = scaler.fit_transform(X_train)
+```
+
+এখানে:
+
+```text
+fit + transform
+```
+
+দুটো কাজ হয়।
+
+Testing:
+
+```python
+X_test_scaled = scaler.transform(X_test)
+```
+
+এখানে শুধু transformation apply হয়।
+
+### মনে রাখবে
+
+```text
+Training → fit_transform()
+Testing  → transform()
+```
+
+---
