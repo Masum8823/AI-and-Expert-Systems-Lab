@@ -865,3 +865,44 @@ z = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
 ```
 
 ---
+# 44. Probability থেকে Class
+
+ধরো model probability দিল:
+
+```text
+P = 0.85
+```
+
+এবং threshold 0.5 হলে:
+
+```text
+0.85 ≥ 0.5
+→ Class 1
+```
+
+আবার:
+
+```text
+P = 0.20
+```
+
+হলে:
+
+```text
+0.20 < 0.5
+→ Class 0
+```
+
+---
+
+# 45. Logistic Regression Evaluation
+
+```python
+print("Accuracy:",
+      accuracy_score(Y_test, Y_pred_logistic))
+
+print("Classification Report:\n",
+      classification_report(Y_test, Y_pred_logistic))
+```
+
+---
