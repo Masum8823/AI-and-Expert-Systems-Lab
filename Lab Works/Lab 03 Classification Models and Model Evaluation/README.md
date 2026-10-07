@@ -836,3 +836,32 @@ Class Prediction
 ```
 
 ---
+# 43. Logistic Regression-এর Basic Idea
+
+Linear Regression-এর output যেকোনো numerical value হতে পারে।
+
+কিন্তু classification-এর ক্ষেত্রে আমাদের class probability দরকার।
+
+Logistic Regression-এর ক্ষেত্রে **sigmoid function** ব্যবহার করা হয়।
+
+Formula:
+
+```text
+σ(z) = 1 / (1 + e^(-z))
+```
+
+এটি output-কে সাধারণত:
+
+```text
+0 থেকে 1
+```
+
+এর মধ্যে probability হিসেবে map করে।
+
+যেখানে:
+
+```text
+z = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+```
+
+---
