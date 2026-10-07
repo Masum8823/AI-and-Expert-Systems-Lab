@@ -736,3 +736,48 @@ Testing  → transform()
 ```
 
 ---
+# 37. কেন Feature Scaling দরকার?
+
+সব algorithm-এর জন্য scaling equally important নয়।
+
+এই Lab-এর note অনুযায়ী scaling বিশেষভাবে দরকার:
+
+```text
+Logistic Regression
+KNN
+SVM
+```
+
+কারণ এগুলো feature values-এর scale-এর প্রতি sensitive হতে পারে।
+
+---
+
+# 38. Decision Tree-এর ক্ষেত্রে Scaling
+
+Decision Tree সাধারণত feature scaling-এর উপর একইভাবে dependent নয়।
+
+তাই Lab code-এ:
+
+```python
+tree_model.fit(X_train, Y_train)
+```
+
+ব্যবহার করা হয়েছে।
+
+এখানে scaled data নয়, original data ব্যবহার করা হয়েছে।
+
+---
+
+# 39. Random Forest-এর ক্ষেত্রেও
+
+Random Forest-ও সাধারণত feature scaling-এর জন্য dependent নয়।
+
+Lab code:
+
+```python
+rf_model.fit(X_train, Y_train)
+```
+
+অর্থাৎ original training features ব্যবহার করা হয়েছে।
+
+---
