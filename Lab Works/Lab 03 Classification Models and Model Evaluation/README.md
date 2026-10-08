@@ -948,3 +948,30 @@ Class 1
 তাই নতুন point-কে Class 1 হিসেবে classify করা হবে।
 
 ---
+# 48. KNN Model
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+
+knn_model = KNeighborsClassifier(n_neighbors=5)
+```
+
+এখানে:
+
+```text
+K = 5
+```
+
+তারপর:
+
+```python
+knn_model.fit(X_train_scaled, Y_train)
+```
+
+Prediction:
+
+```python
+Y_pred_knn = knn_model.predict(X_test_scaled)
+```
+
+---
