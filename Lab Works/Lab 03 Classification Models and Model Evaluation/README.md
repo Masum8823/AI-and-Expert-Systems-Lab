@@ -1028,3 +1028,44 @@ Decision Tree হলো tree structure-based classification algorithm।
 ```
 
 ---
+
+# 53. Decision Tree Model
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+
+tree_model = DecisionTreeClassifier(
+    max_depth=5,
+    random_state=42
+)
+```
+
+Training:
+
+```python
+tree_model.fit(X_train, Y_train)
+```
+
+Prediction:
+
+```python
+Y_pred_tree = tree_model.predict(X_test)
+```
+
+---
+
+# 54. `max_depth=5`
+
+Decision Tree কত গভীর পর্যন্ত যেতে পারবে তা control করতে:
+
+```python
+max_depth=5
+```
+
+ব্যবহার করা হয়েছে।
+
+Depth বেশি হলে tree খুব complex হতে পারে।
+
+Depth limit করা model-এর complexity control করতে সাহায্য করে।
+
+---
