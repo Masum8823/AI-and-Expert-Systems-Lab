@@ -1155,3 +1155,13 @@ Y_pred_rf = rf_model.predict(X_test)
 ```
 
 ---
+
+# 61. Random Forest-এর সুবিধা
+
+Lab-এর মূল point:
+
+> Handles overfitting better than Decision Trees.
+
+অর্থাৎ একটি single Decision Tree-এর তুলনায় Random Forest সাধারণত overfitting কমাতে সাহায্য করতে পারে।
+
+---
