@@ -975,3 +975,35 @@ Y_pred_knn = knn_model.predict(X_test_scaled)
 ```
 
 ---
+
+# 49. K কেন গুরুত্বপূর্ণ?
+
+`K` খুব ছোট হলে model noise-এর প্রতি sensitive হতে পারে।
+
+`K` অনেক বড় হলে local pattern হারিয়ে যেতে পারে।
+
+তাই appropriate K নির্বাচন গুরুত্বপূর্ণ।
+
+---
+
+# 50. KNN এবং Scaling
+
+KNN distance ব্যবহার করে।
+
+তাই feature-এর scale বড় হলে distance calculation-এ সেই feature বেশি influence করতে পারে।
+
+এই কারণে KNN-এর জন্য feature scaling খুব গুরুত্বপূর্ণ।
+
+---
+
+# 51. Distance-এর Basic Idea
+
+দুইটি point-এর Euclidean distance:
+
+```text
+d = √[(x₁-y₁)² + (x₂-y₂)² + ...]
+```
+
+KNN-এর মতো distance-based algorithm-এর ক্ষেত্রে scaling গুরুত্বপূর্ণ হওয়ার একটি কারণ হলো distance calculation।
+
+---
