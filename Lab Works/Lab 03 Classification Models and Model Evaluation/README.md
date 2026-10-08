@@ -906,3 +906,45 @@ print("Classification Report:\n",
 ```
 
 ---
+# Task 2: K-Nearest Neighbors (KNN)
+
+# 46. KNN কী?
+
+KNN-এর full form:
+
+> K-Nearest Neighbors
+
+KNN একটি **distance-based classification algorithm**।
+
+সহজভাবে:
+
+> নতুন data point-এর সবচেয়ে কাছের Kটি data point দেখে তার class নির্ধারণ করা হয়।
+
+---
+
+# 47. KNN-এর Basic Idea
+
+ধরো:
+
+```text
+K = 5
+```
+
+নতুন একটি point-এর সবচেয়ে কাছের ৫টি neighbor পাওয়া গেল।
+
+যদি:
+
+```text
+3 → Class 1
+2 → Class 0
+```
+
+তাহলে majority class:
+
+```text
+Class 1
+```
+
+তাই নতুন point-কে Class 1 হিসেবে classify করা হবে।
+
+---
