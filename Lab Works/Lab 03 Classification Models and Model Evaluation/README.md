@@ -1069,3 +1069,16 @@ Depth বেশি হলে tree খুব complex হতে পারে।
 Depth limit করা model-এর complexity control করতে সাহায্য করে।
 
 ---
+
+# 55. Decision Tree-এর সুবিধা
+
+* বুঝতে সহজ
+* Rule-based structure
+* Feature scaling সাধারণত প্রয়োজন হয় না
+* Non-linear relationship handle করতে পারে
+
+Lab-এর note অনুযায়ী:
+
+> Works well with unscaled data and handles non-linear relationships.
+
+---
