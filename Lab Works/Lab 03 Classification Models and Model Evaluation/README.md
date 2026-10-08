@@ -1165,3 +1165,51 @@ Lab-এর মূল point:
 অর্থাৎ একটি single Decision Tree-এর তুলনায় Random Forest সাধারণত overfitting কমাতে সাহায্য করতে পারে।
 
 ---
+# Task 5: Support Vector Machine
+
+# 62. SVM কী?
+
+SVM-এর full form:
+
+> Support Vector Machine
+
+SVM classification-এর জন্য একটি powerful algorithm।
+
+এটি classes-এর মধ্যে একটি suitable decision boundary তৈরি করার চেষ্টা করে।
+
+---
+
+# 63. SVM-এর Basic Idea
+
+ধরো দুইটি class:
+
+```text
+Class 0  ● ● ●
+
+----------------  ← Decision Boundary
+
+Class 1  ▲ ▲ ▲
+```
+
+SVM এমন boundary খুঁজতে চায় যাতে দুই class-এর separation ভালো হয়।
+
+---
+
+# 64. Margin
+
+SVM শুধু boundary তৈরি করলেই হয় না; boundary এবং nearest data points-এর মধ্যে margin বড় রাখার চেষ্টা করে।
+
+সহজভাবে:
+
+```text
+Class 0     |<--- Margin --->|     Class 1
+     ● ●        Boundary        ▲ ▲
+```
+
+---
+
+# 65. Support Vectors
+
+Decision boundary নির্ধারণে সবচেয়ে গুরুত্বপূর্ণ কাছাকাছি data points-গুলোকে **Support Vectors** বলা হয়।
+
+---
