@@ -1102,3 +1102,56 @@ Tree 5 ─┘
 অনেকগুলো tree-এর prediction combine করে final prediction দেওয়া হয়।
 
 ---
+# 57. Random Forest Model
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+rf_model = RandomForestClassifier(
+    n_estimators=101,
+    max_depth=5,
+    random_state=42
+)
+```
+
+---
+
+# 58. `n_estimators`
+
+```python
+n_estimators=101
+```
+
+মানে Random Forest-এ:
+
+```text
+101টি Decision Tree
+```
+
+ব্যবহার করা হবে।
+
+---
+
+# 59. `max_depth`
+
+```python
+max_depth=5
+```
+
+প্রতিটি tree-এর maximum depth limit করে।
+
+---
+
+# 60. Random Forest Training
+
+```python
+rf_model.fit(X_train, Y_train)
+```
+
+Prediction:
+
+```python
+Y_pred_rf = rf_model.predict(X_test)
+```
+
+---
