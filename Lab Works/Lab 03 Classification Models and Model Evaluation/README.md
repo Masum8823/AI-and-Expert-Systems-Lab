@@ -1082,3 +1082,23 @@ Lab-এর note অনুযায়ী:
 > Works well with unscaled data and handles non-linear relationships.
 
 ---
+
+# Task 4: Random Forest
+
+# 56. Random Forest কী?
+
+Random Forest হলো অনেকগুলো Decision Tree-এর combination।
+
+সহজভাবে:
+
+```text
+Tree 1 ─┐
+Tree 2 ─┤
+Tree 3 ─┤
+Tree 4 ─┤ → Combined Prediction
+Tree 5 ─┘
+```
+
+অনেকগুলো tree-এর prediction combine করে final prediction দেওয়া হয়।
+
+---
