@@ -1213,3 +1213,53 @@ Class 0     |<--- Margin --->|     Class 1
 Decision boundary নির্ধারণে সবচেয়ে গুরুত্বপূর্ণ কাছাকাছি data points-গুলোকে **Support Vectors** বলা হয়।
 
 ---
+# 66. SVM Model
+
+```python
+from sklearn.svm import SVC
+
+svm_model = SVC(
+    kernel='linear',
+    probability=True
+)
+```
+
+Training:
+
+```python
+svm_model.fit(X_train_scaled, Y_train)
+```
+
+Prediction:
+
+```python
+Y_pred_svm = svm_model.predict(X_test_scaled)
+```
+
+---
+
+# 67. `kernel='linear'`
+
+এই Lab-এ:
+
+```python
+kernel='linear'
+```
+
+ব্যবহার করা হয়েছে।
+
+অর্থাৎ linear decision boundary ব্যবহার করা হচ্ছে।
+
+---
+
+# 68. `probability=True`
+
+```python
+probability=True
+```
+
+ব্যবহার করলে probability estimates পাওয়া যায়।
+
+এটি বিশেষভাবে ROC curve / probability-based evaluation-এর সময় প্রয়োজন হতে পারে।
+
+---
