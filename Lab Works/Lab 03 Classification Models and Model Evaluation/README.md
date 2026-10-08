@@ -1007,3 +1007,24 @@ d = √[(x₁-y₁)² + (x₂-y₂)² + ...]
 KNN-এর মতো distance-based algorithm-এর ক্ষেত্রে scaling গুরুত্বপূর্ণ হওয়ার একটি কারণ হলো distance calculation।
 
 ---
+# Task 3: Decision Tree
+
+# 52. Decision Tree কী?
+
+Decision Tree হলো tree structure-based classification algorithm।
+
+এটি বিভিন্ন condition-এর মাধ্যমে data-কে split করে শেষ পর্যন্ত একটি class-এর prediction দেয়।
+
+সহজভাবে:
+
+```text
+             Feature?
+             /      \
+           Yes       No
+           /          \
+       Condition    Condition
+          ↓            ↓
+        Class 0      Class 1
+```
+
+---
