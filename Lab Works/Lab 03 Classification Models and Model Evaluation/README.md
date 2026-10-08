@@ -1263,3 +1263,22 @@ probability=True
 এটি বিশেষভাবে ROC curve / probability-based evaluation-এর সময় প্রয়োজন হতে পারে।
 
 ---
+
+# 69. SVM এবং Scaling
+
+SVM feature values-এর scale-এর প্রতি sensitive হতে পারে।
+
+তাই এই Lab-এ:
+
+```text
+X_train_scaled
+X_test_scaled
+```
+
+ব্যবহার করা হয়েছে।
+
+Lab-এর note:
+
+> SVM is effective for high-dimensional data.
+
+---
