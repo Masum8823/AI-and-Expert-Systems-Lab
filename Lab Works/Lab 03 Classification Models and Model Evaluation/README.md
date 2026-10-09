@@ -1296,3 +1296,15 @@ Lab-এর note:
 ```
 
 ---
+
+# 71. Model Comparison
+
+| Model               | Main Idea                        | Scaling              |
+| ------------------- | -------------------------------- | -------------------- |
+| Logistic Regression | Probability-based classification | Important            |
+| KNN                 | Nearest neighbors                | Important            |
+| Decision Tree       | Rule/tree-based splitting        | Usually not required |
+| Random Forest       | Multiple decision trees          | Usually not required |
+| SVM                 | Decision boundary + margin       | Important            |
+
+---
