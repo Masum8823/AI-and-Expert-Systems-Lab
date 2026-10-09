@@ -1308,3 +1308,30 @@ Lab-এর note:
 | SVM                 | Decision boundary + margin       | Important            |
 
 ---
+
+# 72. Classification Evaluation
+
+Classification model train করার পর শুধু prediction দেখলেই হবে না।
+
+Model কত ভালো কাজ করেছে তা measure করতে হবে।
+
+এই Lab-এ প্রধান metrics:
+
+```text
+Accuracy
+Precision
+Recall
+F1-score
+```
+
+এছাড়া:
+
+```text
+Confusion Matrix
+ROC Curve
+AUC
+```
+
+দিয়ে analysis করা যায়।
+
+---
