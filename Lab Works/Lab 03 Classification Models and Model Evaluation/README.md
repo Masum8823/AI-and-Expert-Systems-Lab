@@ -1496,3 +1496,24 @@ False Negative = FN
 Medical diagnosis-এর ক্ষেত্রে FN খুব গুরুত্বপূর্ণ হতে পারে।
 
 ---
+
+# 80. Confusion Matrix মনে রাখার Trick
+
+```text
+True  → Prediction সঠিক
+False → Prediction ভুল
+
+Positive → Model Positive বলেছে
+Negative → Model Negative বলেছে
+```
+
+তাই:
+
+```text
+TP → Positive বলেছে, সত্যিই Positive
+TN → Negative বলেছে, সত্যিই Negative
+FP → Positive বলেছে, কিন্তু আসলে Negative
+FN → Negative বলেছে, কিন্তু আসলে Positive
+```
+
+---
