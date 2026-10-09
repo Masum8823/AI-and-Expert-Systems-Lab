@@ -1404,3 +1404,47 @@ Predicted 1     FP         TP
 ```
 
 ---
+
+# 76. TP — True Positive
+
+Model বলেছে:
+
+```text
+Positive
+```
+
+এবং actual-ও:
+
+```text
+Positive
+```
+
+তাহলে:
+
+```text
+True Positive = TP
+```
+
+---
+
+# 77. TN — True Negative
+
+Model বলেছে:
+
+```text
+Negative
+```
+
+এবং actual-ও:
+
+```text
+Negative
+```
+
+তাহলে:
+
+```text
+True Negative = TN
+```
+
+---
