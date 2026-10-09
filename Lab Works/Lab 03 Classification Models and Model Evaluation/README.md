@@ -1282,3 +1282,17 @@ Lab-এর note:
 > SVM is effective for high-dimensional data.
 
 ---
+
+# 70. Five Classification Models
+
+এই Lab-এর সবচেয়ে গুরুত্বপূর্ণ অংশগুলোর একটি:
+
+```text
+1. Logistic Regression
+2. KNN
+3. Decision Tree
+4. Random Forest
+5. SVM
+```
+
+---
