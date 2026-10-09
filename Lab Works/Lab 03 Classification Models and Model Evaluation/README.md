@@ -1335,3 +1335,56 @@ AUC
 দিয়ে analysis করা যায়।
 
 ---
+
+# 73. Accuracy
+
+Accuracy হলো মোট prediction-এর মধ্যে কতগুলো prediction সঠিক হয়েছে।
+
+Formula:
+
+```text
+Accuracy =
+Correct Predictions
+-------------------
+Total Predictions
+```
+
+Confusion Matrix-এর terms ব্যবহার করলে:
+
+```text
+Accuracy =
+(TP + TN)
+----------------
+(TP + TN + FP + FN)
+```
+
+---
+
+# 74. Accuracy Example
+
+ধরো মোট 100টি prediction করা হয়েছে।
+
+এর মধ্যে:
+
+```text
+90টি correct
+10টি incorrect
+```
+
+তাহলে:
+
+```text
+Accuracy = 90 / 100
+         = 0.90
+         = 90%
+```
+
+### মনে রাখবে
+
+```text
+Accuracy বেশি → সাধারণভাবে ভালো
+```
+
+কিন্তু imbalanced dataset-এ শুধু accuracy দেখে model judge করা ঠিক নয়।
+
+---
