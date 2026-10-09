@@ -1556,3 +1556,55 @@ Predicted Positive
 ```
 
 ---
+
+# 83. Recall
+
+Recall বলে:
+
+> Actual Positive-এর মধ্যে model কতগুলো correctly detect করতে পেরেছে?
+
+Formula:
+
+```text
+Recall =
+TP
+----------------
+TP + FN
+```
+
+Recall-কে অনেক সময়:
+
+```text
+Sensitivity
+```
+
+বা:
+
+```text
+True Positive Rate (TPR)
+```
+
+বলা হয়।
+
+---
+
+# 84. Recall Example
+
+ধরো actual Positive মোট 100 জন।
+
+Model correctly identify করেছে 90 জন।
+
+তাহলে:
+
+```text
+Recall = 90 / 100
+       = 90%
+```
+
+### Recall-এর focus
+
+```text
+Actual Positive
+```
+
+---
