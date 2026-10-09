@@ -1388,3 +1388,19 @@ Accuracy বেশি → সাধারণভাবে ভালো
 কিন্তু imbalanced dataset-এ শুধু accuracy দেখে model judge করা ঠিক নয়।
 
 ---
+# 75. Confusion Matrix
+
+Confusion Matrix classification model-এর prediction-এর বিস্তারিত summary।
+
+Binary classification-এর ক্ষেত্রে:
+
+```text
+                    Actual
+                 0          1
+
+Predicted 0     TN         FN
+
+Predicted 1     FP         TP
+```
+
+---
