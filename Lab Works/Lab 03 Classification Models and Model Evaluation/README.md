@@ -1517,3 +1517,42 @@ FN → Negative বলেছে, কিন্তু আসলে Positive
 ```
 
 ---
+
+# 81. Precision
+
+Precision বলে:
+
+> Model যেগুলোকে Positive বলেছে, সেগুলোর মধ্যে আসলে কতগুলো Positive ছিল?
+
+Formula:
+
+```text
+Precision =
+TP
+----------------
+TP + FP
+```
+
+---
+
+# 82. Precision Example
+
+ধরো model 100 জনকে Positive বলেছে।
+
+এর মধ্যে 80 জন সত্যিই Positive।
+
+তাহলে:
+
+```text
+Precision = 80 / 100
+          = 0.80
+          = 80%
+```
+
+### Precision-এর focus
+
+```text
+Predicted Positive
+```
+
+---
