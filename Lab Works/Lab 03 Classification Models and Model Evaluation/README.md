@@ -1448,3 +1448,51 @@ True Negative = TN
 ```
 
 ---
+
+# 78. FP — False Positive
+
+Model বলেছে:
+
+```text
+Positive
+```
+
+কিন্তু actual:
+
+```text
+Negative
+```
+
+তাহলে:
+
+```text
+False Positive = FP
+```
+
+এটাকে অনেক সময় **False Alarm** বলা হয়।
+
+---
+
+# 79. FN — False Negative
+
+Model বলেছে:
+
+```text
+Negative
+```
+
+কিন্তু actual:
+
+```text
+Positive
+```
+
+তাহলে:
+
+```text
+False Negative = FN
+```
+
+Medical diagnosis-এর ক্ষেত্রে FN খুব গুরুত্বপূর্ণ হতে পারে।
+
+---
