@@ -1716,3 +1716,27 @@ R = Recall
 ```
 
 ---
+
+# 90. Classification Report
+
+Code:
+
+```python
+print(
+    classification_report(
+        Y_test,
+        Y_pred_logistic
+    )
+)
+```
+
+Classification report সাধারণত দেখায়:
+
+```text
+precision
+recall
+f1-score
+support
+```
+
+---
