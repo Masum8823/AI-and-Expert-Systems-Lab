@@ -1740,3 +1740,23 @@ support
 ```
 
 ---
+
+# 91. Support কী?
+
+Classification report-এর `support` হলো একটি class-এর actual sample সংখ্যা।
+
+Example:
+
+```text
+Class 0 → support = 100
+Class 1 → support = 40
+```
+
+মানে test data-তে:
+
+```text
+Class 0 → 100 samples
+Class 1 → 40 samples
+```
+
+---
