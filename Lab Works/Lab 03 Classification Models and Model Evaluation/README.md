@@ -1640,3 +1640,61 @@ TP / (TP + FN)
 ```
 
 ---
+
+# 86. F1-score
+
+F1-score হলো Precision এবং Recall-এর harmonic mean।
+
+Formula:
+
+```text
+F1 =
+2 × Precision × Recall
+------------------------
+Precision + Recall
+```
+
+অথবা:
+
+```text
+F1 =
+2TP
+-------------------------
+2TP + FP + FN
+```
+
+---
+
+# 87. F1-score কেন দরকার?
+
+যখন Precision এবং Recall দুটোই গুরুত্বপূর্ণ, তখন F1-score useful।
+
+বিশেষ করে imbalanced dataset-এর ক্ষেত্রে accuracy-এর পাশাপাশি F1-score useful হতে পারে।
+
+---
+
+# 88. F1 Example
+
+ধরো:
+
+```text
+Precision = 0.80
+Recall = 0.60
+```
+
+তাহলে:
+
+```text
+F1 =
+2 × 0.80 × 0.60
+----------------
+0.80 + 0.60
+```
+
+```text
+F1 =
+0.96 / 1.40
+≈ 0.686
+```
+
+---
