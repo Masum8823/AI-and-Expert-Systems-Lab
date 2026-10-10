@@ -1859,3 +1859,19 @@ TP + FN
 ```
 
 ---
+
+# 97. False Positive Rate (FPR)
+
+Formula:
+
+```text
+FPR =
+FP
+----------------
+FP + TN
+```
+
+অর্থাৎ actual negative-এর মধ্যে কতগুলোকে ভুলভাবে positive বলা হয়েছে।
+
+---
+
