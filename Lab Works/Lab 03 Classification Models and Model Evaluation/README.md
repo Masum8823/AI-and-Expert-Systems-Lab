@@ -1839,3 +1839,23 @@ Y-axis → True Positive Rate (TPR)
 ```
 
 ---
+
+# 96. True Positive Rate (TPR)
+
+TPR-এর আরেক নাম:
+
+```text
+Recall
+Sensitivity
+```
+
+Formula:
+
+```text
+TPR =
+TP
+----------------
+TP + FN
+```
+
+---
