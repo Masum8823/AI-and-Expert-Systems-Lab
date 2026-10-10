@@ -1822,3 +1822,20 @@ Random Forest       → original test data
 তাই সব model-এর জন্য একই test input ব্যবহার করা যাবে না যদি model আলাদা preprocessing-এর উপর train করা হয়ে থাকে।
 
 ---
+# 95. ROC Curve
+
+ROC-এর full form:
+
+> Receiver Operating Characteristic
+
+ROC curve classification model-এর performance বিভিন্ন classification threshold-এর ক্ষেত্রে visualize করে।
+
+ROC curve-এ সাধারণত:
+
+```text
+X-axis → False Positive Rate (FPR)
+
+Y-axis → True Positive Rate (TPR)
+```
+
+---
