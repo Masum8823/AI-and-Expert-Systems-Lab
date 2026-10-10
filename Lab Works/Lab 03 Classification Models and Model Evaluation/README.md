@@ -1803,3 +1803,22 @@ ConfusionMatrixDisplay.from_estimator(
 এটি model-এর confusion matrix visualize করে।
 
 ---
+
+# 94. Important Note About Model Input
+
+Lab code-এ:
+
+```text
+Logistic Regression → scaled test data
+KNN                 → scaled test data
+SVM                 → scaled test data
+
+Decision Tree       → original test data
+Random Forest       → original test data
+```
+
+কারণ tree-based models-এর জন্য scaling সাধারণত প্রয়োজন হয় না।
+
+তাই সব model-এর জন্য একই test input ব্যবহার করা যাবে না যদি model আলাদা preprocessing-এর উপর train করা হয়ে থাকে।
+
+---
