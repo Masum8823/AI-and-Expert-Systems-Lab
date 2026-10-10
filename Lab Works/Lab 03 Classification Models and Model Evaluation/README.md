@@ -1760,3 +1760,46 @@ Class 1 → 40 samples
 ```
 
 ---
+
+# 92. Confusion Matrix Visualization
+
+সব model-এর confusion matrix একসাথে দেখানো হয়েছে।
+
+Models dictionary:
+
+```python
+models = {
+    "Logistic Regression": logistic_model,
+    "KNN": knn_model,
+    "Decision Tree": tree_model,
+    "Random Forest": rf_model,
+    "SVM": svm_model
+}
+```
+
+তারপর:
+
+```python
+from sklearn.metrics import ConfusionMatrixDisplay
+```
+
+ব্যবহার করা হয়েছে।
+
+---
+
+# 93. ConfusionMatrixDisplay
+
+Code:
+
+```python
+ConfusionMatrixDisplay.from_estimator(
+    model,
+    X_test_scaled,
+    Y_test,
+    ax=plt.gca()
+)
+```
+
+এটি model-এর confusion matrix visualize করে।
+
+---
