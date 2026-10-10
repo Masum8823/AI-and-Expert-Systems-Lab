@@ -1698,3 +1698,21 @@ F1 =
 ```
 
 ---
+
+# 89. Metric Summary Table
+
+| Metric    | Formula                 | Main Focus                      |
+| --------- | ----------------------- | ------------------------------- |
+| Accuracy  | `(TP+TN)/(TP+TN+FP+FN)` | Overall correctness             |
+| Precision | `TP/(TP+FP)`            | Predicted Positive কতটা correct |
+| Recall    | `TP/(TP+FN)`            | Actual Positive কতটা detected   |
+| F1        | `2PR/(P+R)`             | Precision + Recall balance      |
+
+এখানে:
+
+```text
+P = Precision
+R = Recall
+```
+
+---
