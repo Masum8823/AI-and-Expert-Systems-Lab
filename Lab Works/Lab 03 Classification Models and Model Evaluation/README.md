@@ -1608,3 +1608,35 @@ Actual Positive
 ```
 
 ---
+
+# 85. Precision vs Recall
+
+এটি খুব important exam topic।
+
+### Precision
+
+```text
+Predicted Positive-এর মধ্যে
+কতগুলো সত্যি Positive?
+```
+
+Formula:
+
+```text
+TP / (TP + FP)
+```
+
+### Recall
+
+```text
+Actual Positive-এর মধ্যে
+কতগুলো correctly detect হয়েছে?
+```
+
+Formula:
+
+```text
+TP / (TP + FN)
+```
+
+---
