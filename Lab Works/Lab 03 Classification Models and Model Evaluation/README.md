@@ -2081,3 +2081,23 @@ Testing Performance  → Low
 | Training data memorize করতে পারে | Pattern যথেষ্ট শিখতে পারে না |
 
 ---
+
+# 109. Bias এবং Variance — Basic Idea
+
+Underfitting-এর সাথে সাধারণত high bias সম্পর্কিত।
+
+Overfitting-এর সাথে সাধারণত high variance সম্পর্কিত।
+
+সহজভাবে:
+
+```text
+High Bias
+→ Too Simple
+→ Underfitting
+
+High Variance
+→ Too Complex
+→ Overfitting
+```
+
+---
