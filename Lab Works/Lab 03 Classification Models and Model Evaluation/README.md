@@ -1935,3 +1935,40 @@ AUC → ROC curve-এর নিচের area
 ```
 
 ---
+
+# 101. ROC Curve-এর গুরুত্বপূর্ণ Formula
+
+```text
+TPR = TP / (TP + FN)
+
+FPR = FP / (FP + TN)
+```
+
+এই দুটি formula অবশ্যই মনে রাখবে।
+
+---
+
+# 102. `roc_curve()`
+
+ROC values বের করার জন্য:
+
+```python
+from sklearn.metrics import roc_curve, auc
+```
+
+তারপর model-এর probability/score ব্যবহার করে:
+
+```python
+fpr, tpr, thresholds = roc_curve(
+    Y_test,
+    probabilities
+)
+```
+
+তারপর:
+
+```python
+roc_auc = auc(fpr, tpr)
+```
+
+---
