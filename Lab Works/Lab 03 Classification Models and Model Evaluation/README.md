@@ -1972,3 +1972,29 @@ roc_auc = auc(fpr, tpr)
 ```
 
 ---
+
+# 103. `predict()` vs Probability Prediction
+
+Classification model-এ:
+
+```python
+model.predict(X_test)
+```
+
+সরাসরি class দেয়:
+
+```text
+0 or 1
+```
+
+কিন্তু ROC curve-এর জন্য threshold পরিবর্তন করে performance দেখতে probability/decision score দরকার হতে পারে।
+
+যেমন:
+
+```python
+model.predict_proba(X_test)
+```
+
+Probability দেয়।
+
+---
