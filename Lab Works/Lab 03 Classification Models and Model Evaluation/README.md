@@ -2022,3 +2022,37 @@ Threshold change করলে predictions পরিবর্তন হতে প
 ROC curve বিভিন্ন threshold-এর ফলাফল ব্যবহার করে।
 
 ---
+
+# 105. TO DO — Overfitting
+
+Lab-এ বলা হয়েছে:
+
+> Learn About Overfitting and Underfitting
+
+### Overfitting কী?
+
+Model training data খুব ভালোভাবে memorize/fit করে ফেলেছে, কিন্তু নতুন unseen data-তে ভালো perform করতে পারে না।
+
+সহজভাবে:
+
+```text
+Training Performance → Very High
+Testing Performance  → Low
+```
+
+এটি overfitting-এর indication হতে পারে।
+
+---
+
+# 106. Overfitting Example
+
+ধরো:
+
+```text
+Training Accuracy = 99%
+Testing Accuracy  = 75%
+```
+
+Training এবং testing performance-এর বড় difference overfitting-এর indication হতে পারে।
+
+---
