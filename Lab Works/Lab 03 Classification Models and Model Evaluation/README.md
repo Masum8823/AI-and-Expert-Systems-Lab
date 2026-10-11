@@ -1874,4 +1874,22 @@ FP + TN
 অর্থাৎ actual negative-এর মধ্যে কতগুলোকে ভুলভাবে positive বলা হয়েছে।
 
 ---
+# 98. ROC Curve-এর ধারণা
 
+Threshold পরিবর্তন করলে:
+
+```text
+TPR
+```
+
+এবং:
+
+```text
+FPR
+```
+
+পরিবর্তিত হয়।
+
+ROC curve এই বিভিন্ন threshold-এর performance দেখায়।
+
+---
