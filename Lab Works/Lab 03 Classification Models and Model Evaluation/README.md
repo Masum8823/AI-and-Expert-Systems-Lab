@@ -1893,3 +1893,45 @@ FPR
 ROC curve এই বিভিন্ন threshold-এর performance দেখায়।
 
 ---
+# 99. AUC
+
+AUC-এর full form:
+
+> Area Under the Curve
+
+এখানে curve হলো ROC curve।
+
+AUC model-এর class separation ability সম্পর্কে ধারণা দেয়।
+
+সাধারণভাবে:
+
+```text
+AUC বেশি
+→ Classes আলাদা করার ability ভালো
+```
+
+---
+
+# 100. ROC-AUC সম্পর্কে Basic ধারণা
+
+সাধারণ interpretation:
+
+```text
+AUC ≈ 1
+→ Very good separation
+
+AUC ≈ 0.5
+→ Random-like performance
+
+AUC < 0.5
+→ Very poor / reversed ranking
+```
+
+### Exam-এর জন্য
+
+```text
+ROC → TPR vs FPR
+AUC → ROC curve-এর নিচের area
+```
+
+---
