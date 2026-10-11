@@ -2056,3 +2056,18 @@ Testing Accuracy  = 75%
 Training এবং testing performance-এর বড় difference overfitting-এর indication হতে পারে।
 
 ---
+
+# 107. Underfitting
+
+Underfitting হলে model training data-এর pattern-ই যথেষ্ট ভালোভাবে শিখতে পারে না।
+
+তখন:
+
+```text
+Training Performance → Low
+Testing Performance  → Low
+```
+
+হতে পারে।
+
+---
