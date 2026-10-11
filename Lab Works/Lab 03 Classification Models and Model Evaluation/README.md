@@ -1998,3 +1998,27 @@ model.predict_proba(X_test)
 Probability দেয়।
 
 ---
+
+# 104. কেন ROC-এর জন্য Probability দরকার?
+
+ধরো model বলল:
+
+```text
+Patient A → 0.51
+Patient B → 0.90
+Patient C → 0.20
+```
+
+Threshold `0.5` হলে:
+
+```text
+A → Class 1
+B → Class 1
+C → Class 0
+```
+
+Threshold change করলে predictions পরিবর্তন হতে পারে।
+
+ROC curve বিভিন্ন threshold-এর ফলাফল ব্যবহার করে।
+
+---
