@@ -2071,3 +2071,13 @@ Testing Performance  → Low
 হতে পারে।
 
 ---
+# 108. Overfitting vs Underfitting
+
+| Overfitting                      | Underfitting                 |
+| -------------------------------- | ---------------------------- |
+| Model খুব complex                | Model খুব simple             |
+| Training performance high        | Training performance low     |
+| Test performance তুলনামূলক low   | Test performance low         |
+| Training data memorize করতে পারে | Pattern যথেষ্ট শিখতে পারে না |
+
+---
