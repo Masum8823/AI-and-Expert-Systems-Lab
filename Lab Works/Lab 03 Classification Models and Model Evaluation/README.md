@@ -2101,3 +2101,25 @@ High Variance
 ```
 
 ---
+
+# 110. Overfitting কমানোর কিছু উপায়
+
+Model অনুযায়ী বিভিন্ন technique ব্যবহার করা যায়:
+
+* Model complexity কমানো
+* Tree depth কমানো
+* More training data
+* Regularization
+* Cross-validation
+* Ensemble methods
+* Feature selection
+
+এই Lab-এ Decision Tree-এর ক্ষেত্রে:
+
+```python
+max_depth=5
+```
+
+দিয়ে tree complexity সীমিত করা হয়েছে।
+
+---
