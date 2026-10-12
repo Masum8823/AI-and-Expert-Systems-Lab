@@ -2188,3 +2188,24 @@ KNN
 ```
 
 ---
+
+# 113. TO DO — Learn More About SVM
+
+SVM-এর self-study:
+
+* Hyperplane
+* Margin
+* Support Vector
+* Kernel
+* Linear kernel
+* Non-linear kernel
+
+এই Lab-এ:
+
+```python
+kernel='linear'
+```
+
+ব্যবহার করা হয়েছে।
+
+---
