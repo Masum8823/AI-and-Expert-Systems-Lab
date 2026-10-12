@@ -2273,3 +2273,21 @@ Entropy = -Σ pᵢ log₂(pᵢ)
 Entropy কম হলে node তুলনামূলকভাবে pure।
 
 ---
+
+# 117. Information Gain
+
+Parent node এবং child nodes-এর impurity/entropy কমার পরিমাণকে Information Gain দিয়ে measure করা যায়।
+
+Basic idea:
+
+```text
+Information Gain
+=
+Parent Entropy
+-
+Weighted Child Entropy
+```
+
+Decision Tree-এর split selection বোঝার জন্য এটি গুরুত্বপূর্ণ।
+
+---
