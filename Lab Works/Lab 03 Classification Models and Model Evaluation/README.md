@@ -2291,3 +2291,27 @@ Weighted Child Entropy
 Decision Tree-এর split selection বোঝার জন্য এটি গুরুত্বপূর্ণ।
 
 ---
+
+# 118. TO DO — Random Forest
+
+Random Forest সম্পর্কে self-study:
+
+* Multiple Decision Trees
+* Bootstrap sampling
+* Random feature selection
+* Voting
+* Overfitting reduction
+* `n_estimators`
+* `max_depth`
+
+Lab code:
+
+```python
+RandomForestClassifier(
+    n_estimators=101,
+    max_depth=5,
+    random_state=42
+)
+```
+
+---
