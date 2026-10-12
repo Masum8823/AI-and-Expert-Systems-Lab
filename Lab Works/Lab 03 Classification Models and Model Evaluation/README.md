@@ -2315,3 +2315,23 @@ RandomForestClassifier(
 ```
 
 ---
+
+# 119. Ensemble Learning
+
+Random Forest হলো একটি ensemble learning approach।
+
+Ensemble learning মানে:
+
+> একাধিক model-এর result combine করে better prediction পাওয়ার চেষ্টা করা।
+
+Random Forest:
+
+```text
+Many Decision Trees
+        ↓
+Combine Predictions
+        ↓
+Final Prediction
+```
+
+---
