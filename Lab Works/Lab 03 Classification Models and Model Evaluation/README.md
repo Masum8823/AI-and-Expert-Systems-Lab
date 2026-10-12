@@ -2260,3 +2260,16 @@ Gini = 1 - Σ(pᵢ²)
 
 ---
 
+# 116. Entropy
+
+Entropy হলো impurity/uncertainty measure করার একটি method।
+
+Formula:
+
+```text
+Entropy = -Σ pᵢ log₂(pᵢ)
+```
+
+Entropy কম হলে node তুলনামূলকভাবে pure।
+
+---
