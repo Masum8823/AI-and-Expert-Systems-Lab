@@ -2123,3 +2123,49 @@ max_depth=5
 দিয়ে tree complexity সীমিত করা হয়েছে।
 
 ---
+
+# 111. TO DO — Dataset Balancing
+
+যদি dataset imbalanced হয়, কিছু approach:
+
+### 1. Oversampling
+
+Minority class-এর sample বাড়ানো।
+
+```text
+Minority
+   ↓
+More Samples
+```
+
+---
+
+### 2. Undersampling
+
+Majority class-এর sample কমানো।
+
+```text
+Majority
+   ↓
+Fewer Samples
+```
+
+---
+
+### 3. SMOTE
+
+SMOTE-এর full form:
+
+> Synthetic Minority Over-sampling Technique
+
+এটি minority class-এর জন্য synthetic samples তৈরি করে।
+
+---
+
+### 4. Class Weight
+
+Model-কে minority class-এর ভুল prediction-এর জন্য বেশি গুরুত্ব দিতে বলা যায়।
+
+এই Lab-এ class weights সম্পর্কে ধারণা দেওয়া হয়েছে।
+
+---
