@@ -2232,3 +2232,14 @@ linear
 ব্যবহার করা হয়েছে।
 
 ---
+
+# 115. TO DO — Decision Tree Splitting
+
+Decision Tree data-কে বিভিন্ন feature এবং condition অনুযায়ী split করে।
+
+Self-study-এর জন্য গুরুত্বপূর্ণ terms:
+
+```text
+Gini Impurity
+Entropy
+Information Gain
