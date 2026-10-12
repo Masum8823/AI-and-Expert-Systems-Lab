@@ -2209,3 +2209,26 @@ kernel='linear'
 ব্যবহার করা হয়েছে।
 
 ---
+
+# 114. Kernel কী?
+
+Kernel SVM-কে বিভিন্ন ধরনের decision boundary তৈরি করতে সাহায্য করে।
+
+Common kernels:
+
+```text
+linear
+poly
+rbf
+sigmoid
+```
+
+এই Lab-এ শুধু:
+
+```text
+linear
+```
+
+ব্যবহার করা হয়েছে।
+
+---
