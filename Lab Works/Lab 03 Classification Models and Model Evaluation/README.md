@@ -2335,3 +2335,39 @@ Final Prediction
 ```
 
 ---
+
+# 120. Accuracy-এর Limitations
+
+Accuracy useful হলেও সবসময় যথেষ্ট নয়।
+
+ধরো:
+
+```text
+990 → Negative
+10  → Positive
+```
+
+Model সবসময় Negative predict করল।
+
+তাহলে:
+
+```text
+Accuracy = 990 / 1000
+         = 99%
+```
+
+Accuracy 99% হলেও model কোনো Positive detect করতে পারেনি।
+
+তাই imbalanced dataset-এ:
+
+```text
+Precision
+Recall
+F1-score
+Confusion Matrix
+ROC-AUC
+```
+
+দেখাও গুরুত্বপূর্ণ।
+
+---
