@@ -2169,3 +2169,22 @@ Model-কে minority class-এর ভুল prediction-এর জন্য ব�
 এই Lab-এ class weights সম্পর্কে ধারণা দেওয়া হয়েছে।
 
 ---
+
+# 112. TO DO — Learn More About KNN
+
+KNN-এর self-study-এর জন্য:
+
+* K value
+* Euclidean distance
+* Choosing K
+* Small K vs Large K
+* Scaling-এর গুরুত্ব
+
+মনে রাখবে:
+
+```text
+KNN
+→ Distance-based algorithm
+```
+
+---
