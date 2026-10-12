@@ -2243,3 +2243,20 @@ Self-study-এর জন্য গুরুত্বপূর্ণ terms:
 Gini Impurity
 Entropy
 Information Gain
+```
+---
+
+### Gini Impurity
+
+একটি node-এর impurity measure করার একটি method।
+
+Formula:
+
+```text
+Gini = 1 - Σ(pᵢ²)
+```
+
+যেখানে `pᵢ` হলো class-এর probability।
+
+---
+
