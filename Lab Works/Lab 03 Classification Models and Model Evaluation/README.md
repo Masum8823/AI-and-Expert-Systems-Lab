@@ -2932,3 +2932,64 @@ ROC হলো Receiver Operating Characteristic curve, যেখানে বি
 AUC হলো Area Under the ROC Curve। এটি model-এর class separation ability সম্পর্কে ধারণা দেয়।
 
 ---
+# 135. Mid Exam-এর জন্য সবচেয়ে Important Topics
+
+এই Lab থেকে preparation-এর সময় বিশেষভাবে এগুলো ভালোভাবে পড়বে:
+
+```text
+★★★★★ Classification vs Regression
+
+★★★★★ Confusion Matrix
+
+★★★★★ TP, TN, FP, FN
+
+★★★★★ Accuracy Formula
+
+★★★★★ Precision Formula
+
+★★★★★ Recall Formula
+
+★★★★★ F1-score Formula
+
+★★★★★ TPR এবং FPR
+
+★★★★★ Precision vs Recall
+
+★★★★★ Logistic Regression
+
+★★★★★ KNN
+
+★★★★★ Decision Tree
+
+★★★★★ Random Forest
+
+★★★★★ SVM
+
+★★★★★ Feature Scaling
+
+★★★★★ Train-Test Split
+
+★★★★☆ ROC Curve
+
+★★★★☆ AUC
+
+★★★★☆ Class Imbalance
+
+★★★★☆ Imbalance Ratio
+
+★★★★☆ Class Weight
+
+★★★★☆ Overfitting
+
+★★★★☆ Underfitting
+
+★★★☆☆ Gini Impurity
+
+★★★☆☆ Entropy
+
+★★★☆☆ Information Gain
+
+★★★☆☆ SMOTE / Dataset Balancing
+```
+
+---
