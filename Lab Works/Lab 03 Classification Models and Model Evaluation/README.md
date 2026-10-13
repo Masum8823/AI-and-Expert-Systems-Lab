@@ -2447,3 +2447,54 @@ Precision ↓
 তাই problem-এর requirement অনুযায়ী appropriate metric গুরুত্বপূর্ণ।
 
 ---
+
+# 125. Complete Classification Workflow
+
+```text
+                CLASSIFICATION
+                      │
+                      ↓
+                Load Dataset
+                      │
+                      ↓
+                    EDA
+                      │
+        ┌─────────────┼─────────────┐
+        ↓             ↓             ↓
+    Statistics   Missing Values  Class Distribution
+                                    │
+                                    ↓
+                            Check Imbalance
+                                    │
+                                    ↓
+                              X and Y Split
+                                    │
+                                    ↓
+                              Train/Test Split
+                                    │
+                                    ↓
+                              Feature Scaling
+                                    │
+             ┌──────────────┬───────┼────────┬──────────────┐
+             ↓              ↓       ↓        ↓              ↓
+          Logistic         KNN   Decision   Random         SVM
+         Regression              Tree       Forest
+             │              │       │        │              │
+             └──────────────┴───────┼────────┴──────────────┘
+                                    ↓
+                                Prediction
+                                    │
+                                    ↓
+                              Model Evaluation
+                                    │
+                   ┌────────────────┼────────────────┐
+                   ↓                ↓                ↓
+               Accuracy       Classification     Confusion
+                                 Report            Matrix
+                   │
+                   └───────────────┬────────────────┘
+                                   ↓
+                              ROC / AUC
+```
+
+---
