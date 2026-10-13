@@ -2371,3 +2371,24 @@ ROC-AUC
 দেখাও গুরুত্বপূর্ণ।
 
 ---
+
+# 121. Medical Classification-এ Recall কেন গুরুত্বপূর্ণ হতে পারে?
+
+এই Lab breast cancer classification নিয়ে কাজ করছে।
+
+যদি actual malignant patient-কে model ভুলভাবে benign বলে:
+
+```text
+Actual → Malignant
+Prediction → Benign
+```
+
+এটি:
+
+```text
+False Negative
+```
+
+তাই medical diagnosis-এর ক্ষেত্রে **Recall/Sensitivity** গুরুত্বপূর্ণ হতে পারে, কারণ actual positive cases miss করা serious হতে পারে।
+
+---
