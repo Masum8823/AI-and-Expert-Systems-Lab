@@ -2787,3 +2787,31 @@ svm_model = SVC(
 ```
 
 ---
+
+# 133. Common Model Workflow
+
+প্রায় সব model-এর basic workflow:
+
+```python
+model = Model()
+
+model.fit(X_train, Y_train)
+
+Y_pred = model.predict(X_test)
+```
+
+তারপর:
+
+```python
+accuracy_score(Y_test, Y_pred)
+```
+
+এবং:
+
+```python
+classification_report(Y_test, Y_pred)
+```
+
+দিয়ে evaluate করা যায়।
+
+---
