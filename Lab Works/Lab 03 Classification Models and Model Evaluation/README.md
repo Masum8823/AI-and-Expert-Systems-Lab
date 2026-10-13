@@ -2639,3 +2639,14 @@ Recall → Real Positive-এর মধ্যে detect কত?
 ```
 
 ---
+# 129. Model Summary
+
+| Model               | Main Concept                     | Important Point                |
+| ------------------- | -------------------------------- | ------------------------------ |
+| Logistic Regression | Probability-based classification | Simple & interpretable         |
+| KNN                 | Nearest neighbors                | Distance-based                 |
+| Decision Tree       | Tree/rule-based                  | Non-linear relationships       |
+| Random Forest       | Many decision trees              | Better overfitting handling    |
+| SVM                 | Boundary + margin                | Good for high-dimensional data |
+
+---
