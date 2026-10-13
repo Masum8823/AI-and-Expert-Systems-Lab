@@ -2612,3 +2612,30 @@ FPR → Actual Negative
 ```
 
 ---
+# 128. Easy Formula Memory Trick
+
+### Precision
+
+```text
+Predicted Positive
+        ↓
+TP / (TP + FP)
+```
+
+### Recall
+
+```text
+Actual Positive
+        ↓
+TP / (TP + FN)
+```
+
+### মনে রাখার Trick
+
+```text
+Precision → Prediction-এর Positive-এর মধ্যে correct কত?
+
+Recall → Real Positive-এর মধ্যে detect কত?
+```
+
+---
