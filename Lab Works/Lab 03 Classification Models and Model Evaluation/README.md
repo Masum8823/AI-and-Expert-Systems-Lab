@@ -2815,3 +2815,120 @@ classification_report(Y_test, Y_pred)
 দিয়ে evaluate করা যায়।
 
 ---
+
+# 134. Important Exam Questions
+
+### Q1. What is Classification?
+
+Classification হলো supervised learning-এর একটি problem যেখানে input data-কে predefined class/category-এর মধ্যে classify করা হয়।
+
+---
+
+### Q2. Classification এবং Regression-এর difference কী?
+
+Classification class/category predict করে, আর Regression continuous numerical value predict করে।
+
+---
+
+### Q3. What is Accuracy?
+
+Accuracy হলো মোট prediction-এর মধ্যে সঠিক prediction-এর proportion।
+
+Formula:
+
+```text
+Accuracy =
+(TP + TN) / (TP + TN + FP + FN)
+```
+
+---
+
+### Q4. What is Precision?
+
+Model যেসব sample-কে Positive বলেছে, সেগুলোর মধ্যে কতগুলো আসলে Positive তা Precision বলে।
+
+```text
+Precision = TP / (TP + FP)
+```
+
+---
+
+### Q5. What is Recall?
+
+Actual Positive samples-এর মধ্যে কতগুলো model correctly identify করেছে তা Recall বলে।
+
+```text
+Recall = TP / (TP + FN)
+```
+
+---
+
+### Q6. What is F1-score?
+
+Precision এবং Recall-এর harmonic mean হলো F1-score।
+
+```text
+F1 = 2PR / (P + R)
+```
+
+---
+
+### Q7. What is Confusion Matrix?
+
+Confusion Matrix classification model-এর correct এবং incorrect predictions-কে TP, TN, FP এবং FN-এর মাধ্যমে summarize করে।
+
+---
+
+### Q8. What is KNN?
+
+KNN হলো distance-based classification algorithm যেখানে nearest K data points-এর majority class ব্যবহার করে নতুন sample classify করা হয়।
+
+---
+
+### Q9. What is Decision Tree?
+
+Decision Tree feature-based conditions ব্যবহার করে data split করে একটি tree structure-এর মাধ্যমে prediction করে।
+
+---
+
+### Q10. What is Random Forest?
+
+Random Forest হলো multiple Decision Trees-এর ensemble model যা combined prediction ব্যবহার করে।
+
+---
+
+### Q11. What is SVM?
+
+SVM এমন একটি classification algorithm যা classes-এর মধ্যে একটি suitable decision boundary এবং margin তৈরি করার চেষ্টা করে।
+
+---
+
+### Q12. Why is Feature Scaling important?
+
+Feature scaling different features-এর values-কে comparable scale-এ নিয়ে আসে এবং বিশেষ করে Logistic Regression, KNN এবং SVM-এর মতো algorithms-এর performance-এর জন্য গুরুত্বপূর্ণ।
+
+---
+
+### Q13. What is Overfitting?
+
+যখন model training data-তে খুব ভালো perform করে কিন্তু unseen test data-তে comparatively poor perform করে, তাকে overfitting বলে।
+
+---
+
+### Q14. What is Underfitting?
+
+যখন model training data-এর pattern যথেষ্ট ভালোভাবে learn করতে পারে না এবং training ও testing—দুই জায়গাতেই poor performance দেয়, তাকে underfitting বলে।
+
+---
+
+### Q15. What is ROC?
+
+ROC হলো Receiver Operating Characteristic curve, যেখানে বিভিন্ন threshold-এর জন্য True Positive Rate এবং False Positive Rate-এর relationship দেখানো হয়।
+
+---
+
+### Q16. What is AUC?
+
+AUC হলো Area Under the ROC Curve। এটি model-এর class separation ability সম্পর্কে ধারণা দেয়।
+
+---
