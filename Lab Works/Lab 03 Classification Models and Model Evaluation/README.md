@@ -2392,3 +2392,21 @@ False Negative
 তাই medical diagnosis-এর ক্ষেত্রে **Recall/Sensitivity** গুরুত্বপূর্ণ হতে পারে, কারণ actual positive cases miss করা serious হতে পারে।
 
 ---
+
+# 122. Precision কখন বেশি গুরুত্বপূর্ণ?
+
+যখন false positive কমানো গুরুত্বপূর্ণ।
+
+উদাহরণ:
+
+```text
+Model Positive বলল
+↓
+কিন্তু actual Negative
+↓
+False Positive
+```
+
+Precision এই ধরনের error-এর সাথে সম্পর্কিত।
+
+---
