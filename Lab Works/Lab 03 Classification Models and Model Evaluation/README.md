@@ -2744,3 +2744,46 @@ X_test_scaled = scaler.transform(X_test)
 ```
 
 ---
+# 132. Model Creation
+
+## Logistic Regression
+
+```python
+logistic_model = LogisticRegression()
+```
+
+## KNN
+
+```python
+knn_model = KNeighborsClassifier(n_neighbors=5)
+```
+
+## Decision Tree
+
+```python
+tree_model = DecisionTreeClassifier(
+    max_depth=5,
+    random_state=42
+)
+```
+
+## Random Forest
+
+```python
+rf_model = RandomForestClassifier(
+    n_estimators=101,
+    max_depth=5,
+    random_state=42
+)
+```
+
+## SVM
+
+```python
+svm_model = SVC(
+    kernel='linear',
+    probability=True
+)
+```
+
+---
