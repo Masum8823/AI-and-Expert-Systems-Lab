@@ -2424,3 +2424,26 @@ Recall = TP / (TP + FN)
 FN বেশি হলে Recall কমে যায়।
 
 ---
+# 124. Precision-Recall Trade-off
+
+কিছু ক্ষেত্রে Precision এবং Recall-এর মধ্যে trade-off থাকতে পারে।
+
+Threshold পরিবর্তন করলে:
+
+```text
+Precision ↑
+Recall ↓
+```
+
+অথবা:
+
+```text
+Recall ↑
+Precision ↓
+```
+
+হতে পারে।
+
+তাই problem-এর requirement অনুযায়ী appropriate metric গুরুত্বপূর্ণ।
+
+---
