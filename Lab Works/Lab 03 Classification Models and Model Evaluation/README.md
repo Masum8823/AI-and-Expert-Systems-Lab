@@ -2993,3 +2993,93 @@ AUC হলো Area Under the ROC Curve। এটি model-এর class separatio
 ```
 
 ---
+
+# 136. Last-Minute Revision Sheet
+
+```text
+Classification
+→ Class predict করে
+
+Regression
+→ Numerical value predict করে
+
+X
+→ Features
+
+Y
+→ Target
+
+80/20
+→ Train/Test split
+
+StandardScaler
+→ Feature scaling
+
+Logistic Regression
+→ Classification
+
+KNN
+→ Nearest neighbors
+
+Decision Tree
+→ Tree-based rules
+
+Random Forest
+→ Multiple decision trees
+
+SVM
+→ Decision boundary + margin
+
+TP
+→ Actual Positive + Predicted Positive
+
+TN
+→ Actual Negative + Predicted Negative
+
+FP
+→ Actual Negative + Predicted Positive
+
+FN
+→ Actual Positive + Predicted Negative
+
+Accuracy
+→ Overall correct prediction
+
+Precision
+→ Predicted Positive-এর মধ্যে correct
+
+Recall
+→ Actual Positive-এর মধ্যে detected
+
+F1
+→ Precision + Recall balance
+
+TPR
+→ Recall
+
+FPR
+→ False Positive rate
+
+Confusion Matrix
+→ TP/TN/FP/FN
+
+ROC
+→ TPR vs FPR
+
+AUC
+→ Area under ROC
+
+Overfitting
+→ Train ভালো, Test খারাপ
+
+Underfitting
+→ Train এবং Test দুটোই খারাপ
+
+Imbalance Ratio
+→ Majority / Minority
+
+Scaling
+→ Logistic + KNN + SVM-এর জন্য important
+```
+
+---
