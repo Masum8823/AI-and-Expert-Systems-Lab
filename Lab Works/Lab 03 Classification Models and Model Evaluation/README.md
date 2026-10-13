@@ -2498,3 +2498,97 @@ Precision ↓
 ```
 
 ---
+# 126. Important Formulas — One Place
+
+## Accuracy
+
+```text
+Accuracy =
+(TP + TN)
+-------------------------
+TP + TN + FP + FN
+```
+
+---
+
+## Precision
+
+```text
+Precision =
+TP
+----------------
+TP + FP
+```
+
+---
+
+## Recall / Sensitivity / TPR
+
+```text
+Recall =
+TP
+----------------
+TP + FN
+```
+
+---
+
+## F1-score
+
+```text
+F1 =
+2 × Precision × Recall
+------------------------
+Precision + Recall
+```
+
+---
+
+## True Positive Rate
+
+```text
+TPR =
+TP
+----------------
+TP + FN
+```
+
+---
+
+## False Positive Rate
+
+```text
+FPR =
+FP
+----------------
+FP + TN
+```
+
+---
+
+## Imbalance Ratio
+
+```text
+IR =
+Majority Class Count
+--------------------
+Minority Class Count
+```
+
+---
+
+## Gini Impurity
+
+```text
+Gini = 1 - Σ(pᵢ²)
+```
+
+---
+
+## Entropy
+
+```text
+Entropy = -Σ pᵢ log₂(pᵢ)
+```
+
+---
