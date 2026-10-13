@@ -2680,3 +2680,67 @@ RF       → X_train
 ```
 
 ---
+
+# 131. Important Python Code Patterns
+
+## Load Dataset
+
+```python
+cancer = load_breast_cancer()
+```
+
+## Create DataFrame
+
+```python
+df = pd.DataFrame(
+    cancer.data,
+    columns=cancer.feature_names
+)
+```
+
+## Add Target
+
+```python
+df["target"] = cancer.target
+```
+
+## Missing Values
+
+```python
+df.isnull().sum()
+```
+
+## Class Distribution
+
+```python
+df["target"].value_counts()
+```
+
+## Features and Target
+
+```python
+X = df.drop(columns=["target"])
+Y = df["target"]
+```
+
+## Train-Test Split
+
+```python
+X_train, X_test, Y_train, Y_test = train_test_split(
+    X,
+    Y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+## Scaling
+
+```python
+scaler = StandardScaler()
+
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+```
+
+---
