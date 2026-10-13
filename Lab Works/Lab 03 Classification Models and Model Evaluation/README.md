@@ -3128,3 +3128,73 @@ Scaling
 ```
 
 ---
+# 138. Final Understanding
+
+এই Lab-এর মূল বিষয় হলো **Classification এবং Classification Model Evaluation**।
+
+প্রথমে dataset load করে EDA করা হয়েছে। এরপর missing values, class distribution এবং class imbalance সম্পর্কে ধারণা নেওয়া হয়েছে।
+
+তারপর data-কে:
+
+```text
+X → Features
+Y → Target
+```
+
+এ ভাগ করে:
+
+```text
+80% → Training
+20% → Testing
+```
+
+করা হয়েছে।
+
+এরপর প্রয়োজন অনুযায়ী feature scaling করা হয়েছে।
+
+তারপর পাঁচটি classification algorithm implement করা হয়েছে:
+
+```text
+1. Logistic Regression
+2. KNN
+3. Decision Tree
+4. Random Forest
+5. SVM
+```
+
+শেষে model performance evaluate করার জন্য:
+
+```text
+Accuracy
+Precision
+Recall
+F1-score
+Confusion Matrix
+ROC
+AUC
+```
+
+ব্যবহার করা হয়েছে।
+
+সবচেয়ে গুরুত্বপূর্ণ হলো **Confusion Matrix থেকে TP, TN, FP এবং FN বুঝে Accuracy, Precision, Recall, F1, TPR এবং FPR-এর formula বের করতে পারা।**
+
+---
+
+# 139. Final One-Line Workflow
+
+```text
+Load Dataset
+→ EDA
+→ Check Class Balance
+→ Split X/Y
+→ Train/Test Split
+→ Feature Scaling
+→ Train Classification Models
+→ Predict
+→ Confusion Matrix
+→ Accuracy + Precision + Recall + F1
+→ ROC + AUC
+→ Compare Models
+```
+
+**এই workflow-টাই পুরো AI Lab 03-এর মূল ধারণা।**
