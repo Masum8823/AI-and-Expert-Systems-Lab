@@ -2592,3 +2592,23 @@ Entropy = -Σ pᵢ log₂(pᵢ)
 ```
 
 ---
+# 127. Confusion Matrix Master Table
+
+|                    | Actual Negative | Actual Positive |
+| ------------------ | --------------- | --------------- |
+| Predicted Negative | TN              | FN              |
+| Predicted Positive | FP              | TP              |
+
+এখান থেকেই প্রধান metrics মনে রাখা যায়:
+
+```text
+Accuracy → সব prediction
+
+Precision → Predicted Positive
+
+Recall → Actual Positive
+
+FPR → Actual Negative
+```
+
+---
