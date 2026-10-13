@@ -3083,3 +3083,48 @@ Scaling
 ```
 
 ---
+
+# 137. Final Memory Map
+
+```text
+                         AI LAB 03
+                             │
+                      CLASSIFICATION
+                             │
+                ┌────────────┴────────────┐
+                ↓                         ↓
+            Data / EDA                 Models
+                │                         │
+       ┌────────┼────────┐       ┌───────┼────────┐
+       ↓        ↓        ↓       ↓       ↓        ↓
+   Missing   Statistics Class   Logistic KNN     Tree
+   Values              Balance  Reg.             │
+                                                   
+                             ┌──────────┐
+                             ↓          ↓
+                        Random Forest  SVM
+                             │          │
+                             └────┬─────┘
+                                  ↓
+                              Prediction
+                                  │
+                                  ↓
+                         Model Evaluation
+                                  │
+              ┌───────────────────┼──────────────────┐
+              ↓                   ↓                  ↓
+           Accuracy         Precision/Recall      Confusion
+                                                   Matrix
+              │                   │                  │
+              └───────────────────┼──────────────────┘
+                                  ↓
+                              F1-score
+                                  │
+                                  ↓
+                             ROC Curve
+                                  │
+                                  ↓
+                                AUC
+```
+
+---
