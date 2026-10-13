@@ -2650,3 +2650,33 @@ Recall → Real Positive-এর মধ্যে detect কত?
 | SVM                 | Boundary + margin                | Good for high-dimensional data |
 
 ---
+
+# 130. Which Models Need Scaling?
+
+### Scaling Important
+
+```text
+Logistic Regression
+KNN
+SVM
+```
+
+### Usually Scaling Not Required
+
+```text
+Decision Tree
+Random Forest
+```
+
+### Lab-এর code অনুযায়ী
+
+```text
+Logistic → X_train_scaled
+KNN      → X_train_scaled
+SVM      → X_train_scaled
+
+Tree     → X_train
+RF       → X_train
+```
+
+---
