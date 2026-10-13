@@ -2410,3 +2410,17 @@ False Positive
 Precision এই ধরনের error-এর সাথে সম্পর্কিত।
 
 ---
+
+# 123. Recall কখন বেশি গুরুত্বপূর্ণ?
+
+যখন actual positive cases miss করা উচিত নয়।
+
+Formula:
+
+```text
+Recall = TP / (TP + FN)
+```
+
+FN বেশি হলে Recall কমে যায়।
+
+---
