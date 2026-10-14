@@ -234,3 +234,24 @@ Dataset-এর feature-এর উদাহরণ:
 এগুলো tumor measurement-সংক্রান্ত numerical features।
 
 ---
+
+## 9. Target Variable এবং Class Label
+
+Code:
+
+```python
+y = pd.Series(data.target, name='target')
+```
+
+scikit-learn-এর এই dataset-এ label mapping হলো:
+
+```text
+0 → Malignant
+1 → Benign
+```
+
+অর্থাৎ model-এর output label 0 হলে Malignant এবং 1 হলে Benign বোঝানো হয়েছে।
+
+**সতর্কতা:** Dataset-এর label mapping অন্য dataset-এ একই হবে—এমন নয়। তাই সবসময় dataset-এর documentation বা target names check করতে হবে।
+
+---
