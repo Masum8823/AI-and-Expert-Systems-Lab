@@ -59,3 +59,29 @@ DL → Multiple neural-network layers দিয়ে শেখা
 ```
 
 ---
+
+## 3. Artificial Neural Network (ANN) কী?
+
+**Artificial Neural Network (ANN)** হলো একটি Machine Learning model, যা মানুষের মস্তিষ্কের neuron-এর কাজ থেকে অনুপ্রাণিত হয়ে তৈরি। এটি input data থেকে pattern শিখে prediction করতে পারে।
+
+সহজভাবে, ANN input নেয়, বিভিন্ন calculation করে এবং output দেয়। Training-এর সময় model তার weights ও biases পরিবর্তন করে prediction উন্নত করার চেষ্টা করে।
+
+উদাহরণ:
+
+```text
+Tumor Measurements
+        ↓
+       ANN
+        ↓
+Benign / Malignant
+```
+
+ANN ব্যবহার করা যায়:
+
+- Classification
+- Regression
+- Image recognition
+- Speech recognition
+- Pattern recognition
+
+---
