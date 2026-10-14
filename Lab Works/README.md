@@ -131,3 +131,23 @@ a = f(z)
 - \(a\) = neuron-এর output
 
 ---
+
+## 5. Weight এবং Bias কী?
+
+### Weight
+
+Weight নির্ধারণ করে কোনো input feature final calculation-এ কতটা প্রভাব ফেলবে।
+
+যে feature-এর weight বেশি, সেটি model-এর calculation-এ তুলনামূলকভাবে বেশি প্রভাব ফেলতে পারে। তবে weight-এর অর্থ model ও অন্য weights-এর সঙ্গে মিলিয়ে বুঝতে হয়।
+
+### Bias
+
+Bias হলো একটি অতিরিক্ত trainable value, যা weighted sum-কে adjust করে। এটি model-কে আরও flexible হতে সাহায্য করে।
+
+```text
+Weighted Sum = (Input × Weight-এর যোগফল) + Bias
+```
+
+Training-এর সময় model data অনুযায়ী weights ও biases update করে।
+
+---
