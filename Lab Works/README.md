@@ -255,3 +255,40 @@ scikit-learn-এর এই dataset-এ label mapping হলো:
 **সতর্কতা:** Dataset-এর label mapping অন্য dataset-এ একই হবে—এমন নয়। তাই সবসময় dataset-এর documentation বা target names check করতে হবে।
 
 ---
+
+## 10. Required Libraries
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import classification_report, confusion_matrix
+
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+```
+
+### Library-গুলোর কাজ
+
+| Library / Function | কাজ |
+|---|---|
+| NumPy | Numerical calculation ও array operations |
+| Pandas | DataFrame এবং tabular data handling |
+| Matplotlib | Graph আঁকা |
+| Seaborn | Statistical visualization |
+| `load_breast_cancer()` | Breast Cancer Dataset load করা |
+| `train_test_split()` | Data-কে training ও testing ভাগে ভাগ করা |
+| `StandardScaler()` | Feature standardization |
+| `classification_report()` | Precision, recall, F1-score ইত্যাদি দেখানো |
+| `confusion_matrix()` | Actual ও predicted class-এর তুলনা |
+| TensorFlow | Machine Learning ও Deep Learning framework |
+| Keras `Sequential` | Layer-ভিত্তিক model তৈরি |
+| Keras `Dense` | Fully connected neural-network layer তৈরি |
+
+---
