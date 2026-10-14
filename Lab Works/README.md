@@ -151,3 +151,39 @@ Weighted Sum = (Input × Weight-এর যোগফল) + Bias
 Training-এর সময় model data অনুযায়ী weights ও biases update করে।
 
 ---
+## 6. Neural Network-এর Layers
+
+একটি সাধারণ ANN-এ তিন ধরনের layer দেখা যায়।
+
+### 6.1 Input Layer
+
+Input layer feature values গ্রহণ করে। এই Lab-এ প্রতিটি breast cancer sample-এর 30টি numerical feature input হিসেবে ব্যবহৃত হয়।
+
+### 6.2 Hidden Layer
+
+Hidden layer input থেকে pattern শেখে। একটি network-এ এক বা একাধিক hidden layer থাকতে পারে।
+
+এই Lab-এ দুটি hidden Dense layer রয়েছে:
+
+```text
+First Hidden Layer  → 32 neurons
+Second Hidden Layer → 16 neurons
+```
+
+### 6.3 Output Layer
+
+Output layer final prediction দেয়। এই Lab-এ binary classification হওয়ায় output layer-এ একটি neuron আছে।
+
+```text
+Input: 30 Features
+       ↓
+Hidden Layer: 32 Neurons
+       ↓
+Hidden Layer: 16 Neurons
+       ↓
+Output Layer: 1 Neuron
+       ↓
+Probability between 0 and 1
+```
+
+---
