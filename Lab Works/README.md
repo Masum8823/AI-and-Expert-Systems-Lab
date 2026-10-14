@@ -85,3 +85,48 @@ ANN ব্যবহার করা যায়:
 - Pattern recognition
 
 ---
+## 4. Biological Neuron এবং Artificial Neuron
+
+মানুষের মস্তিষ্কে neuron signal গ্রহণ ও প্রক্রিয়াকরণ করে। Artificial neuron এই ধারণার একটি mathematical model।
+
+Artificial neuron-এর প্রধান অংশ:
+
+- **Inputs:** Model-এর কাছে আসা data values।
+- **Weights:** প্রতিটি input কতটা গুরুত্বপূর্ণ, তা নির্ধারণে সাহায্য করে।
+- **Bias:** Weighted sum-কে adjust করে।
+- **Activation Function:** Neuron-এর output নির্ধারণ করে।
+
+সাধারণ ধারণা:
+
+```text
+Inputs
+  ↓
+Weights × Inputs
+  ↓
+Add Bias
+  ↓
+Activation Function
+  ↓
+Output
+```
+
+একটি neuron-এর basic formula:
+
+\[
+z = w_1x_1 + w_2x_2 + \cdots + w_nx_n + b
+\]
+
+\[
+a = f(z)
+\]
+
+যেখানে:
+
+- \(x_i\) = input features
+- \(w_i\) = weights
+- \(b\) = bias
+- \(z\) = weighted sum plus bias
+- \(f\) = activation function
+- \(a\) = neuron-এর output
+
+---
