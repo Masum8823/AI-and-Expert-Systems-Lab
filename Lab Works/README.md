@@ -110,6 +110,7 @@ Activation Function
 Output
 ```
 
+
 একটি neuron-এর basic formula:
 
 \[
