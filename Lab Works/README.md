@@ -292,3 +292,38 @@ from tensorflow.keras.layers import Dense
 | Keras `Dense` | Fully connected neural-network layer তৈরি |
 
 ---
+
+## 11. Dataset Load এবং DataFrame তৈরি
+
+Code:
+
+```python
+data = load_breast_cancer()
+
+X = pd.DataFrame(
+    data.data,
+    columns=data.feature_names
+)
+
+y = pd.Series(data.target, name='target')
+```
+
+ব্যাখ্যা:
+
+- `load_breast_cancer()` dataset load করে।
+- `data.data` input feature values দেয়।
+- `data.feature_names` feature-গুলোর নাম দেয়।
+- `pd.DataFrame()` feature-গুলোকে row ও column-সহ DataFrame-এ রাখে।
+- `data.target` target labels দেয়।
+- `pd.Series()` target-কে একটি Series হিসেবে রাখে।
+
+এখানে:
+
+```text
+X → Input Features
+y → Target Labels
+```
+
+Machine Learning-এ সাধারণ convention হিসেবে `X` features এবং `y` target বোঝায়।
+
+---
