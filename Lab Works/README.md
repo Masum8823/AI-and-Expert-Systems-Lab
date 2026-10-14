@@ -209,3 +209,28 @@ Prediction Probability
 এখানে model input data গ্রহণ করে এবং layer-by-layer calculation করে final probability তৈরি করে।
 
 ---
+
+## 8. Dataset Used in This Lab
+
+এই Lab-এ scikit-learn-এর built-in **Breast Cancer Dataset** ব্যবহার করা হয়েছে।
+
+Code:
+
+```python
+from sklearn.datasets import load_breast_cancer
+
+data = load_breast_cancer()
+```
+
+Dataset-এ breast tumor-এর বিভিন্ন numerical measurement রয়েছে। এই features থেকে model tumor-এর class predict করার চেষ্টা করে।
+
+Dataset-এর feature-এর উদাহরণ:
+
+- mean radius
+- mean texture
+- mean perimeter
+- mean area
+
+এগুলো tumor measurement-সংক্রান্ত numerical features।
+
+---
