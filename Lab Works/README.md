@@ -187,3 +187,25 @@ Probability between 0 and 1
 ```
 
 ---
+
+## 7. Feedforward Neural Network কী?
+
+Feedforward Neural Network হলো এমন neural network যেখানে information input থেকে hidden layer হয়ে output layer-এর দিকে যায়। সাধারণ feedforward pass-এ information সামনের দিকে প্রবাহিত হয়; recurrent loop থাকে না।
+
+এই Lab-এর flow:
+
+```text
+Input Features
+      ↓
+Dense(32, ReLU)
+      ↓
+Dense(16, ReLU)
+      ↓
+Dense(1, Sigmoid)
+      ↓
+Prediction Probability
+```
+
+এখানে model input data গ্রহণ করে এবং layer-by-layer calculation করে final probability তৈরি করে।
+
+---
