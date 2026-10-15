@@ -398,3 +398,35 @@ Model train করার আগে dataset-এর গঠন, distribution এব
 EDA সাহায্য করে data সম্পর্কে ধারণা পেতে; তবে শুধু graph দেখে কোনো model ভালো হবে কি না নিশ্চিত বলা যায় না।
 
 ---
+## 15. Class Distribution এবং Count Plot
+
+Code:
+
+```python
+sns.countplot(x='target', data=df)
+plt.title("Class Distribution (0 = Malignant, 1 = Benign)")
+plt.show()
+```
+
+### `countplot()` কী করে?
+
+`countplot()` প্রতিটি category-তে কতটি sample আছে, তা bar-এর মাধ্যমে দেখায়।
+
+এই Lab-এ:
+
+```text
+0 → Malignant
+1 → Benign
+```
+
+X-axis-এ class label এবং Y-axis-এ sample count দেখানো হয়।
+
+### কেন দরকার?
+
+- দুই class-এ sample-এর সংখ্যা তুলনা করতে।
+- Dataset balanced নাকি imbalanced, সে সম্পর্কে ধারণা পেতে।
+- কোনো class খুব কম sample নিয়ে আছে কি না দেখতে।
+
+Count plot নিজে class imbalance সমাধান করে না; শুধু distribution দেখায়।
+
+---
