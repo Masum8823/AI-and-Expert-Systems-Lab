@@ -499,3 +499,24 @@ plt.show()
 Pair plot visualization-এর জন্য; এটি model train করে না।
 
 ---
+## 18. Feature Scaling কী?
+
+Dataset-এর বিভিন্ন feature-এর numerical range অনেক আলাদা হতে পারে। Feature scaling তাদের values-কে একটি comparable scale-এ নিয়ে আসে।
+
+উদাহরণ:
+
+```text
+Feature A: 1–10
+Feature B: 1000–50000
+```
+
+বড় numerical range থাকা feature training-কে প্রভাবিত করতে পারে। Neural network-এর ক্ষেত্রে scaling অনেক সময় training-কে আরও stable ও efficient করতে সাহায্য করে।
+
+এই Lab-এ ব্যবহার করা হয়েছে:
+
+```python
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+```
+
+---
