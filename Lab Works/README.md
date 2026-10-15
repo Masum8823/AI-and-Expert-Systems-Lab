@@ -466,3 +466,36 @@ Correlation coefficient সাধারণত −1 থেকে +1-এর মধ
 **মনে রাখবে:** Correlation মানেই causation নয়। দুটি feature correlated হলেই একটিই অন্যটির কারণ—এ কথা বলা যায় না।
 
 ---
+## 17. Pair Plot
+
+Code:
+
+```python
+sns.pairplot(
+    df[['mean radius', 'mean texture',
+        'mean perimeter', 'mean area', 'target']],
+    hue='target'
+)
+plt.show()
+```
+
+`pairplot()` নির্বাচিত numerical features-এর pairwise relationship graph-এ দেখায়।
+
+এই Lab-এ চারটি feature ব্যবহার করা হয়েছে:
+
+- `mean radius`
+- `mean texture`
+- `mean perimeter`
+- `mean area`
+
+`hue='target'` দিয়ে class অনুযায়ী point-গুলোর রং আলাদা করা হয়।
+
+### কেন দরকার?
+
+- Feature-গুলোর মধ্যে relationship দেখা।
+- Class 0 ও Class 1-এর data distribution তুলনা করা।
+- কোনো feature combination-এ class-গুলো কতটা আলাদা দেখা যায়, তা বোঝা।
+
+Pair plot visualization-এর জন্য; এটি model train করে না।
+
+---
