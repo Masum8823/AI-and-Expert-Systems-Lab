@@ -520,3 +520,33 @@ X_scaled = scaler.fit_transform(X)
 ```
 
 ---
+## 19. StandardScaler কী?
+
+`StandardScaler` প্রতিটি feature-কে training data-এর mean ও standard deviation ব্যবহার করে standardize করে।
+
+Formula:
+
+\[
+z = \frac{x-\mu}{\sigma}
+\]
+
+যেখানে:
+
+- \(x\) = original value
+- \(\mu\) = feature-এর mean
+- \(\sigma\) = feature-এর standard deviation
+- \(z\) = standardized value
+
+Standardized data-এর mean সাধারণত 0-এর কাছাকাছি এবং standard deviation 1-এর কাছাকাছি হয়।
+
+### Code-এর ব্যাখ্যা
+
+```python
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+```
+
+- `StandardScaler()` scaler object তৈরি করে।
+- `fit()` data থেকে mean ও standard deviation শেখে।
+- `transform()` সেই statistics ব্যবহার করে data standardize করে।
+- `fit_transform()` একই সঙ্গে fitting ও transformation করে।
