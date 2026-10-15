@@ -570,3 +570,40 @@ X_test = scaler.transform(X_test)
 এই সংশোধিত workflow-তে test data-এর statistics scaler শেখার সময় ব্যবহার করা হয় না।
 
 ---
+
+## 20. Train-Test Split
+
+Code:
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X_scaled, y, test_size=0.2, random_state=42
+)
+```
+
+Dataset-কে দুই ভাগে ভাগ করা হয়:
+
+- **Training data:** Model শেখানোর জন্য।
+- **Testing data:** Training শেষে model-এর performance পরীক্ষা করার জন্য।
+
+### `test_size=0.2`
+
+এর অর্থ মোট data-এর 20% test data হিসেবে রাখা হবে এবং বাকি 80% training data হবে।
+
+```text
+100% Dataset
+    ├── 80% Training
+    └── 20% Testing
+```
+
+569টি sample-এর ক্ষেত্রে exact সংখ্যা ভাগ করার rounding-এর কারণে আনুমানিক 455টি training sample এবং 114টি test sample হয়।
+
+### `random_state=42`
+
+Data split-এর randomness নির্দিষ্ট করে, যাতে একই data ও একই settings ব্যবহার করলে সাধারণত একই split পাওয়া যায়। `42` বিশেষ কোনো mathematical rule নয়; অন্য integer-ও ব্যবহার করা যায়।
+
+### গুরুত্বপূর্ণ নোট
+
+Code-এ test set-কে `validation_data` হিসেবেও `model.fit()`-এ দেওয়া হয়েছে। শেখার সময় বারবার test-set performance দেখা হলে সেটি কার্যত validation set-এর মতো ব্যবহৃত হয়। নিরপেক্ষ final evaluation-এর জন্য আলাদা validation set এবং untouched test set রাখা উত্তম।
+
+---
