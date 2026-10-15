@@ -381,3 +381,20 @@ df = 30 Feature Columns + 1 Target Column
 এই dataset-এর ক্ষেত্রে `df`-এর shape হবে 569 rows ও 31 columns।
 
 ---
+
+## 14. Exploratory Data Analysis (EDA)
+
+EDA-এর full form **Exploratory Data Analysis**।
+
+Model train করার আগে dataset-এর গঠন, distribution এবং feature-গুলোর সম্পর্ক বোঝার প্রক্রিয়াকে EDA বলে।
+
+এই Lab-এ EDA-এর জন্য ব্যবহার করা হয়েছে:
+
+1. Dataset shape
+2. Class distribution count plot
+3. Feature correlation heatmap
+4. Selected features-এর pair plot
+
+EDA সাহায্য করে data সম্পর্কে ধারণা পেতে; তবে শুধু graph দেখে কোনো model ভালো হবে কি না নিশ্চিত বলা যায় না।
+
+---
