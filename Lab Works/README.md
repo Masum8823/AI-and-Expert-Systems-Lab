@@ -430,3 +430,39 @@ X-axis-এ class label এবং Y-axis-এ sample count দেখানো হ�
 Count plot নিজে class imbalance সমাধান করে না; শুধু distribution দেখায়।
 
 ---
+
+## 16. Feature Correlation Heatmap
+
+Code:
+
+```python
+plt.figure(figsize=(12, 10))
+sns.heatmap(df.corr(), cmap='coolwarm', square=True)
+plt.title("Feature Correlation Heatmap")
+plt.show()
+```
+
+### Correlation কী?
+
+Correlation দুটি numerical variable-এর মধ্যে linear relationship-এর দিক ও শক্তি সম্পর্কে ধারণা দেয়।
+
+Correlation coefficient সাধারণত −1 থেকে +1-এর মধ্যে থাকে:
+
+| মান | সাধারণ ব্যাখ্যা |
+|---|---|
+| +1-এর কাছাকাছি | Strong positive linear relationship |
+| 0-এর কাছাকাছি | দুর্বল বা কোনো linear relationship নেই |
+| −1-এর কাছাকাছি | Strong negative linear relationship |
+
+### Heatmap কী দেখায়?
+
+- প্রতিটি cell দুটি column-এর correlation দেখায়।
+- Color-এর মাধ্যমে correlation-এর মান বোঝা সহজ হয়।
+- `df.corr()` numerical columns-এর pairwise correlation হিসাব করে।
+- `figsize=(12, 10)` figure-এর size নির্ধারণ করে।
+- `cmap='coolwarm'` color palette নির্বাচন করে।
+- `square=True` cell-গুলোকে square আকারে দেখায়।
+
+**মনে রাখবে:** Correlation মানেই causation নয়। দুটি feature correlated হলেই একটিই অন্যটির কারণ—এ কথা বলা যায় না।
+
+---
