@@ -550,3 +550,23 @@ X_scaled = scaler.fit_transform(X)
 - `fit()` data থেকে mean ও standard deviation শেখে।
 - `transform()` সেই statistics ব্যবহার করে data standardize করে।
 - `fit_transform()` একই সঙ্গে fitting ও transformation করে।
+
+### গুরুত্বপূর্ণ সতর্কতা: Data Leakage
+
+প্রদত্ত code-এ split করার আগে পুরো `X`-এ `fit_transform()` করা হয়েছে। এটি test data-এর statistics preprocessing-এর মধ্যে ঢুকিয়ে দিতে পারে, যাকে **data leakage** বলা হয়।
+
+সঠিক workflow হলো আগে split করা, তারপর শুধু training data-তে `fit` করা এবং training-এর শেখা scaler দিয়ে test data transform করা। নিচে সংশোধিত pattern দেওয়া হয়েছে:
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+```
+
+এই সংশোধিত workflow-তে test data-এর statistics scaler শেখার সময় ব্যবহার করা হয় না।
+
+---
