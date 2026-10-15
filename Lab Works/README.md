@@ -327,3 +327,57 @@ y → Target Labels
 Machine Learning-এ সাধারণ convention হিসেবে `X` features এবং `y` target বোঝায়।
 
 ---
+## 12. Dataset-এর Shape দেখা
+
+Code:
+
+```python
+print("Shape of dataset:", X.shape)
+```
+
+`shape` DataFrame-এর row এবং column-এর সংখ্যা জানায়।
+
+এই Breast Cancer Dataset-এ সাধারণত:
+
+```text
+569 rows × 30 features
+```
+
+অর্থাৎ:
+
+- 569টি sample বা record
+- 30টি input feature
+
+`X.shape` শুধু feature DataFrame-এর shape দেখায়; target column এতে অন্তর্ভুক্ত নয়।
+
+মনে রাখো:
+
+```text
+X.shape → (Rows, Columns)
+```
+
+---
+
+## 13. X এবং y একসঙ্গে রাখা
+
+Code:
+
+```python
+df = X.copy()
+df['target'] = y
+```
+
+ব্যাখ্যা:
+
+- `X.copy()` দিয়ে X-এর একটি copy তৈরি হয়।
+- `df['target'] = y` দিয়ে target column যোগ করা হয়।
+
+এখন `df`-এ feature columns এবং target—দুটোই আছে। এটি মূলত plotting ও exploratory analysis সহজ করার জন্য করা হয়েছে।
+
+```text
+df = 30 Feature Columns + 1 Target Column
+```
+
+এই dataset-এর ক্ষেত্রে `df`-এর shape হবে 569 rows ও 31 columns।
+
+---
