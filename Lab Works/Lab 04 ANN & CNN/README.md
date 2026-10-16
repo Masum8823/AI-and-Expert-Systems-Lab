@@ -607,3 +607,57 @@ Data split-এর randomness নির্দিষ্ট করে, যাতে
 Code-এ test set-কে `validation_data` হিসেবেও `model.fit()`-এ দেওয়া হয়েছে। শেখার সময় বারবার test-set performance দেখা হলে সেটি কার্যত validation set-এর মতো ব্যবহৃত হয়। নিরপেক্ষ final evaluation-এর জন্য আলাদা validation set এবং untouched test set রাখা উত্তম।
 
 ---
+
+## 21. TensorFlow এবং Keras
+
+### TensorFlow কী?
+
+TensorFlow হলো একটি open-source framework, যা neural network-সহ Machine Learning ও Deep Learning model তৈরি এবং train করতে ব্যবহৃত হয়।
+
+### Keras কী?
+
+Keras হলো neural network তৈরির high-level API। এটি layer যোগ করে model তৈরি ও train করা সহজ করে।
+
+এই Lab-এ:
+
+```python
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+```
+
+- `tf` হলো TensorFlow-এর সংক্ষিপ্ত alias।
+- `Sequential` layer-গুলোকে ধারাবাহিকভাবে সাজিয়ে model তৈরি করে।
+- `Dense` fully connected layer তৈরি করে।
+
+---
+
+## 22. Sequential Model কী?
+
+`Sequential` model-এ layer-গুলো একটির পর একটি সাজানো হয়। একটি সাধারণ feedforward network তৈরির জন্য এটি সহজ পদ্ধতি।
+
+Code:
+
+```python
+model = Sequential([
+    Dense(32, activation='relu', input_shape=(X_train.shape[1],)),
+    Dense(16, activation='relu'),
+    Dense(1, activation='sigmoid')
+])
+```
+
+এখানে তিনটি Dense layer আছে।
+
+```text
+Input
+  ↓
+Dense: 32 neurons, ReLU
+  ↓
+Dense: 16 neurons, ReLU
+  ↓
+Dense: 1 neuron, Sigmoid
+  ↓
+Output
+```
+
+---
