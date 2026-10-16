@@ -808,3 +808,42 @@ Dense(16, activation='relu')
 - Non-linear relationship শেখাতে সাহায্য করে।
 
 ---
+
+## 30. Sigmoid Activation Function
+
+Sigmoid function-এর formula:
+
+\[
+\sigma(x)=\frac{1}{1+e^{-x}}
+\]
+
+এর output 0 থেকে 1-এর মধ্যে থাকে।
+
+উদাহরণ:
+
+```text
+Large negative input → Output near 0
+Input = 0            → Output = 0.5
+Large positive input → Output near 1
+```
+
+Code:
+
+```python
+Dense(1, activation='sigmoid')
+```
+
+### Sigmoid কেন ব্যবহার করা হয়?
+
+Binary classification-এ একটি probability-like output প্রয়োজন হতে পারে। Sigmoid output সেই কাজের উপযোগী।
+
+এই Lab-এর threshold 0.5:
+
+```text
+Probability > 0.5 → Predicted label 1 (Benign)
+Probability ≤ 0.5 → Predicted label 0 (Malignant)
+```
+
+এটি এই code-এর ব্যবহৃত decision rule। বাস্তব application-এ threshold problem-এর requirement অনুযায়ী বদলাতে পারে।
+
+---
