@@ -707,3 +707,19 @@ input_shape=(X_train.shape[1],)
 **নোট:** `input_shape` প্রথম Dense layer-কে input-এর dimensions জানায়। আধুনিক Keras-এ চাইলে আলাদা `Input(shape=(30,))` layer দিয়েও একই বিষয় স্পষ্টভাবে লেখা যায়।
 
 ---
+
+## 25. Hidden Layer 1 — 32 Neurons
+
+Code:
+
+```python
+Dense(32, activation='relu', input_shape=(X_train.shape[1],))
+```
+
+এই layer-এ 32টি neuron আছে। প্রতিটি neuron input feature-এর combination থেকে pattern শিখতে পারে।
+
+`activation='relu'` এই layer-এর output-এ ReLU function প্রয়োগ করে।
+
+এটি hidden layer-এর প্রথম অংশ।
+
+---
