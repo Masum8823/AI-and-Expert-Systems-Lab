@@ -855,3 +855,19 @@ Probability ≤ 0.5 → Predicted label 0 (Malignant)
 | Input / First Dense | 32 | ReLU | 30টি feature থেকে pattern শেখা শুরু |
 | Second Dense | 16 | ReLU | Learned representation আরও process করা |
 | Output Dense | 1 | Sigmoid | Binary class-এর probability দেওয়া |
+
+Model-এর সংক্ষিপ্ত structure:
+
+```text
+30 Input Features
+       ↓
+32 Neurons + ReLU
+       ↓
+16 Neurons + ReLU
+       ↓
+1 Neuron + Sigmoid
+       ↓
+Probability
+```
+
+---
