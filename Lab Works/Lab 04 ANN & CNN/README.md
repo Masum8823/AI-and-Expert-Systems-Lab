@@ -759,3 +759,19 @@ Output = 0.85
 এটি model-এর positive class (এই dataset-এ label 1 = Benign) সম্পর্কে উচ্চ probability নির্দেশ করে। নির্দিষ্ট class নির্ধারণের জন্য threshold ব্যবহার করা হয়।
 
 ---
+
+## 28. Activation Function কী?
+
+Activation function neuron-এর weighted sum-কে output-এ রূপান্তর করে। এটি neural network-কে non-linear pattern শেখার ক্ষমতা দেয়।
+
+এই Lab-এ দুটি activation function আছে:
+
+1. ReLU
+2. Sigmoid
+
+| Function | কোথায় ব্যবহৃত | কাজ |
+|---|---|---|
+| ReLU | Hidden layers | Negative input-কে 0 করে; positive input অপরিবর্তিত রাখে |
+| Sigmoid | Binary output layer | Output-কে 0 থেকে 1-এর মধ্যে আনে |
+
+---
