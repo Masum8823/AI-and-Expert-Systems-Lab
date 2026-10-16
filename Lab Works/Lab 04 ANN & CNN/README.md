@@ -847,3 +847,11 @@ Probability ≤ 0.5 → Predicted label 0 (Malignant)
 এটি এই code-এর ব্যবহৃত decision rule। বাস্তব application-এ threshold problem-এর requirement অনুযায়ী বদলাতে পারে।
 
 ---
+
+## 31. Model Architecture Summary
+
+| Layer | Neurons | Activation | উদ্দেশ্য |
+|---|---:|---|---|
+| Input / First Dense | 32 | ReLU | 30টি feature থেকে pattern শেখা শুরু |
+| Second Dense | 16 | ReLU | Learned representation আরও process করা |
+| Output Dense | 1 | Sigmoid | Binary class-এর probability দেওয়া |
