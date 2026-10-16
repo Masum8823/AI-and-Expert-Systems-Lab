@@ -684,3 +684,26 @@ Dense(32, activation='relu')
 - `activation='relu'` = ReLU activation function ব্যবহার করা হবে।
 
 ---
+## 24. Input Shape
+
+Code:
+
+```python
+input_shape=(X_train.shape[1],)
+```
+
+`X_train.shape[1]` training data-তে feature column-এর সংখ্যা দেয়।
+
+এই dataset-এ 30টি feature আছে। তাই input shape:
+
+```text
+(30,)
+```
+
+অর্থাৎ প্রতিটি sample-এ 30টি numerical input value আছে।
+
+শেষের comma-সহ `(30,)` Python-এর one-dimensional tuple বোঝায়।
+
+**নোট:** `input_shape` প্রথম Dense layer-কে input-এর dimensions জানায়। আধুনিক Keras-এ চাইলে আলাদা `Input(shape=(30,))` layer দিয়েও একই বিষয় স্পষ্টভাবে লেখা যায়।
+
+---
