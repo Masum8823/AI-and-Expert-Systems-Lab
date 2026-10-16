@@ -775,3 +775,36 @@ Activation function neuron-এর weighted sum-কে output-এ রূপান
 | Sigmoid | Binary output layer | Output-কে 0 থেকে 1-এর মধ্যে আনে |
 
 ---
+## 29. ReLU Activation Function
+
+ReLU-এর full form **Rectified Linear Unit**।
+
+Formula:
+
+\[
+f(x)=\max(0,x)
+\]
+
+অর্থাৎ:
+
+```text
+Input = -3 → Output = 0
+Input =  0 → Output = 0
+Input =  5 → Output = 5
+```
+
+Code:
+
+```python
+Dense(32, activation='relu')
+Dense(16, activation='relu')
+```
+
+### ReLU কেন ব্যবহার করা হয়?
+
+- Negative input-এর জন্য output 0 দেয়।
+- Positive input-কে  রাখে।
+- Deep learning-এর hidden layer-এ বহুল ব্যবহৃত।
+- Non-linear relationship শেখাতে সাহায্য করে।
+
+---
