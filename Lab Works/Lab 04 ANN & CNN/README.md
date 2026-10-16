@@ -661,3 +661,26 @@ Output
 ```
 
 ---
+
+## 23. Dense Layer কী?
+
+`Dense` হলো fully connected neural-network layer। এর প্রতিটি neuron আগের layer-এর সব output-এর সঙ্গে connected থাকে।
+
+Syntax:
+
+```python
+Dense(number_of_neurons, activation='function')
+```
+
+উদাহরণ:
+
+```python
+Dense(32, activation='relu')
+```
+
+অর্থ:
+
+- `32` = এই layer-এ 32টি neuron।
+- `activation='relu'` = ReLU activation function ব্যবহার করা হবে।
+
+---
