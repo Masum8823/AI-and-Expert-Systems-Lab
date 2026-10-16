@@ -723,3 +723,17 @@ Dense(32, activation='relu', input_shape=(X_train.shape[1],))
 এটি hidden layer-এর প্রথম অংশ।
 
 ---
+
+## 26. Hidden Layer 2 — 16 Neurons
+
+Code:
+
+```python
+Dense(16, activation='relu')
+```
+
+এই layer-এ 16টি neuron আছে। এটি আগের layer-এর output থেকে আরও pattern শিখতে পারে।
+
+এখানে আবার ReLU activation function ব্যবহার করা হয়েছে।
+
+---
