@@ -871,3 +871,25 @@ Probability
 ```
 
 ---
+
+## 32. Model Compile করা
+
+Code:
+
+```python
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+```
+
+`compile()` training শুরু করার আগে model-এর training configuration নির্ধারণ করে।
+
+এখানে তিনটি বিষয় নির্ধারণ করা হয়েছে:
+
+- Optimizer
+- Loss function
+- Evaluation metric
+
+---
