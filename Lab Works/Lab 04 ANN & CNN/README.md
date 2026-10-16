@@ -737,3 +737,25 @@ Dense(16, activation='relu')
 এখানে আবার ReLU activation function ব্যবহার করা হয়েছে।
 
 ---
+
+## 27. Output Layer — 1 Neuron
+
+Code:
+
+```python
+Dense(1, activation='sigmoid')
+```
+
+এখানে একটি output neuron আছে।
+
+কারণ task-টি **binary classification**—অর্থাৎ দুটি class-এর মধ্যে একটি নির্বাচন করতে হবে।
+
+Sigmoid activation output-কে 0 ও 1-এর মধ্যে probability-সদৃশ মানে রূপান্তর করে।
+
+```text
+Output = 0.85
+```
+
+এটি model-এর positive class (এই dataset-এ label 1 = Benign) সম্পর্কে উচ্চ probability নির্দেশ করে। নির্দিষ্ট class নির্ধারণের জন্য threshold ব্যবহার করা হয়।
+
+---
