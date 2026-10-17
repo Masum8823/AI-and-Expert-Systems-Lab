@@ -1148,3 +1148,21 @@ plt.show()
 - `Val Accuracy`: Validation data-তে accuracy
 - `legend()`: কোন line কোনটি তা দেখায়
 - `title()`: Graph-এর title নির্ধারণ করে
+
+### Graph কীভাবে বুঝবে?
+
+**Case 1: দুই accuracy বাড়ছে এবং কাছাকাছি আছে**
+
+Model শেখার উন্নতি হতে পারে এবং generalization মোটামুটি ভালো হতে পারে।
+
+**Case 2: Training accuracy বাড়ছে, validation accuracy কমছে বা পিছিয়ে যাচ্ছে**
+
+এটি overfitting-এর সম্ভাব্য indication।
+
+**Case 3: দুই accuracy-ই কম**
+
+Model যথেষ্ট pattern শিখতে পারছে না—underfitting বা অন্য training সমস্যা হতে পারে।
+
+**মনে রাখবে:** Graph দেখে ধারণা পাওয়া যায়; final conclusion-এর জন্য loss, data quality এবং আলাদা test performance-ও বিবেচনা করতে হয়।
+
+---
