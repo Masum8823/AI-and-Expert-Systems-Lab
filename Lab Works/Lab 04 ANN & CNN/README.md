@@ -1080,3 +1080,24 @@ Epoch 30 → Training data ত্রিশতমবার ব্যবহার
 Epoch বেশি হলেই model সবসময় ভালো হবে—এমন নয়। খুব বেশি epoch হলে overfitting হতে পারে।
 
 ---
+## 39. Batch কী?
+
+Training-এর সময় সব sample একসঙ্গে process না করে ছোট ছোট group-এ process করা যেতে পারে। প্রতিটি group-কে batch বলা হয়।
+
+Keras-এর default batch size নির্দিষ্ট না করলে সাধারণত 32 ব্যবহৃত হয়। তাই এই code-এ batch size আলাদা করে দেওয়া হয়নি বলে Keras default ব্যবহার করবে।
+
+উদাহরণ:
+
+```text
+Training Samples
+      ↓
+Batch 1
+      ↓
+Batch 2
+      ↓
+Batch 3
+```
+
+একটি epoch-এ একাধিক batch process হতে পারে।
+
+---
