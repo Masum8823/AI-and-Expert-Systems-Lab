@@ -929,3 +929,33 @@ Better Prediction-এর চেষ্টা
 Adam ব্যবহার করলেই সব dataset-এ সর্বোত্তম result নিশ্চিত হয় না; এটি একটি সাধারণ ও কার্যকর starting choice।
 
 ---
+## 34. Loss Function কী?
+
+Loss function model-এর prediction actual label থেকে কতটা আলাদা, তা measure করে।
+
+Training-এর সময় model loss কমানোর চেষ্টা করে।
+
+এই Lab-এ:
+
+```python
+loss='binary_crossentropy'
+```
+
+ব্যবহার করা হয়েছে।
+
+Binary Cross-Entropy binary classification-এর জন্য বহুল ব্যবহৃত loss function।
+
+Formula:
+
+\[
+L=-\left[y\log(p)+(1-y)\log(1-p)\right]
+\]
+
+যেখানে:
+
+- \(y\) = actual label (0 অথবা 1)
+- \(p\) = model-এর predicted probability
+
+সহজভাবে, model সঠিক class-কে বেশি probability দিলে loss সাধারণত কম হয়; ভুল class-কে অত্যন্ত বেশি probability দিলে loss বেশি হয়।
+
+---
