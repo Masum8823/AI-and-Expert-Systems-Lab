@@ -1218,3 +1218,16 @@ Predicted 1 → Benign
 ```
 
 ---
+
+## 44. `predict()` বনাম Predicted Probability
+
+| বিষয় | `model.predict()` |
+|---|---|
+| এই Lab-এ output | Sigmoid output probability |
+| Output shape | সাধারণত `(number_of_samples, 1)` |
+| Final class | Threshold দিয়ে নির্ধারণ করা হয় |
+| Example | 0.82 → threshold 0.5 অনুযায়ী class 1 |
+
+এখানে একটি গুরুত্বপূর্ণ পার্থক্য আছে: Keras model-এর `predict()` এই architecture-এ সরাসরি probability দেয়। Scikit-learn-এর অনেক classifier-এর `predict()` সাধারণত class label দেয়, আর `predict_proba()` probability দেয়।
+
+---
