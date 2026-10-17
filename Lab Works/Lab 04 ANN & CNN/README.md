@@ -959,3 +959,68 @@ L=-\left[y\log(p)+(1-y)\log(1-p)\right]
 সহজভাবে, model সঠিক class-কে বেশি probability দিলে loss সাধারণত কম হয়; ভুল class-কে অত্যন্ত বেশি probability দিলে loss বেশি হয়।
 
 ---
+
+## 35. Accuracy Metric
+
+Code:
+
+```python
+metrics=['accuracy']
+```
+
+Accuracy দিয়ে মোট sample-এর মধ্যে কতগুলো sample সঠিক class হিসেবে predict হয়েছে তা দেখা হয়।
+
+Formula:
+
+\[
+Accuracy=\frac{\text{Correct Predictions}}{\text{Total Predictions}}
+\]
+
+উদাহরণ:
+
+```text
+100টি sample-এর মধ্যে 95টি সঠিক
+Accuracy = 95 / 100 = 95%
+```
+
+`accuracy` training ও validation-এর performance monitor করতে সাহায্য করে। তবে শুধু accuracy দেখে model-এর সব দিক বোঝা যায় না; classification report এবং confusion matrix-ও দেখা উচিত।
+
+---
+
+## 36. `model.summary()`
+
+Code:
+
+```python
+model.summary()
+```
+
+এটি model-এর architecture-এর summary দেখায়।
+
+সাধারণত দেখা যায়:
+
+- Layer-এর নাম
+- Output shape
+- Trainable parameters
+- Non-trainable parameters
+- মোট parameter-এর সংখ্যা
+
+### Parameter কী?
+
+Dense layer-এর trainable parameters হলো weights ও biases, যেগুলো training-এর সময় update হতে পারে।
+
+এই architecture-এ parameter count:
+
+- First Dense: \(30 \times 32 + 32 = 992\)
+- Second Dense: \(32 \times 16 + 16 = 528\)
+- Output Dense: \(16 \times 1 + 1 = 17\)
+
+মোট:
+
+\[
+992+528+17=1537
+\]
+
+অর্থাৎ এই architecture-এ **1,537টি trainable parameter** আছে।
+
+---
