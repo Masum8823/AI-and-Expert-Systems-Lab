@@ -1191,3 +1191,30 @@ Sample 3 → 0.67
 এগুলো সরাসরি class label নয়; এগুলো threshold দিয়ে class-এ রূপান্তর করা হবে।
 
 ---
+
+## 43. Probability থেকে Class Label
+
+Code:
+
+```python
+y_pred = (y_pred_prob > 0.5).astype("int32")
+```
+
+ব্যাখ্যা:
+
+1. `y_pred_prob > 0.5` প্রতিটি probability 0.5-এর চেয়ে বড় কি না পরীক্ষা করে।
+2. শর্ত সত্য হলে `True`, অন্যথায় `False` তৈরি হয়।
+3. `.astype("int32")` Boolean result-কে integer label-এ রূপান্তর করে:
+   - `True` → 1
+   - `False` → 0
+
+এখানে `>` ব্যবহার করা হয়েছে, `>=` নয়। তাই probability ঠিক 0.5 হলে label 0 হবে।
+
+এই dataset-এ:
+
+```text
+Predicted 0 → Malignant
+Predicted 1 → Benign
+```
+
+---
