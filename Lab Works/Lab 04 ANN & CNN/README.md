@@ -893,3 +893,39 @@ model.compile(
 - Evaluation metric
 
 ---
+
+## 33. Optimizer কী?
+
+Optimizer training-এর সময় model-এর weights ও biases কীভাবে update হবে তা নির্ধারণ করে।
+
+এই Lab-এ:
+
+```python
+optimizer='adam'
+```
+
+ব্যবহার করা হয়েছে।
+
+### Adam-এর ধারণা
+
+Adam-এর full form **Adaptive Moment Estimation**।
+
+এটি gradient-এর information ব্যবহার করে weights update করে এবং deep learning-এ বহুল ব্যবহৃত optimizer।
+
+সহজভাবে:
+
+```text
+Prediction
+   ↓
+Calculate Loss
+   ↓
+Calculate Gradients
+   ↓
+Adam Updates Weights
+   ↓
+Better Prediction-এর চেষ্টা
+```
+
+Adam ব্যবহার করলেই সব dataset-এ সর্বোত্তম result নিশ্চিত হয় না; এটি একটি সাধারণ ও কার্যকর starting choice।
+
+---
