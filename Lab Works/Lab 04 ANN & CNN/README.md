@@ -1024,3 +1024,35 @@ Dense layer-এর trainable parameters হলো weights ও biases, যেগ�
 অর্থাৎ এই architecture-এ **1,537টি trainable parameter** আছে।
 
 ---
+## 37. Model Training — `model.fit()`
+
+Code:
+
+```python
+history = model.fit(
+    X_train,
+    y_train,
+    epochs=30,
+    validation_data=(X_test, y_test),
+    verbose=1
+)
+```
+
+`fit()` method training data ব্যবহার করে model-কে train করে।
+
+### প্রতিটি argument-এর কাজ
+
+| Argument | কাজ |
+|---|---|
+| `X_train` | Training input features |
+| `y_train` | Training-এর actual labels |
+| `epochs=30` | Training data-এর উপর সর্বোচ্চ 30টি training cycle |
+| `validation_data` | প্রতিটি epoch শেষে validation performance হিসাব |
+| `verbose=1` | Training progress দেখানো |
+| `history` | প্রতিটি epoch-এর recorded metrics সংরক্ষণ |
+
+### গুরুত্বপূর্ণ সতর্কতা
+
+এই code-এ `X_test, y_test` validation data হিসেবে ব্যবহার করা হয়েছে। তাই এটি সম্পূর্ণ untouched final test set নয়। আরও নির্ভরযোগ্য evaluation-এর জন্য training, validation ও final test—তিনটি আলাদা অংশ রাখা ভালো।
+
+---
