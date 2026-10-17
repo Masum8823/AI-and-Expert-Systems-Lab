@@ -1166,3 +1166,28 @@ Model যথেষ্ট pattern শিখতে পারছে না—underf
 **মনে রাখবে:** Graph দেখে ধারণা পাওয়া যায়; final conclusion-এর জন্য loss, data quality এবং আলাদা test performance-ও বিবেচনা করতে হয়।
 
 ---
+## 42. Prediction কী?
+
+Training শেষে model নতুন input-এর class predict করতে পারে।
+
+Code:
+
+```python
+y_pred_prob = model.predict(X_test)
+```
+
+এই line test data-এর প্রতিটি sample-এর জন্য output probability তৈরি করে।
+
+যেহেতু output layer-এ একটি Sigmoid neuron আছে, প্রতিটি sample-এর জন্য একটি probability-like value পাওয়া যায়।
+
+উদাহরণ:
+
+```text
+Sample 1 → 0.92
+Sample 2 → 0.18
+Sample 3 → 0.67
+```
+
+এগুলো সরাসরি class label নয়; এগুলো threshold দিয়ে class-এ রূপান্তর করা হবে।
+
+---
