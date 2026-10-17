@@ -1125,3 +1125,26 @@ history.history['val_accuracy']
 এই values দিয়ে training performance-এর graph তৈরি করা হয়।
 
 ---
+
+## 41. Training ও Validation Accuracy Graph
+
+Code:
+
+```python
+plt.plot(history.history['accuracy'], label='Train Accuracy')
+plt.plot(history.history['val_accuracy'], label='Val Accuracy')
+plt.xlabel("Epochs")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.title("Training and Validation Accuracy")
+plt.show()
+```
+
+### Graph-এর অংশ
+
+- X-axis: Epochs
+- Y-axis: Accuracy
+- `Train Accuracy`: Training data-তে accuracy
+- `Val Accuracy`: Validation data-তে accuracy
+- `legend()`: কোন line কোনটি তা দেখায়
+- `title()`: Graph-এর title নির্ধারণ করে
