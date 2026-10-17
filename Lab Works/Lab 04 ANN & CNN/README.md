@@ -1056,3 +1056,27 @@ history = model.fit(
 এই code-এ `X_test, y_test` validation data হিসেবে ব্যবহার করা হয়েছে। তাই এটি সম্পূর্ণ untouched final test set নয়। আরও নির্ভরযোগ্য evaluation-এর জন্য training, validation ও final test—তিনটি আলাদা অংশ রাখা ভালো।
 
 ---
+## 38. Epoch কী?
+
+একটি epoch হলো model-এর training dataset-এর সব sample-এর উপর একবার training সম্পন্ন হওয়া।
+
+Code:
+
+```python
+epochs=30
+```
+
+অর্থাৎ model training data-এর উপর সর্বোচ্চ 30টি epoch চালাবে।
+
+সহজভাবে:
+
+```text
+Epoch 1 → Training data একবার ব্যবহার
+Epoch 2 → Training data দ্বিতীয়বার ব্যবহার
+...
+Epoch 30 → Training data ত্রিশতমবার ব্যবহার
+```
+
+Epoch বেশি হলেই model সবসময় ভালো হবে—এমন নয়। খুব বেশি epoch হলে overfitting হতে পারে।
+
+---
