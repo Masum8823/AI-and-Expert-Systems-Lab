@@ -1101,3 +1101,27 @@ Batch 3
 একটি epoch-এ একাধিক batch process হতে পারে।
 
 ---
+
+## 40. `history` Object
+
+Code:
+
+```python
+history = model.fit(...)
+```
+
+`history` object training চলাকালীন প্রতিটি epoch-এর metrics সংরক্ষণ করে।
+
+এই Lab-এ ব্যবহার করা হয়েছে:
+
+```python
+history.history['accuracy']
+history.history['val_accuracy']
+```
+
+- `accuracy` = প্রতিটি epoch-এর training accuracy
+- `val_accuracy` = প্রতিটি epoch-এর validation accuracy
+
+এই values দিয়ে training performance-এর graph তৈরি করা হয়।
+
+---
