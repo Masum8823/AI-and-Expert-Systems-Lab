@@ -1472,3 +1472,31 @@ CNN image-এর ছোট ছোট অংশ পরীক্ষা করে e
 ANN এবং CNN সম্পূর্ণ আলাদা জগৎ নয়। CNN-এর architecture-এও Dense layer থাকতে পারে।
 
 ---
+
+## 53. CNN-এর Basic Architecture
+
+একটি সাধারণ image classification CNN-এর flow:
+
+```text
+Input Image
+    ↓
+Convolution Layer
+    ↓
+Activation Function (ReLU)
+    ↓
+Pooling Layer
+    ↓
+More Convolution / Pooling Layers
+    ↓
+Flatten or Global Pooling
+    ↓
+Dense Layer
+    ↓
+Output Layer
+    ↓
+Predicted Class
+```
+
+Architecture dataset ও task অনুযায়ী পরিবর্তিত হতে পারে।
+
+---
