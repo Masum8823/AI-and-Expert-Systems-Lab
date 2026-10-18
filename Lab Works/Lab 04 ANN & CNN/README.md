@@ -1500,3 +1500,32 @@ Predicted Class
 Architecture dataset ও task অনুযায়ী পরিবর্তিত হতে পারে।
 
 ---
+## 54. Convolution Layer
+
+Convolution layer image-এর উপর ছোট filter বা kernel প্রয়োগ করে feature map তৈরি করে।
+
+প্রাথমিক layer শিখতে পারে:
+
+- Edge
+- Line
+- Simple texture
+
+পরের layer শিখতে পারে:
+
+- Shape
+- Object-এর অংশ
+- আরও জটিল visual pattern
+
+সহজভাবে:
+
+```text
+Input Image
+    ↓
+Small Filter / Kernel
+    ↓
+Feature Map
+```
+
+CNN filter-এর values training-এর সময় শেখে।
+
+---
