@@ -1337,3 +1337,31 @@ Model সাধারণত input-এর shape চায়:
 ```
 
 ---
+
+## 48. Single Sample Prediction
+
+Code:
+
+```python
+pred_prob = model.predict(single_input)[0][0]
+pred_label = int(pred_prob > 0.5)
+true_label = y_test.iloc[sample_index]
+```
+
+### `model.predict(single_input)`
+
+একটি sample-এর probability তৈরি করে।
+
+### `[0][0]`
+
+প্রথম sample-এর প্রথম output neuron-এর value নেয়।
+
+### `pred_label`
+
+Probability 0.5-এর বেশি হলে 1, অন্যথায় 0 নির্ধারণ করে।
+
+### `y_test.iloc[sample_index]`
+
+নির্বাচিত sample-এর actual label নেয়। `.iloc[]` position অনুযায়ী Series থেকে value নির্বাচন করে।
+
+---
