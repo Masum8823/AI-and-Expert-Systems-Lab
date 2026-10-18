@@ -1277,3 +1277,35 @@ Test data-তে প্রতিটি class-এর actual sample সংখ্�
 **গুরুত্বপূর্ণ:** Classification report-এ class 0 ও class 1-এর label এই dataset-এর mapping অনুযায়ী পড়তে হবে।
 
 ---
+
+## 46. Confusion Matrix
+
+Code:
+
+```python
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+```
+
+Confusion matrix actual class এবং predicted class-এর count দেখায়।
+
+Binary classification-এ scikit-learn-এর default label order `[0, 1]` হলে matrix-এর layout:
+
+```text
+                  Predicted
+                 0       1
+Actual 0        TN      FP
+Actual 1        FN      TP
+```
+
+এখানে row হলো actual label এবং column হলো predicted label।
+
+| Term | অর্থ |
+|---|---|
+| TN — True Negative | Actual 0, predicted 0 |
+| FP — False Positive | Actual 0, predicted 1 |
+| FN — False Negative | Actual 1, predicted 0 |
+| TP — True Positive | Actual 1, predicted 1 |
+
+এই Lab-এ class 0 হলো Malignant এবং class 1 হলো Benign। তাই confusion matrix পড়ার সময় positive/negative শব্দের পাশাপাশি actual class mapping-ও খেয়াল রাখতে হবে।
+
+---
