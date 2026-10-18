@@ -1231,3 +1231,49 @@ Predicted 1 → Benign
 এখানে একটি গুরুত্বপূর্ণ পার্থক্য আছে: Keras model-এর `predict()` এই architecture-এ সরাসরি probability দেয়। Scikit-learn-এর অনেক classifier-এর `predict()` সাধারণত class label দেয়, আর `predict_proba()` probability দেয়।
 
 ---
+
+## 45. Classification Report
+
+Code:
+
+```python
+print(
+    "Classification Report:\n",
+    classification_report(y_test, y_pred)
+)
+```
+
+`classification_report()` classification model-এর evaluation metrics দেখায়।
+
+সাধারণত এতে থাকে:
+
+- Precision
+- Recall
+- F1-score
+- Support
+
+### Precision
+
+Model যে sample-গুলোকে একটি class হিসেবে predict করেছে, সেগুলোর মধ্যে কতগুলো সত্যিই সেই class—তা measure করে।
+
+### Recall
+
+Actual কোনো class-এর sample-এর মধ্যে কতগুলো model সঠিকভাবে identify করেছে, তা measure করে।
+
+### F1-score
+
+Precision ও Recall-এর harmonic mean।
+
+\[
+F1=\frac{2PR}{P+R}
+\]
+
+যেখানে \(P\) = Precision এবং \(R\) = Recall।
+
+### Support
+
+Test data-তে প্রতিটি class-এর actual sample সংখ্যা।
+
+**গুরুত্বপূর্ণ:** Classification report-এ class 0 ও class 1-এর label এই dataset-এর mapping অনুযায়ী পড়তে হবে।
+
+---
