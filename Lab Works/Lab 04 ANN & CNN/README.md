@@ -1309,3 +1309,31 @@ Actual 1        FN      TP
 এই Lab-এ class 0 হলো Malignant এবং class 1 হলো Benign। তাই confusion matrix পড়ার সময় positive/negative শব্দের পাশাপাশি actual class mapping-ও খেয়াল রাখতে হবে।
 
 ---
+## 47. Single Test Sample নির্বাচন
+
+Code:
+
+```python
+sample_index = 0
+single_input = X_test[sample_index].reshape(1, -1)
+```
+
+ব্যাখ্যা:
+
+- `sample_index = 0` test set-এর প্রথম sample নির্বাচন করে।
+- `X_test[sample_index]` ওই sample-এর feature values বের করে।
+- `.reshape(1, -1)` input-কে একটি row-যুক্ত 2D array-তে রূপান্তর করে।
+
+Model সাধারণত input-এর shape চায়:
+
+```text
+(number_of_samples, number_of_features)
+```
+
+একটি sample ও 30টি feature-এর জন্য shape হবে:
+
+```text
+(1, 30)
+```
+
+---
