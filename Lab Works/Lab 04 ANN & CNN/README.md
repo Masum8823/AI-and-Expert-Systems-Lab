@@ -1439,3 +1439,23 @@ Predict One Sample
 **Workflow-এর গুরুত্বপূর্ণ correction:** বাস্তব evaluation-এ আগে train/validation/test split করা, তারপর training data দিয়ে scaler fit করা উত্তম। Final test set-কে model selection-এর সময় বারবার ব্যবহার করা উচিত নয়।
 
 ---
+
+# Part 2: Convolutional Neural Network (CNN)
+
+## 51. CNN কী?
+
+CNN-এর full form **Convolutional Neural Network**।
+
+CNN হলো Deep Learning model-এর একটি ধরন, যা বিশেষ করে image-এর মতো grid-structured data থেকে features শেখার জন্য কার্যকর।
+
+CNN image-এর ছোট ছোট অংশ পরীক্ষা করে edge, texture, shape এবং আরও জটিল visual pattern শিখতে পারে।
+
+ব্যবহারের উদাহরণ:
+
+- Handwritten digit recognition
+- Image classification
+- Face recognition
+- Object detection
+- Medical image analysis
+
+---
