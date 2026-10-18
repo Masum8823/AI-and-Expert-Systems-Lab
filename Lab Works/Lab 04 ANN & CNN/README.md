@@ -1365,3 +1365,39 @@ Probability 0.5-এর বেশি হলে 1, অন্যথায় 0 নি�
 নির্বাচিত sample-এর actual label নেয়। `.iloc[]` position অনুযায়ী Series থেকে value নির্বাচন করে।
 
 ---
+## 49. Prediction Result Print করা
+
+Code:
+
+```python
+print(f"\nSample {sample_index}:")
+print(f"Predicted Probability: {pred_prob:.4f}")
+print(
+    f"Predicted Label: {pred_label} "
+    f"({'Benign' if pred_label == 1 else 'Malignant'})"
+)
+print(
+    f"True Label: {true_label} "
+    f"({'Benign' if true_label == 1 else 'Malignant'})"
+)
+```
+
+এখানে f-string ব্যবহার করে text-এর সঙ্গে variable-এর value দেখানো হয়েছে।
+
+- `{pred_prob:.4f}` probability-কে decimal-এর পরে 4 ঘর পর্যন্ত দেখায়।
+- `pred_label == 1` হলে `Benign` দেখায়।
+- অন্যথায় `Malignant` দেখায়।
+- `true_label` দিয়ে actual class দেখানো হয়।
+
+উদাহরণ output-এর format:
+
+```text
+Sample 0:
+Predicted Probability: 0.9234
+Predicted Label: 1 (Benign)
+True Label: 1 (Benign)
+```
+
+এটি শুধু format বোঝানোর example; actual output training-এর result অনুযায়ী আলাদা হতে পারে।
+
+---
