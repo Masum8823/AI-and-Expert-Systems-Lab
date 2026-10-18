@@ -1459,3 +1459,16 @@ CNN image-এর ছোট ছোট অংশ পরীক্ষা করে e
 - Medical image analysis
 
 ---
+
+## 52. ANN এবং CNN-এর পার্থক্য
+
+| ANN / সাধারণ Dense Network | CNN |
+|---|---|
+| Dense layer-এ input-এর সব feature সংযুক্ত থাকে | Convolution filter দিয়ে local patterns শেখে |
+| Tabular data-তে কার্যকর হতে পারে | Image data-তে বিশেষভাবে কার্যকর |
+| Flattened image দিলে spatial structure সহজে হারিয়ে যেতে পারে | Image-এর spatial relationship কাজে লাগাতে পারে |
+| সাধারণত Dense layer-নির্ভর architecture হতে পারে | Convolution ও pooling layer ব্যবহার করে |
+
+ANN এবং CNN সম্পূর্ণ আলাদা জগৎ নয়। CNN-এর architecture-এও Dense layer থাকতে পারে।
+
+---
