@@ -1401,3 +1401,41 @@ True Label: 1 (Benign)
 এটি শুধু format বোঝানোর example; actual output training-এর result অনুযায়ী আলাদা হতে পারে।
 
 ---
+
+## 50. সম্পূর্ণ ANN Workflow
+
+```text
+Load Breast Cancer Dataset
+          ↓
+Create X and y
+          ↓
+Create DataFrame
+          ↓
+EDA and Visualization
+          ↓
+Feature Scaling
+          ↓
+Train-Test Split
+          ↓
+Build Sequential ANN
+          ↓
+Compile Model
+          ↓
+Train with model.fit()
+          ↓
+Plot Train / Validation Accuracy
+          ↓
+Predict Test Samples
+          ↓
+Convert Probability to Class
+          ↓
+Classification Report
+          ↓
+Confusion Matrix
+          ↓
+Predict One Sample
+```
+
+**Workflow-এর গুরুত্বপূর্ণ correction:** বাস্তব evaluation-এ আগে train/validation/test split করা, তারপর training data দিয়ে scaler fit করা উত্তম। Final test set-কে model selection-এর সময় বারবার ব্যবহার করা উচিত নয়।
+
+---
