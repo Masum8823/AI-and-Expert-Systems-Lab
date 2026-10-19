@@ -1603,3 +1603,22 @@ Smaller Feature Map
 Pooling layer সাধারণত trainable weights ব্যবহার করে না।
 
 ---
+## 59. Flatten Layer
+
+Convolution ও pooling-এর পরে feature maps-কে Dense layer-এ পাঠাতে একমাত্রিক vector-এ রূপান্তর করা যেতে পারে। এই কাজের জন্য `Flatten` layer ব্যবহার করা হয়।
+
+```text
+2D / 3D Feature Maps
+          ↓
+        Flatten
+          ↓
+      1D Vector
+          ↓
+      Dense Layer
+```
+
+Flatten নিজে feature শেখে না; এটি data-এর shape পরিবর্তন করে।
+
+কিছু CNN architecture-এ Flatten-এর বদলে Global Average Pooling-ও ব্যবহার করা হয়।
+
+---
