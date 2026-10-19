@@ -1658,3 +1658,14 @@ Learning Objectives-এ MNIST ও CIFAR-10-এর মতো image dataset-এর
 - Image size: 32×32 pixels, 3 color channels।
 - 10টি object category।
 - MNIST-এর তুলনায় image pattern আরও জটিল।
+
+### তুলনা
+
+| বিষয় | MNIST | CIFAR-10 |
+|---|---|---|
+| Image type | Grayscale | RGB color |
+| Image size | 28×28 | 32×32 |
+| Class সংখ্যা | 10 | 10 |
+| Example | Handwritten digits | Animals ও vehicles-এর মতো object |
+
+---
