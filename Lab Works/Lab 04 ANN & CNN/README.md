@@ -1682,3 +1682,29 @@ CNN-এর গুরুত্বপূর্ণ সুবিধা:
 তবে ভালো performance পেতে পর্যাপ্ত data, উপযুক্ত architecture, preprocessing এবং training গুরুত্বপূর্ণ।
 
 ---
+## 63. Lab Code-এ CNN Implement করা হয়েছে কি?
+
+না। প্রদত্ত code-এ:
+
+```python
+from tensorflow.keras.layers import Dense
+```
+
+ব্যবহার করা হয়েছে এবং model-এ শুধু Dense layer যোগ করা হয়েছে।
+
+এখানে `Conv2D`, `MaxPooling2D` বা CNN-এর অন্য convolution layer নেই। তাই এই practical code-টি ANN implementation; CNN হলো learning objective-এর পরবর্তী ধারণাগত অংশ।
+
+একটি সাধারণ CNN-এ layer import-এর উদাহরণ:
+
+```python
+from tensorflow.keras.layers import (
+    Conv2D,
+    MaxPooling2D,
+    Flatten,
+    Dense
+)
+```
+
+এই import pattern CNN তৈরির জন্য প্রয়োজন হতে পারে, কিন্তু শুধু import করলেই CNN তৈরি হয় না—model-এ convolution ও সংশ্লিষ্ট layer ব্যবহার করে architecture বানাতে হবে।
+
+---
