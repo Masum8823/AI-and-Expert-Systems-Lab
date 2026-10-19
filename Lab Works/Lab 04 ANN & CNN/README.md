@@ -1581,3 +1581,25 @@ Filter প্রতিবার কত ঘর করে এগোবে, তা 
 Padding ও stride output feature map-এর dimensions-এ প্রভাব ফেলে।
 
 ---
+## 58. Pooling Layer
+
+Pooling layer feature map-এর spatial dimensions ছোট করে। এতে computation কমতে পারে এবং গুরুত্বপূর্ণ feature সংক্ষিপ্তভাবে ধরে রাখা যায়।
+
+দুটি পরিচিত ধরন:
+
+- **Max Pooling:** একটি window-এর সর্বোচ্চ value নেয়।
+- **Average Pooling:** একটি window-এর average নেয়।
+
+উদাহরণ:
+
+```text
+Feature Map
+    ↓
+Max Pooling
+    ↓
+Smaller Feature Map
+```
+
+Pooling layer সাধারণত trainable weights ব্যবহার করে না।
+
+---
