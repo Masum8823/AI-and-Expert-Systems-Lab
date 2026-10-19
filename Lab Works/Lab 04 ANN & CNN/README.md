@@ -1652,3 +1652,9 @@ Learning Objectives-এ MNIST ও CIFAR-10-এর মতো image dataset-এর
 - Image size: 28×28 pixels।
 - সাধারণত 10টি class: digit 0 থেকে 9।
 - Beginner CNN practice-এর জন্য বহুল ব্যবহৃত।
+### CIFAR-10
+
+- ছোট color image dataset।
+- Image size: 32×32 pixels, 3 color channels।
+- 10টি object category।
+- MNIST-এর তুলনায় image pattern আরও জটিল।
