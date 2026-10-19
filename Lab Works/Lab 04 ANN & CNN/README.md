@@ -1622,3 +1622,23 @@ Flatten নিজে feature শেখে না; এটি data-এর shape �
 কিছু CNN architecture-এ Flatten-এর বদলে Global Average Pooling-ও ব্যবহার করা হয়।
 
 ---
+
+## 60. CNN-এ Dense এবং Output Layer
+
+CNN-এর শেষের দিকে Dense layer ব্যবহার করে learned features-এর ভিত্তিতে class prediction করা হতে পারে।
+
+Binary classification-এ একটি সাধারণ option:
+
+```python
+Dense(1, activation='sigmoid')
+```
+
+Multi-class classification-এ একটি সাধারণ option:
+
+```python
+Dense(number_of_classes, activation='softmax')
+```
+
+তবে output layer ও loss function নির্বাচন নির্ভর করে task-এর ধরন এবং label format-এর উপর।
+
+---
