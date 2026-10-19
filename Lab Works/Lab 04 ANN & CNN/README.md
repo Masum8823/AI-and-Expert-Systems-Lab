@@ -1529,3 +1529,21 @@ Feature Map
 CNN filter-এর values training-এর সময় শেখে।
 
 ---
+
+## 55. Filter / Kernel কী?
+
+Filter বা kernel হলো ছোট matrix, যা image-এর বিভিন্ন local region-এর উপর slide করে calculation করে।
+
+উদাহরণ হিসেবে 3×3 kernel:
+
+```text
+[ 1  0 -1 ]
+[ 1  0 -1 ]
+[ 1  0 -1 ]
+```
+
+এটি শুধু বোঝানোর example; বাস্তব CNN-এ filter-এর weights training-এর মাধ্যমে শেখা হয়।
+
+Filter image-এর pattern detect করতে সাহায্য করে। একটি convolution layer-এ একাধিক filter থাকতে পারে, ফলে একাধিক feature map তৈরি হয়।
+
+---
