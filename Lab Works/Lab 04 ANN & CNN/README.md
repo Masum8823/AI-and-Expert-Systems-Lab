@@ -1547,3 +1547,18 @@ Filter বা kernel হলো ছোট matrix, যা image-এর বিভ�
 Filter image-এর pattern detect করতে সাহায্য করে। একটি convolution layer-এ একাধিক filter থাকতে পারে, ফলে একাধিক feature map তৈরি হয়।
 
 ---
+## 56. Feature Map কী?
+
+Convolution operation-এর output-কে feature map বলা হয়।
+
+Feature map দেখায় image-এর কোন অঞ্চলে কোনো learned feature-এর response বেশি হয়েছে।
+
+```text
+Image + Learned Filter
+          ↓
+      Feature Map
+```
+
+CNN-এর পরবর্তী layer-গুলো এই feature map ব্যবহার করে আরও জটিল pattern শেখে।
+
+---
