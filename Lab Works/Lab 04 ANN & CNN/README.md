@@ -1562,3 +1562,22 @@ Image + Learned Filter
 CNN-এর পরবর্তী layer-গুলো এই feature map ব্যবহার করে আরও জটিল pattern শেখে।
 
 ---
+## 57. Padding এবং Stride
+
+### Padding
+
+Convolution-এর আগে image-এর border-এর চারপাশে অতিরিক্ত value—সাধারণত zero—যোগ করাকে padding বলে।
+
+- `valid`: সাধারণত padding ছাড়া convolution।
+- `same`: উপযুক্ত padding ব্যবহার করে stride 1-এর ক্ষেত্রে spatial size সাধারণত একই রাখে।
+
+### Stride
+
+Filter প্রতিবার কত ঘর করে এগোবে, তা stride নির্ধারণ করে।
+
+- Stride 1: এক ঘর করে এগোয়।
+- Stride 2: দুই ঘর করে এগোয়; output spatial size সাধারণত আরও ছোট হয়।
+
+Padding ও stride output feature map-এর dimensions-এ প্রভাব ফেলে।
+
+---
