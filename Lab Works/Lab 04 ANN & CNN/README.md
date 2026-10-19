@@ -1669,3 +1669,16 @@ Learning Objectives-এ MNIST ও CIFAR-10-এর মতো image dataset-এর
 | Example | Handwritten digits | Animals ও vehicles-এর মতো object |
 
 ---
+
+## 62. CNN কেন Image Classification-এ উপযোগী?
+
+CNN-এর গুরুত্বপূর্ণ সুবিধা:
+
+- Image-এর local spatial pattern শেখে।
+- একই filter image-এর বিভিন্ন জায়গায় ব্যবহার করতে পারে।
+- Edge থেকে শুরু করে complex visual feature শেখার সুযোগ দেয়।
+- সাধারণ Dense network-এর তুলনায় image structure বেশি কার্যকরভাবে ব্যবহার করতে পারে।
+
+তবে ভালো performance পেতে পর্যাপ্ত data, উপযুক্ত architecture, preprocessing এবং training গুরুত্বপূর্ণ।
+
+---
