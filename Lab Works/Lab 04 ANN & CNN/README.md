@@ -1642,3 +1642,13 @@ Dense(number_of_classes, activation='softmax')
 তবে output layer ও loss function নির্বাচন নির্ভর করে task-এর ধরন এবং label format-এর উপর।
 
 ---
+## 61. MNIST এবং CIFAR-10
+
+Learning Objectives-এ MNIST ও CIFAR-10-এর মতো image dataset-এর কথা বলা হয়েছে।
+
+### MNIST
+
+- Handwritten digit-এর grayscale image।
+- Image size: 28×28 pixels।
+- সাধারণত 10টি class: digit 0 থেকে 9।
+- Beginner CNN practice-এর জন্য বহুল ব্যবহৃত।
