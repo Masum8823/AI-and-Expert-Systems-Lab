@@ -1708,3 +1708,16 @@ from tensorflow.keras.layers import (
 এই import pattern CNN তৈরির জন্য প্রয়োজন হতে পারে, কিন্তু শুধু import করলেই CNN তৈরি হয় না—model-এ convolution ও সংশ্লিষ্ট layer ব্যবহার করে architecture বানাতে হবে।
 
 ---
+# Part 3: Important Differences and Revision
+
+## 64. ANN বনাম CNN — Quick Table
+
+| বিষয় | ANN | CNN |
+|---|---|---|
+| Full form | Artificial Neural Network | Convolutional Neural Network |
+| Basic component | Neurons ও Dense layers | Convolution filters, feature maps, pooling; Dense layers-ও থাকতে পারে |
+| Common data | Tabular বা general numerical data | Image ও spatial data |
+| Feature learning | Dense connections-এর মাধ্যমে | Local convolution filters-এর মাধ্যমে |
+| Example | Breast cancer tabular classification | MNIST digit image classification |
+
+---
