@@ -1973,3 +1973,51 @@ Pooling feature map-এর spatial dimensions কমায়, ফলে computatio
 না। দেওয়া code-এ শুধু Dense layers ব্যবহার করে Feedforward ANN তৈরি করা হয়েছে। CNN-এর জন্য convolution layer যোগ করে আলাদা architecture তৈরি করতে হবে।
 
 ---
+
+## 69. Mid/Final Exam-এর জন্য Most Important Topics
+
+```text
+★★★★★ ANN-এর definition ও working principle
+
+★★★★★ Feedforward Neural Network
+
+★★★★★ Neuron, Weight এবং Bias
+
+★★★★★ Input, Hidden এবং Output Layer
+
+★★★★★ Dense Layer
+
+★★★★★ ReLU ও Sigmoid
+
+★★★★★ ANN Architecture: 32 → 16 → 1
+
+★★★★★ Binary Cross-Entropy
+
+★★★★★ Adam Optimizer
+
+★★★★★ Epoch এবং model.fit()
+
+★★★★★ StandardScaler
+
+★★★★★ Train-Test Split
+
+★★★★★ Probability থেকে Class Label
+
+★★★★★ Classification Report ও Confusion Matrix
+
+★★★★☆ Training vs Validation Accuracy
+
+★★★★☆ Overfitting ও Underfitting
+
+★★★★☆ CNN-এর definition ও architecture
+
+★★★★☆ Convolution, Filter ও Feature Map
+
+★★★★☆ Pooling ও Flatten
+
+★★★★☆ ANN বনাম CNN
+
+★★★☆☆ MNIST বনাম CIFAR-10
+```
+
+---
