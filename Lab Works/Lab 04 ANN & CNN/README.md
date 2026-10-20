@@ -1932,3 +1932,23 @@ Binary Cross-Entropy হলো binary classification-এর loss function, য�
 ### Q10. What is an optimizer? Why is Adam used?
 
 Optimizer training-এর সময় weights ও biases update করে। Adam gradient-based update ব্যবহার করে এবং neural network training-এর একটি বহুল ব্যবহৃত optimizer।
+
+### Q11. What is an epoch?
+
+একটি epoch হলো model-এর training dataset-এর সব sample-এর উপর একবার training সম্পন্ন হওয়া।
+
+### Q12. Why is StandardScaler used?
+
+StandardScaler feature-গুলোকে mean 0 এবং standard deviation 1-এর কাছাকাছি scale-এ standardize করে। এটি neural network training-কে সহায়তা করতে পারে।
+
+### Q13. What is the purpose of `model.compile()`?
+
+`model.compile()` optimizer, loss function এবং evaluation metrics নির্ধারণ করে training configuration প্রস্তুত করে।
+
+### Q14. What is the purpose of `model.fit()`?
+
+`model.fit()` training data ব্যবহার করে model train করে এবং প্রতিটি epoch-এর metrics সংরক্ষণ করতে পারে।
+
+### Q15. What is the purpose of a confusion matrix?
+
+Confusion matrix actual এবং predicted class-এর count দেখায়। Binary classification-এ এটি TN, FP, FN ও TP বুঝতে সাহায্য করে।
