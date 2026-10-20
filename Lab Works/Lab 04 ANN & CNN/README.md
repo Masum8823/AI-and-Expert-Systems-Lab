@@ -2138,3 +2138,20 @@ CNN অংশে image classification-এর জন্য convolution, filter, f
 **এই Lab-এর সবচেয়ে গুরুত্বপূর্ণ বিষয় হলো ANN-এর architecture, ReLU ও Sigmoid-এর কাজ, compile ও fit-এর পার্থক্য, epoch, probability থেকে class prediction এবং CNN-এর basic architecture বোঝা।**
 
 ---
+
+## 72. One-Line Workflow
+
+```text
+Load Dataset
+→ Explore Data
+→ Scale Features
+→ Split Data
+→ Build ANN
+→ Compile Model
+→ Train Model
+→ Plot Accuracy
+→ Predict Probabilities
+→ Convert to Labels
+→ Classification Report
+→ Confusion Matrix
+```
