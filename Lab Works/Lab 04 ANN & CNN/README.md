@@ -1952,3 +1952,24 @@ StandardScaler feature-গুলোকে mean 0 এবং standard deviation 1-
 ### Q15. What is the purpose of a confusion matrix?
 
 Confusion matrix actual এবং predicted class-এর count দেখায়। Binary classification-এ এটি TN, FP, FN ও TP বুঝতে সাহায্য করে।
+### Q16. What is a CNN?
+
+CNN হলো Convolutional Neural Network, যা convolution filter ব্যবহার করে image-এর local features ও spatial patterns শিখতে পারে।
+
+### Q17. What is a convolution filter?
+
+Convolution filter বা kernel হলো ছোট matrix, যা image-এর local region-এর উপর calculation করে feature map তৈরি করে।
+
+### Q18. What is pooling?
+
+Pooling feature map-এর spatial dimensions কমায়, ফলে computation কমতে পারে এবং গুরুত্বপূর্ণ feature সংক্ষিপ্তভাবে রাখা যায়।
+
+### Q19. What is the difference between ANN and CNN?
+
+সাধারণ Dense ANN fully connected layer ব্যবহার করে, আর CNN convolution filter দিয়ে local spatial features শেখে। CNN বিশেষভাবে image classification-এ কার্যকর।
+
+### Q20. Was CNN implemented in this Lab code?
+
+না। দেওয়া code-এ শুধু Dense layers ব্যবহার করে Feedforward ANN তৈরি করা হয়েছে। CNN-এর জন্য convolution layer যোগ করে আলাদা architecture তৈরি করতে হবে।
+
+---
