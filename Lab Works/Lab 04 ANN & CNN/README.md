@@ -1839,3 +1839,55 @@ print(confusion_matrix(y_test, y_pred))
 | Flatten | Feature maps-কে vector-এ রূপান্তর করে |
 
 ---
+
+## 67. Important Formulas — One Place
+
+### Artificial Neuron
+
+\[
+z=\sum_{i=1}^{n} w_i x_i+b
+\]
+
+\[
+a=f(z)
+\]
+
+### ReLU
+
+\[
+f(x)=\max(0,x)
+\]
+
+### Sigmoid
+
+\[
+\sigma(x)=\frac{1}{1+e^{-x}}
+\]
+
+### Standardization
+
+\[
+z=\frac{x-\mu}{\sigma}
+\]
+
+### Binary Cross-Entropy
+
+\[
+L=-[y\log(p)+(1-y)\log(1-p)]
+\]
+
+### Accuracy
+
+\[
+Accuracy=\frac{\text{Correct Predictions}}{\text{Total Predictions}}
+\]
+
+### F1-score
+
+\[
+F1=\frac{2PR}{P+R}
+\]
+
+যেখানে \(P\) হলো Precision এবং \(R\) হলো Recall।
+
+---
