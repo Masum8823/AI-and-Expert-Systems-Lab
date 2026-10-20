@@ -1891,3 +1891,20 @@ F1=\frac{2PR}{P+R}
 যেখানে \(P\) হলো Precision এবং \(R\) হলো Recall।
 
 ---
+## 68. Important Exam Questions and Answers
+
+### Q1. What is an Artificial Neural Network (ANN)?
+
+ANN হলো একটি Machine Learning model, যা biological neuron-এর ধারণা থেকে অনুপ্রাণিত। এটি input data থেকে pattern শিখে classification বা regression-এর মতো কাজ করে।
+
+### Q2. What is a Feedforward Neural Network?
+
+Feedforward Neural Network হলো এমন neural network যেখানে information input layer থেকে hidden layer হয়ে output layer-এর দিকে প্রবাহিত হয়।
+
+### Q3. What is a neuron?
+
+Neuron হলো neural network-এর একটি computational unit, যা input, weights ও bias ব্যবহার করে calculation করে এবং activation function-এর মাধ্যমে output তৈরি করে।
+
+### Q4. What are weights and biases?
+
+Weights input-এর প্রভাব নিয়ন্ত্রণে সাহায্য করে, আর bias weighted sum-কে adjust করে। Training-এর সময় দুটিই update হতে পারে।
