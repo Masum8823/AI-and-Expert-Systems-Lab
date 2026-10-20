@@ -1721,3 +1721,41 @@ from tensorflow.keras.layers import (
 | Example | Breast cancer tabular classification | MNIST digit image classification |
 
 ---
+## 65. Important Python Code Patterns
+
+### Dataset load
+
+```python
+data = load_breast_cancer()
+```
+
+### Features ও target
+
+```python
+X = pd.DataFrame(data.data, columns=data.feature_names)
+y = pd.Series(data.target, name='target')
+```
+
+### DataFrame-এ target যোগ করা
+
+```python
+df = X.copy()
+df['target'] = y
+```
+
+### Scaling
+
+```python
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+```
+
+শিক্ষামূলক code-এ এটি দেখানো হয়েছে। বাস্তব workflow-তে আগে split করে training data-তে scaler fit করবে।
+
+### Train-test split
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X_scaled, y, test_size=0.2, random_state=42
+)
+```
