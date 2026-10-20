@@ -1759,3 +1759,34 @@ X_train, X_test, y_train, y_test = train_test_split(
     X_scaled, y, test_size=0.2, random_state=42
 )
 ```
+### ANN model
+
+```python
+model = Sequential([
+    Dense(32, activation='relu', input_shape=(X_train.shape[1],)),
+    Dense(16, activation='relu'),
+    Dense(1, activation='sigmoid')
+])
+```
+
+### Compile
+
+```python
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+```
+
+### Train
+
+```python
+history = model.fit(
+    X_train,
+    y_train,
+    epochs=30,
+    validation_data=(X_test, y_test),
+    verbose=1
+)
+```
