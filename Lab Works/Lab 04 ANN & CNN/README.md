@@ -2113,3 +2113,28 @@ CIFAR-10
 ```
 
 ---
+## 71. Final Understanding
+
+এই Lab-এর ANN practical-এ প্রথমে Breast Cancer Dataset load করে feature ও target আলাদা করা হয়েছে। এরপর class distribution, feature correlation এবং pair plot দিয়ে data explore করা হয়েছে।
+
+তারপর feature scaling ও train-test split করে তিনটি Dense layer-যুক্ত Feedforward ANN তৈরি করা হয়েছে:
+
+```text
+Input Features: 30
+        ↓
+Dense: 32 Neurons + ReLU
+        ↓
+Dense: 16 Neurons + ReLU
+        ↓
+Dense: 1 Neuron + Sigmoid
+        ↓
+Binary Classification
+```
+
+Model compile করার সময় Adam optimizer, Binary Cross-Entropy loss এবং Accuracy metric ব্যবহার করা হয়েছে। `model.fit()` দিয়ে training করা হয়েছে, training ও validation accuracy graph আঁকা হয়েছে এবং test samples-এর probability থেকে class label নির্ধারণ করা হয়েছে। শেষে Classification Report, Confusion Matrix এবং একটি single sample prediction দেখানো হয়েছে।
+
+CNN অংশে image classification-এর জন্য convolution, filter, feature map, pooling, flatten এবং Dense layer-এর ভূমিকা ব্যাখ্যা করা হয়েছে। তবে মনে রাখতে হবে, সরবরাহ করা code-এ CNN train করা হয়নি।
+
+**এই Lab-এর সবচেয়ে গুরুত্বপূর্ণ বিষয় হলো ANN-এর architecture, ReLU ও Sigmoid-এর কাজ, compile ও fit-এর পার্থক্য, epoch, probability থেকে class prediction এবং CNN-এর basic architecture বোঝা।**
+
+---
