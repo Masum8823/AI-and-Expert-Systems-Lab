@@ -1790,3 +1790,23 @@ history = model.fit(
     verbose=1
 )
 ```
+### Predict probability
+
+```python
+y_pred_prob = model.predict(X_test)
+```
+
+### Probability থেকে class
+
+```python
+y_pred = (y_pred_prob > 0.5).astype("int32")
+```
+
+### Evaluation
+
+```python
+print(classification_report(y_test, y_pred))
+print(confusion_matrix(y_test, y_pred))
+```
+
+---
