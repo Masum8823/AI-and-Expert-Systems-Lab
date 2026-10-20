@@ -1810,3 +1810,32 @@ print(confusion_matrix(y_test, y_pred))
 ```
 
 ---
+
+## 66. Important Terms — এক নজরে
+
+| Term | সহজ অর্থ |
+|---|---|
+| ANN | Neuron-অনুপ্রাণিত learning model |
+| Neuron | Input process করে output তৈরি করে |
+| Weight | Input-এর প্রভাব নির্ধারণে সাহায্য করে |
+| Bias | Weighted sum adjust করে |
+| Input Layer | Input feature গ্রহণ করে |
+| Hidden Layer | Data থেকে pattern শেখে |
+| Output Layer | Final output দেয় |
+| Dense Layer | Fully connected layer |
+| Activation Function | Neuron-এর output transform করে |
+| ReLU | Negative value-কে 0 করে |
+| Sigmoid | Output 0–1-এর মধ্যে আনে |
+| Loss Function | Prediction error measure করে |
+| Optimizer | Weights update করে |
+| Epoch | Training data-এর উপর একবার training pass |
+| Batch | Training sample-এর ছোট group |
+| StandardScaler | Feature standardize করে |
+| Overfitting | Training ভালো, unseen data-তে performance খারাপ হতে পারে |
+| CNN | Convolution ব্যবহার করে feature শেখে |
+| Kernel / Filter | Local pattern detect করার learned matrix |
+| Feature Map | Convolution-এর output |
+| Pooling | Spatial dimensions কমায় |
+| Flatten | Feature maps-কে vector-এ রূপান্তর করে |
+
+---
