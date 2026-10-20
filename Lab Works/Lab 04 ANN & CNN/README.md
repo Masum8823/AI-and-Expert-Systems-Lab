@@ -1908,3 +1908,27 @@ Neuron হলো neural network-এর একটি computational unit, যা i
 ### Q4. What are weights and biases?
 
 Weights input-এর প্রভাব নিয়ন্ত্রণে সাহায্য করে, আর bias weighted sum-কে adjust করে। Training-এর সময় দুটিই update হতে পারে।
+
+### Q5. What is a Dense layer?
+
+Dense layer হলো fully connected layer, যেখানে প্রতিটি neuron আগের layer-এর সব output-এর সঙ্গে connected থাকে।
+
+### Q6. What is an activation function?
+
+Activation function neuron-এর calculated value-কে transform করে। এটি neural network-কে non-linear pattern শেখার ক্ষমতা দেয়।
+
+### Q7. Why is ReLU used in hidden layers?
+
+ReLU negative input-এর জন্য 0 এবং positive input-এর জন্য input value দেয়। এটি hidden layer-এ বহুল ব্যবহৃত এবং non-linear pattern শেখায় সাহায্য করে।
+
+### Q8. Why is Sigmoid used in the output layer?
+
+Binary classification-এ Sigmoid output-কে 0 থেকে 1-এর মধ্যে আনে, যা probability হিসেবে ব্যাখ্যা করা যায়।
+
+### Q9. What is Binary Cross-Entropy?
+
+Binary Cross-Entropy হলো binary classification-এর loss function, যা actual label এবং predicted probability-এর পার্থক্য measure করে।
+
+### Q10. What is an optimizer? Why is Adam used?
+
+Optimizer training-এর সময় weights ও biases update করে। Adam gradient-based update ব্যবহার করে এবং neural network training-এর একটি বহুল ব্যবহৃত optimizer।
