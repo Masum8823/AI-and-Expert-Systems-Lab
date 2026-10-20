@@ -2021,3 +2021,95 @@ Pooling feature map-এর spatial dimensions কমায়, ফলে computatio
 ```
 
 ---
+## 70. Last-Minute Revision Sheet
+
+```text
+ANN
+→ Artificial Neural Network
+
+Feedforward
+→ Input থেকে Output-এর দিকে information যায়
+
+Neuron
+→ Input process করে output তৈরি করে
+
+Weight
+→ Input-এর influence
+
+Bias
+→ Weighted sum adjust করে
+
+Dense
+→ Fully connected layer
+
+ReLU
+→ max(0, x)
+
+Sigmoid
+→ Output 0 থেকে 1-এর মধ্যে
+
+Input Features
+→ 30টি numerical feature
+
+Hidden Layers
+→ 32 neurons, তারপর 16 neurons
+
+Output Layer
+→ 1 neuron + Sigmoid
+
+Optimizer
+→ Adam
+
+Loss
+→ Binary Cross-Entropy
+
+Metric
+→ Accuracy
+
+Epoch
+→ Training data-এর উপর একবার training pass
+
+StandardScaler
+→ Mean 0, standard deviation 1-এর কাছাকাছি
+
+model.fit()
+→ Model training
+
+model.predict()
+→ এই ANN-এ probability output
+
+Threshold
+→ 0.5
+
+Label 0
+→ Malignant
+
+Label 1
+→ Benign
+
+Confusion Matrix
+→ Actual বনাম Predicted count
+
+CNN
+→ Convolutional Neural Network
+
+Kernel / Filter
+→ Local feature detect করে
+
+Feature Map
+→ Convolution-এর output
+
+Pooling
+→ Spatial dimensions কমায়
+
+Flatten
+→ Feature maps-কে vector-এ রূপান্তর করে
+
+MNIST
+→ 28×28 grayscale digits
+
+CIFAR-10
+→ 32×32 RGB images, 10 classes
+```
+
+---
